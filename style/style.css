@@ -1,0 +1,33 @@
+/* A Free Design by Bryant Smith (bryantsmith.com) */
+
+
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+
+
+#menu a {
+	float: none;
+	display: inline;
+	
+	text-align: center;
+	text-decoration: none;
+	
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 15px;
+	
+	padding-top: 5px;
+	
+}
+
+
+
+
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}

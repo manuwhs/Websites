@@ -1,0 +1,76 @@
+#content2
+{
+
+	height: 570px;
+    width: 825px;
+	
+	font: 15px matrixFont;
+	font-weight: normal;
+	letter-spacing: 0.0625em;
+
+	
+	text-shadow:  0 0 30px #000000, 0 0 5px #000000, 0 0 1px #000000;
+	
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:5px;
+
+}
+
+#mos
+{
+	width: 100%;
+	height: 100%;
+	margin-bottom: 25%;
+}
+
+#mos_img
+{
+	width: 25%;
+	height: 100%;
+	float: right;
+}
+
+#foto_mos
+{
+	margin-right: 15%;
+	float: left;
+	width: 85%;
+	height: 100%;
+}
+
+#mos_text
+{
+	float: left;
+	width: 70%;
+	height: 100%;
+}
+
+#video_presummer
+{
+	float:center;
+	display: inline;
+	
+	width:412px;
+	height:260px;
+
+	margin: 10px;
+	margin-left: 222px;
+	
+    border-radius: 5px;
+	border: 2px solid #8AC007;
+	
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+}
+
+
+
+@font-face {
+    font-family: matrixFont;
+    src: url(../font/matrix.ttf);
+}
+
+
+
+
+

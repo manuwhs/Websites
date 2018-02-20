@@ -1,0 +1,15 @@
+#img_schedule
+{
+	width: 100%;
+	border: 2px solid;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+	border-color: #00000000;
+}
+
+
+
+@font-face {
+    font-family: matrixFont;
+    src: url(../font/matrix.ttf);
+}

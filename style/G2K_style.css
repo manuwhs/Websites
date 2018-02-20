@@ -1,0 +1,39 @@
+#us_pic_div{
+	vertical-align: middle;
+	text-align: center;
+}
+
+#us_pic{
+	
+	width: 450px;
+	height: 300px;
+	position: relative;
+	
+	border-radius: 5px;
+	border: 2px solid #8AC007;
+	
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+}
+
+#content2
+{
+
+	height: 635px;
+    width: 825px;
+	
+	font: 15px matrixFont;
+	font-weight: normal;
+	letter-spacing: 0.0625em;
+
+	
+	text-shadow:  0 0 30px #000000, 0 0 5px #000000, 0 0 1px #000000;
+	
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:5px;
+
+}
+
+
+
+

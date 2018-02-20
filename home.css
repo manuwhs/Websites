@@ -1,0 +1,118 @@
+
+/* Hook + Counter */
+
+#hook_div
+{
+	float: none;
+	padding-left: 10px;
+	background: rgba(0,0,0,0.9);
+	text-shadow:  0 0 5px #ffffff;
+	font: 25px matrixFont;
+	display: block;
+}
+
+#countdown_div
+{
+	text-shadow:  0 0 5px #ffffff, 0 0 10px #ff0000;
+	font: 40px matrixFont;
+	margin-left: 50px;
+	display: inline;
+}
+
+#last_phrase
+{
+	float: none;
+	text-shadow:  0 0 5px #ffffff, 0 0 15px #00CC00;
+	font: 25px matrixFont;
+	display: block;
+	text-align: center;
+}
+
+
+/* VIDEO + TEXT besides video */
+
+#video_SC15
+{
+	float:left;
+	display: inline;
+	
+	width:412px;
+	height:260px;
+
+	margin: 10px;
+	margin-right: 40px;
+	margin-top: 20px;
+   border-radius: 5px;
+	border: 2px solid #8AC007;
+	
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+}
+
+#content li
+{
+	margin-left: 460px;
+	margin-top: 3px;
+}
+
+
+
+/* Foot */
+
+#sponsors
+{
+margin-left: 20px;
+display: inline;
+}
+
+#organizers
+{
+margin-left: 20px;
+display: inline;
+float:right;
+}
+
+#footer
+{	
+	clear:both;
+	background: rgba(0,0,0,1);
+	width:100%;
+	text-shadow:  0 0 5px #ffffff, 0 0 15px #00CC00;
+	font: 20px matrixFont;
+	
+	margin-bottom: 5px;
+	margin-top: 2px;
+
+   border-radius: 25px;
+
+	border: 2px solid #8AC007;
+	text-align: center;
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+	
+}
+
+#BEST_logo_foot
+{
+	width:150px;
+	height: 72px;
+	margin: 5px;
+}
+
+#UC3M_grants_foot
+{
+
+	width:250px;
+	height: 72px;
+	margin: 5px;
+}
+
+
+@font-face {
+    font-family: matrixFont;
+    src: url(./font/matrix.ttf);
+}
+
+
+
+
+
+

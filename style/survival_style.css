@@ -1,0 +1,40 @@
+/* A Free Design by Bryant Smith (bryantsmith.com) 
+We create the text-glow class, this is done using the attribute 
+
+*/
+
+/* MAIN PROPERTIES AND CONTENT */
+
+
+#survival_ani
+{
+	width: 400px;
+	height: 300px;
+
+	float: right;
+	background-size: contain;
+	display:inline;
+	
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 20px #ffffff;
+}
+
+#survival_img
+{
+
+	background-size: contain;
+	display:block;
+	
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 20px #ffffff;
+	
+}
+
+#survival_text
+{
+	
+	background-size: contain;
+	display:block;
+	
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 20px #ffffff;
+}
+
+

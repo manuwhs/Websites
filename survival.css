@@ -1,0 +1,58 @@
+/* A Free Design by Bryant Smith (bryantsmith.com) 
+We create the text-glow class, this is done using the attribute 
+
+*/
+
+/* MAIN PROPERTIES AND CONTENT */
+
+
+#survival_ani
+{
+	width: 400px;
+	height: 300px;
+
+	float: right;
+	background-size: contain;
+	display:inline;
+	margin-left: 20px;
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 20px #ffffff;
+}
+
+#survival_img
+{
+
+	background-size: contain;
+	display:block;
+	margin:10px;
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 20px #ffffff;
+}
+
+
+#content
+{
+text-align: left;
+}	
+	
+	
+#content a {
+	float: none;
+	display: inline;
+	
+	text-align: center;
+	text-decoration: none;
+	
+	color: #ffffff;
+	font: 15px matrixFont;
+	font-weight:;
+	text-shadow:  0 0 5px #00CC00, 0 0 5px #00CC00, 0 0 1px #ffffff;
+	
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 0px;
+}
+
+
+@font-face {
+    font-family: matrixFont;
+    src: url(./font/matrix.ttf);
+}

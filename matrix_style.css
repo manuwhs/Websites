@@ -1,0 +1,240 @@
+/* A Free Design by Bryant Smith (bryantsmith.com) 
+We create the text-glow class, this is done using the attribute 
+
+*/
+/* MAIN PROPERTIES AND CONTENT */
+
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+
+body {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	font: 15px matrixFont;
+
+	color: #00CC00;
+	background: #000000;
+	
+}
+
+#background {
+   background-image:url("./images/matrix/background.jpg");
+
+   background-repeat: repeat-x repeat-y;
+
+	position: relative;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 50;
+	
+	text-shadow:  0 0 5px #00CC00, 0 0 5px #00CC00, 0 0 1px #ffffff;
+
+	}
+	
+
+#container
+{
+  display: block; 
+  height: 100%;
+  width: 1020px;
+  position: relative; 
+
+}
+
+#content
+{
+
+	height:100%;
+   width: 867px;
+	background: rgba(0,0,0,0.85);
+
+	font: 15px matrixFont;
+	font-weight: normal;
+	letter-spacing: 0.0625em;
+
+	text-shadow:  0 0 30px #000000, 0 0 5px #000000, 0 0 1px #000000;
+	
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:5px;
+	margin-top: 0px;
+
+}
+
+
+/* HEADER  */
+
+#mainpic
+{
+	background-image:url(images/main_pics/Big_Madrix.png);
+	width: 100%;
+	height: 170px;
+	background-size: contain;
+	display:block;
+}
+
+#BEST_logo
+{
+	float:left;
+	width:150px;
+	height: 72px;
+	margin: 5px;
+	alt: "BEST Madrid Carlos III";
+}
+
+#UC3M_logo
+{
+	float: right;
+	width:250px;
+	height: 72px;
+	margin: 5px;
+	alt: "Madrid Carlos III";
+}
+
+
+/* MENU */
+#menu
+{
+	background: rgba(0,0,0,1);
+
+	
+	margin-bottom: 1px;
+	margin-top: 1px;
+
+	text-align: center;
+	
+	padding-top: 12px;
+	
+	height:30px;
+   border-radius: 20px;
+	border: 2px solid #8AC007;
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+}
+
+#menu ul {
+	list-style: none;
+	padding: 0px;
+	margin-left:auto;
+	margin-right: :auto;
+	display: inline;
+}
+
+#menu li {
+	margin-left: 50px;
+	list-style: none;
+	padding: 0px;	
+	display: inline; 
+	float: none;
+	
+}
+
+#menu a {
+	float: none;
+	display: inline;
+	
+	text-align: center;
+	text-decoration: none;
+	
+	color: #ffffff;
+	font: 15px matrixFont;
+	font-weight: bold;
+	text-shadow:  0 0 5px #00CC00, 0 0 5px #00CC00, 0 0 1px #ffffff;
+	
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 0px;
+}
+
+
+
+#menu a:hover{
+	text-shadow:  0 0 5px #ff00ff, 0 0 15px #00CC00, 0 0 10px #ff00ff ;
+}
+
+#pillholder
+{
+   margin-left: 50px;
+   margin-top: 10px;
+   margin-right: 50px;
+	background-image:url(./images/matrix/redpill.png);
+	width: 20px;
+	height: 30px;
+	background-size: contain;
+	display:inline-block;
+	float:right;
+	
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+}
+
+
+/* Foot */
+
+#sponsors
+{
+	margin-left: 20px;
+	display: inline;
+}
+
+#organizers
+{
+	margin-left: 20px;
+	display: inline;
+	float:right;
+}
+
+#footer
+{	
+	clear:both;
+	background: rgba(0,0,0,1);
+	width:100%;
+	text-shadow:  0 0 5px #ffffff, 0 0 15px #00CC00;
+	font: 20px matrixFont;
+	
+	margin-bottom: 2px;
+	margin-top: 2px;
+
+   border-radius: 25px;
+
+	border: 2px solid #8AC007;
+	text-align: left;
+	box-shadow:  0 0 10px #00CC00, 0 0 5px #00CC00, 0 0 10px #ffffff;
+	
+}
+
+#BEST_logo_foot
+{
+	width:150px;
+	height: 72px;
+	margin: 5px;
+}
+
+#UC3M_grants_foot
+{
+	width:250px;
+	height: 72px;
+	margin: 5px;
+}
+
+#Ayuntamiento_grants_foot
+{
+	width:170px;
+	height: 72px;
+	margin: 5px;
+}
+
+
+@font-face {
+    font-family: matrixFont;
+    src: url(./font/matrix.ttf);
+}
+
+
+
+
