@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Clases</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+Las clases en <b><font color=00ffff>Programación orientada a objetos (POO)</font></b> son definiciones de los elementos que forman un sistema, <br>en este caso, definiciones de los objetos que van a intervenir en nuestros programas. <br>
+<b><font color=00ffff>Las clases son declaraciones de objetos</b></font>, es decir, son un tipo, una clase especifica de objeto, por ejemplo, quieres crear una imagen, pues tienes que crear un ejemplar de la clase imagen, y despues le das las caracteristicas para crearla.<br> Esto quiere decir que la definición de un objeto es la clase. Cuando programamos un objeto y definimos sus características y funcionalidades en realidad lo que estamos haciendo es programar una clase. <br>
+Por lo tanto solo <b><font color=00ffff>son un conjunto de propiedades y metodos</b></font><br><br>
+Una clase es un conjunto de variables, llamados atributos, y funciones, llamadas métodos, que trabajan sobre esas variables. Las clases son, al fin y al cabo, una definición: una especificación de propiedades y funcionalidades de elementos que van a participar en nuestros programas. 
+<br><br>
+<b><font color=00ffff>Un objeto es un ejemplo de una clase, es decir, una instancia,</b> </font>digamos que la clase esta formada por un conjunto de propiedades y metodos y un objeto es crear un ejemplo de esa clase dandole las propiedades y metodos que queramos. 
+ <br>Cuando se hace una clase simplemente se especifica qué propiedades y funcionalidades tiene. 
+<br>Por ejemplo, un hombre podría tener como propiedades el nombre o la edad y como funcionalidades, comer, moverse o estudiar. <br>
+Las clases, se definien con la funcion <b><font color=00ffff>"class"</b></font>, que funciona asi ---> <b><font color=00ffff>class nombre_clase{contenido_clase}</font></b>.<br>
+Entre los corchetes, pondremos las propiedades y funciones.<br><br>
+En la clase hombre declararíamos dos atributos: la edad o el nombre, que serían como dos variables. <br>
+Para declarar las variables de una clase, deberemos usar tambien el operador var antes de la variable.<br>
+También deberíamos crear tres métodos, con los procedimientos a seguir para que el hombre pueda comer, moverse o estudiar. <br>
+Estos métodos se definen declarando funciones dentro de la clase. <br>
+
+El código para definir una clase se puede ver a continuación: <br><br>
+<font color=00ffff>
+class hombre{ <br>
+var $nombre; <br>
+var $edad;<br>
+var $alimentos;<br>
+var $sitio;<br>
+var $estudios; <br><br>
+
+function comer($comida){ <br>
+$this->alimentos = $comida;
+} <br><br>
+
+function moverse($destino){ <br>
+$this->sitio = $destino;
+} <br><br>
+
+function mostrar_sitio(){ <br>
+echo $this->sitio;
+} <br><br>
+
+function estudiar($asignatura){ <br>
+$this->estudios = $asignatura; 
+} <br>
+} <br></font>
+<br>
+En este codigo, hemos creado una clase con varias variables, que estan vacias, y hemos creado cuatro metodos (funciones).<br>
+Como veis aparece la variable $this en los metodos, dentro de un método, la variable $this hace referencia al objeto sobre el que invocamos el método.<br>
+<h1>Instanciar clases</h1>
+Si queremos trabajar con las clases debemos instanciar objetos, proceso que consiste en generar un ejemplar de una clase. <br>
+
+Por ejemplo, tenemos la clase hombre anterior. Con la clase en si no podemos hacer nada, pero podemos crear objetos hombre a partir de esa clase. <br>
+Cada objeto hombre tendrá unas características propias, como la edad o el nombre. <br>
+Además podrá desempeñar unas funciones como comer o moverse, ahora bien, cada uno comerá o se moverá por su cuenta cuando le sea solicitado, sin interferir en principio con lo que pueda estar haciendo otro hombre. <br>
+<br>
+Para crear un objeto de la clase, usamos el operador new, la forma para crear un objeto es --->$variable = new nombre_clase<br><font color=00ffff>
+$pepe = new hombre(); <br>
+$juan = new hombre(); <br></font>
+<br>
+Para usar las propiedades y metodos, usaremos las siguientes estructuras:<br>
+<font color=00ffff>nombre_objeto->nombre_propiedad<br>
+nombre_objeto->nombre_metodo()<br></font>
+Ejemplos:<br><font color=00ffff>
+$juan=new hombre;<br>
+$juan->alimentos="macarrones";<br>
+$juan->moverse("casa");<br>
+$juan->mostrar_sitio()<br></font>
+<h1>Constructures</h1>
+Los constructores son funciones, o métodos, que se encargan de realizar las tareas de inicialización de los objetos al ser instanciados. Es decir, cuando se crean los objetos a partir de las clases, se llama a un constructor que se encarga de inicializar los atributos del objeto y realizar cualquier otra tarea de inicialización que sea necesaria. 
+Por ejemplo, sirve para darle un valor inicial a las propiedades del objeto.

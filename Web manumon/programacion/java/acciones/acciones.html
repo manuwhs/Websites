@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Acciones</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Las <strong><font color=ff00ff>Acciones son funciones predefinidas de JavaScript</strong></font>, es decir: <br>JavaScript las crea, y nosotros sólo tenemos que usarlas de la manera que se nos indica.<br> No tenemos que definir las funciones ni nada por el estilo, ni siquiera necesitamos saber cómo están hechas... Lo importante es que están listas para usar, lo que facilita el uso de este lenguaje de programación y sobre todo, haga muy rápido comenzar a programar. <br>
+Las acciones son practicamento todos los codigos predefinidos por flash, incluyendo los eventos, sentencias, funciones...
+<br><strong><font color=ff00ff>Para invocar estas acciones, escribimos su nombre y sus parametros en el caso de que los haya.</font></strong><br>
+Existen distintos tipos de acciones como las sentencias o los eventos, casi todo lo que este predefinido y podamos usarlo son acciones.
+<br><br>
+Estas acciones, estan contenidas en la libreria de funciones de JavaScript. <br>
+Las siguientes funciones son funciones utiles que nos alludaran a manejar datos:<br><br>
+
+<img src="ico2.jpg"> <font color=ff00ff><b>eval(string) </font></b><br>
+Esta función recibe una cadena de caracteres y la ejecuta como si fuera una sentencia de Javascript. 
+<br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>parseInt(cadena,base) </font></b><br>
+Recibe una cadena y una base. Devuelve un valor numérico resultante de convertir la cadena en un número en la base indicada. 
+<br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>parseFloat(cadena) </font></b><br>
+Convierte la cadena en un número y lo devuelve. 
+<br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>escape(carácter) </font></b><br>
+Devuelve el carácter que recibe por parámetro en una codificación ISO Latin 1. 
+<br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>unescape(carácter)  </font></b><br>
+Hace exatamente lo opuesto a la función escape. 
+<br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>isNaN(número)  </font></b><br>
+Devuelve un boleano dependiendo de lo que recibe por parámetro. Si no es un número devuelve un true, si es un numero devuelve false. 
+<br>
+<h1>Ejemplos</h1>
+<img src="ico2.jpg"> <font color=ff00ff><b>eval(string) </font></b><br>
+Como ya hemos explicado antes, esta funcion ejecuta una cadena de caracteres como si fuera una sentencia de JavaScript. <br>
+Esto nos brinda la posibilidad de escribir una variable que sea una cadena de texto y pos lo tento no haga nada y que luego la podamos ejecutar con esta funcion. Esta funcion ejecutaria por ejemplo una suma que estuviera en String. Ejemplo:<br>
+<font color=00ffff>
+&ltscript&gt<br>
+var yo="3+2";<br>
+eval("document.write(" + yo +")") <br>
+&lt/script&gt<br></font>
+Analicemos este codigo: Creamos la variable yo que es un String, osea texto plano, y despues usamos la funcion eval, <br>
+dentro de los parentesis tiene que haber un String osea que tiene que empezar por comillas o ser una variables.<br>
+Como sabemos, cuando abrimos unas comillas, las siguientes que pongamos seran de cierre, sabiendo esto, vemos que<br>
+las primeras comillas contienen "document.write(" y las otras ")", lo unico que queda fuera es  + yo +, la variables de String yo,<br>
+Tiene que aparecer fuera de las comillas o sino, el navegador interpretara que es texto plano, por eso aparece fuera de las comillas<br>
+y los signos + lo que hacen es unir las partes.<br>
+Asique el codigo equivaldria a:<br><font color=00ffff>
+document.write(3 + 2) </font>
+<br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>parseInt(cadena,base) </font></b><br>
+Esta variable tiene dos parametros, la primera es un numero, que escribiremos entre comillas dobles y la segunda es la base que utilizaremos para saber el valor de ese numero en base 10 osea en forma decimal.<br>
+Esta funcion permite formas de base 2 (binario), 8 (octal), 10 (decimal), 16 (hexadecimal). Ejemplo:<br>
+<font color=00ffff>
+&ltscript&gt
+<br><br>
+parseInt("100",16) <br>
+"Devuelve el numero 256"<br><br>
+
+parseInt("100",10) <br>
+"Devuelve el numero 100"<br><br>
+
+
+parseInt("100",8) <br>
+"Devuelve el numero 64"<br><br>
+
+parseInt("100",2) <br>
+"Devuelve el numero 4"<br><br>
+
+&lt/script&gt<br></font>
+En caso de que no fuera un numero lo que introducimos, nos dara como resultado sNaN.<br>
+Si quieres ver los resultados, usa write() asi: document.write (parseInt("100",numero)) <br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>parseFloat(cadena) </font></b><br>
+Esta funcion lo unico que hace es convertir una cadena en un numero.<br>
+<font color=00ffff>
+&ltscript&gt<br>
+var numero="25";<br>
+document.write(parseFloat(numero))<br>
+&lt/script&gt<br></font><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>escape(carácter) </font></b><br>
+Como hemos dicho antes esta funcion convierte el tipo de un texto en codificación ISO Latin .<br>
+<font color=00ffff>
+&ltscript&gt<br>
+document.write(escape("&ltHola&gt"))<br>
+&lt/script&gt<br></font>
+Este codigo escribiria: %3CHola%3E<br>
+<br>
+<img src="ico2.jpg"> <font color=ff00ff><b>unescape(carácter) </font></b><br>
+Hace lo contrario que escape.<br>
+<font color=00ffff>
+&ltscript&gt<br>
+document.write(unescape("%3E"))<br>
+&lt/script&gt<br></font>
+Este codigo escribiria: ><br><br>
+<img src="ico2.jpg"> <font color=ff00ff><b>isNaN(número)  </font></b><br>
+Esta funcion devuelve true si lo que hay entre parentesis no es un numero y false si lo es:<br>
+
+<font color=00ffff>
+&ltscript&gt<br>
+var numero = isNaN("12")<br>
+var numer = isNaN("FFFFFF")<br>
+document.write(numero +" / "+ numer)<br>
+&lt/script&gt<br></font>
+Esto daria como resultado false / true

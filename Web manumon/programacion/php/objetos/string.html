@@ -1,0 +1,142 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Clase String</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+En javascript las variables de tipo texto son objetos de la clase String por lo tanto tienen metodos y propiedades.<br>
+Para crear un objeto de la clase String hay es asignar como valor a una variable, un texto plano, es decir, un texto entre "".
+<br>Tambien se puede crear con el operador new como ya veremos.
+<h2>Propiedades</h2>
+<img src="ico2.jpg"><b><font color=ff00ff> Length </b></font><br>
+Esta propiedad guarda el número de caracteres del String.
+<h2>Metodos</h2>
+
+<img src="ico2.jpg"><b><font color=ff00ff> charAt(indice) </b></font><br>
+Devuelve el carácter que hay en la posición indicada como índice. Las posiciones de un string empiezan en 0. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> indexOf(carácter,desde) </b></font><br>
+Devuelve la posición de la primera vez que aparece el carácter indicado por parámetro en un string. Si no encuentra el carácter en el string devuelve -1. El segundo parámetro es opcional y sirve para indicar a partir de que posición se desea que empiece la búsqueda. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> lastIndexOf(carácter,desde) </b></font><br>
+Busca la posición de un carácter exáctamente igual a como lo hace la función indexOf pero desde el final en lugar del principio. El segundo parámetro indica el número de caracteres desde donde se busca, igual que en indexOf. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> replace(substring_a_buscar,nuevoStr) </b></font><br>
+Implementado en Javascript 1.2, sirve para reemplazar porciones del texto de un string por otro texto, por ejemplo, podríamos uilizarlo para reemplazar todas las apariciones del substring "xxx" por "yyy". El método no reemplaza en el string, sino que devuelve un resultante de hacer ese reemplazo. Acepta expresiones regulares como substring a buscar.<br><br> 
+
+<img src="ico2.jpg"><b><font color=ff00ff> split(separador) </b></font><br>
+Este método sólo es compatible con javascript 1.1 en adelante. Sirve para crear un vector a partir de un String en el que cada elemento es la parte del String que está separada por el separador indicado por parámetro. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> substring(inicio,fin) </b></font><br>
+Devuelve el substring que empieza en el carácter de inicio y termina en el carácter de fin. Si intercambiamos los parámetros de inicio y fin también funciona. Simplemente nos da el substring que hay entre el carácter menor y el mayor. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> toLowerCase() </b></font><br>
+Pone todas los caracteres de un string en minúsculas. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> toUpperCase() </b></font><br>
+Pone todas los caracteres de un string en mayúsculas. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> toString() </b></font><br>
+Este método lo tienen todos los objetos y se usa para convertirlos en cadenas. <br><br>
+
+Hasta aquí hemos visto los métodos que nos ayudarán a tratar cadenas. Ahora vamos a ver otros métodos que son menos útiles, pero hay que indicarlos para que quede constancia de ellos. Todos sirven para aplicar estilos a un texto y es como si utilizásemos etiquetas HTML. Veamos cómo. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> anchor(name) </b></font><br>
+Convierte en un ancla (sitio a donde dirigir un enlace) una cadena de caracteres usando como el atributo name de la etiqueta &ltA&gt lo que recibe por parámetro. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff > big() </b></font><br>
+Aumenta el tamaño de letra del string. Es como si colocásemos en un string al principio la etiqueta &ltBIG&gt y al final &lt/BIG&gt.<br><br> 
+
+<img src="ico2.jpg"><b><font color=ff00ff> blink() </b></font><br>
+Para que parpadee el texto del string, es como utilizar la etiqueta &ltBLINK&gt. Solo vale para Netscape. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> bold() </b></font><br>
+Como si utilizásemos la etiqueta &ltB&gt. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> fixed() </b></font><br>
+Para utilizar una fuente monoespaciada, etiqueta &ltTT&gt. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> fontColor(color) </b></font><br>
+Pone la fuente a ese color. Como utilizar la etiqueta &ltFONT color=el_color_indicado&gt. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> fontSize(tamaño) </b></font><br>
+Pone la fuente al tamaño indicado. Como si utilizásemos la etiqueta &ltFONT&gt con el atributo size. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> italics() </b></font><br>
+Pone la fuente en cursiva. Etiqueta &ltI&gt. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> link(url) </b></font><br>
+Pone el texto como un enlace a la URL indicada. Es como si utilizásemos la etiqueta &ltA&gt con el atributo href indicado como parámetro. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> small() </b></font><br>
+Es como utilizar la etiqueta &ltSMALL&gt <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> strike() </b></font><br>
+Como utilizar la etiqueta &ltSTRIKE&gt, que sirve para que el texto aparezca tachado. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> sub() </b></font><br>
+Actualiza el texto como si se estuviera utilizando la etiqueta &ltSUB&gt, de subíndice. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> sup() </b></font><br>
+Como si utilizásemos la etiqueta &ltSUP&gt, de superíndice. <br><br>
+<h2>Ejemplos</h2>
+1- Ejemplo de la propiedad length:<br><font color=00ffff>
+&ltscript&gt<br>
+var letras = "numero"<br>
+var let = letras.length<br>
+document.write(let)<br>
+&lt/script&gt<br></font>
+Aqui se le da el valor del numero de caracteres del String de la variable letras a la variable let. El resultado es 6.<br><br>
+2- Ejemplo de la propiedad lenght y el metodo subString():<br><font color=00ffff>
+&ltscript&gt<br>
+var miString = "Esto es un texo que se parte por la mitad" <br>
+var mitad1;<br>
+var mitad2; <br>
+
+posicion_mitad = miString.length / 2 <br><br>
+
+mitad1 = miString.substring(0,posicion_mitad) <br>
+mitad2 = miString.substring(posicion_mitad,miString.length) <br>
+
+document.write(mitad1 + "&ltbr&gt" + mitad2) <br>
+&lt/script&gt<br></font>
+En este codigo, se crea una variable llamada posicion_mitad que es igual a la mitad de los caracteres del string de la variable miString, luego con la funcion substring() se crean dos variables, una que contenga desde el primer caracter hasta el de la mitad y otro que tenga desde la mitad hasta el ultimo.<br>
+Luego eso se muestra en pantalla con write() añadiendo ademas salto de linea entre ellos.
+<br><br>
+3- Ejemplo de toLowerCase() y toUpperCase():<br>
+<font color=00ffff>
+&ltscript&gt<br>
+var minusculas = "esto sera un texto en mayusculas" <br>
+var mayusculas = "ESTO SERA UN TEXTO EN MINUSCULAS"<br>
+
+
+document.write ( mayusculas.toLowerCase() )<br>
+document.write ( minusculas.toUpperCase() )  <br>
+&lt/script&gt<br></font>
+El resultado de esto sera:<br>
+<script>
+var minusculas = "esto sera un texto en mayusculas" 
+var mayusculas = "ESTO SERA UN TEXTO EN MINUSCULAS"
+document.write(mayusculas.toLowerCase()+"<br>")
+document.write(minusculas.toUpperCase()) 
+</script>
+<br><br>
+4- Uso de indexOf(carácter,desde) y  lastIndexOf(carácter,desde) :<br>
+<font color=00ffff>
+&ltscript&gt<br>
+var texto="tipos de letras en un texto" <br>
+document.write( texto.indexOf("d" , 0))<br>
+document.write( texto.lastIndexOf("d" , 0))<br>
+&lt/script&gt<br></font>

@@ -1,0 +1,52 @@
+ <table align="center">
+            <tbody>
+              <tr>
+                <td>Ciudad</td>
+                <td>Temperatura (º)</td>
+                <td>Humedad (%)</td>
+                <td>Dirección de viento</td>
+                <td>Velocidad del viento (km/h)</td>
+                <td>Lluvia (mm) últimas 2 horas</td>
+              </tr>
+              <tr>
+                <td>Huesca</td>
+                <td>16</td>
+                <td>20</td>
+                <td>S</td>
+                <td>14</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Ourense</td>
+                <td>8</td>
+                <td>62</td>
+                <td>S</td>
+                <td>14</td>
+                <td>0.2</td>
+              </tr>
+              <tr>
+                <td>Oviedo</td>
+                <td>13</td>
+                <td>75</td>
+                <td>S</td>
+                <td>18</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Pamplona</td>
+                <td>9</td>
+                <td>32</td>
+                <td>S</td>
+                <td>28</td>
+                <td>5.1</td>
+              </tr>
+              <tr>
+                <td>Alicante</td>
+                <td>30</td>
+                <td>69</td>
+                <td>E</td>
+                <td>15</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>

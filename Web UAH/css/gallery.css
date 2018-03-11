@@ -1,0 +1,38 @@
+body,html,div,ul{
+	border:0;
+	outline:none;
+	margin:0;
+	padding:0;
+}
+
+ul{
+	list-style:none;
+}
+#gallery {
+	width: 660px; 
+	margin: 0 auto;
+}
+#gallery ul {
+	padding-left: 10px;	
+}
+#gallery li {
+	display: inline; 
+	margin-right: 2px;
+}
+#gallery #main-img {
+	background: url(bg_img.png) no-repeat 0 0; 
+	padding-top: 15px;
+	padding-bottom: 1px;
+}
+
+#carrusel {
+	border:2px solid;
+	padding: 10px;
+	margin:1px;
+	width: 550px;
+	background-color : white;
+}
+
+#numero {
+	color: white;
+}

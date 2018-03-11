@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Marcos o Frames</H1></u></center></font></td></tr></table></center>
+<br>
+Cuando queremos que algunas partes de nuestra pagina esten fijas, mejorar su apariencia o dividir la pagina, recurrimos a los marcos.<br>
+
+Los marcos o frames sirven para distribuir mejor los datos de las páginas, ya que permiten mantener fijas algunas partes, <br>
+como pueden ser el logotipo y la barra de navegación, mientras que otras sí pueden cambiar.<br>
+Y una de las cosas más importantes es que puedes cargar cosas diferentes sin que unas afecten a las otras. <br>
+Es como dividir el archivo .html en varios.<br>
+<br>
+Los conjuntos de marcos se definen a través de las etiquetas <strong>&ltframeset&gt y &lt/frameset&gt, </strong> <br>
+que van después de la etiqueta  <strong>&lthead&gt </strong>. En los archivos donde se divide una web en frames no hay &ltbody&gt<br>
+A través de estas etiquetas se indica el número de marcos en que se dividirá la ventana, <br>
+cada uno de los cuales será una especie de subventana.<br><br>
+Los atributos que pueden especificarse sobre la etiqueta &ltframeset&gt son los siguientes:<br><br>
+  <table width="606" border="1" align="center" cellspacing="0" bordercolor="#999999" class="texto" bgcolor=#010739>
+        <tr> 
+          <td width="88" background="f_rotulo2b.gif"><div align="center"><strong>Atributo</strong></div></td>
+          <td width="180" background="f_rotulo2b.gif"><div align="center"><strong>Significado</strong></div></td>
+          <td background="f_rotulo2b.gif"><div align="center"><strong>Posibles 
+              valores</strong></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center"> 
+              <p class="atributoazul"><strong>cols</strong></p>
+            </div></td>
+          <td><div align="center">tama&ntilde;o de cada una de las columnas en 
+              que se divide el documento</div></td>
+          <td><div align="center"> 
+              <p>un n&uacute;mero (acompa&ntilde;ado de % cuando se desee 
+                que sea en porcentaje) por cada columna, separados por comas.</p>
+            </div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>rows</strong></div></td>
+          <td><div align="center">tama&ntilde;o de cada una de las columnas en 
+              que se divide el documento</div></td>
+          <td><div align="center">un n&uacute;mero (acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje) por cada fila, separados 
+              por comas.</div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>frameborder</strong></div></td>
+          <td><div align="center">aparece o no el borde de los marcos</div></td>
+          <td><div align="center"><span class="palabramarron"><strong>yes</strong></span><br>
+              <span class="palabramarron"><strong>no</strong></span></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>framespacing</strong></div></td>
+          <td><div align="center">separaci&oacute;n entre los marcos</div></td>
+          <td><div align="center">un n&uacute;mero </div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>border</strong></div></td>
+          <td><div align="center">grosor del borde</div></td>
+          <td><div align="center">un n&uacute;mero, acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje</div></td>
+        </tr>
+        <tr> 
+          <td class="atributoazul"><div align="center"><strong>bordercolor</strong></div></td>
+          <td><div align="center">color del borde</div></td>
+          <td><div align="center">n&uacute;mero hexadecimal</div></td>
+        </tr>
+      </table>
+<br>
+Para dividir una pagina en frames sigue estos pasos:<br>
+* Primero, con el atributo cols, se especifica el numero de columnas en las que se dividira la pagina, <br>
+si la quieres dividir en tres columnas por ejemplo, pones cols seguido de las tres dimensiones separadas por comas de las columnas. <br>
+Imaginate que de las tres tienes puesto la dimension de dos y quieres que la del centro ocupe el resto, para se usa el asterisco "*", <br>
+que hace que las dimensiones del marco sean las restantes.<br>
+Si solo queriamos dividir el archivo en tres columnas, entoces elegimos lo que vamos a poner en cada frame. <br>
+Para referirnos a un frame ponemos <strong> &ltframe&gt </strong> y para indicar su contenido, le ponemos el atributo <strong> src = "direccion"</strong>.<br>
+Si tambien queremos dividir una columna en otras columnas o filas, tendremos que habrir una nueva etiqueta <strong>&ltframeset&gt</strong>,<br>
+le ponemos el atributo de cols o rows, las divisiones con sus dimensiones y los frames con sus contenidos.<br>
+Ejemplo:<br><font color=00ff00>
+
+&ltframeset cols=200,* &gt<br>
+&ltframeset rows=38,*&gt<br>
+                                  &ltframe src=""&gt<br>
+                                  &ltframe src=""&gt <br>
+                      &lt/frameset&gt<br>
+    &ltframeset rows=150,*&gt<br>
+                     
+                              &ltframeset cols="*,*,*"&gt<br>
+                                         &ltframe src="" &gt<br>
+                                         &ltframe src=""&gt<br>
+                                         &ltframe src=""&gt<br>
+                            &lt/frameset&gt<br>
+                     
+                     &ltframe src=""&gt<br>
+&lt/frameset&gt<br></font>
+Como veis en este codigo lo que se hace es dividir primero el archivo en dos columnas, despues la primera de ellas en dos filas, la otra columna en otras dos y la primera de ellas en otras tres columnas. Este es el codigo de esta web.<br><br>
+<h1>Atributos de los Frames</h2>
+Un frame (marco) tiene los siguientes atributos:<br>
+ <table width="625" border="1" align="center" cellspacing="0" bordercolor="#999999" class="texto" bgcolor=#010739>
+        <tr> 
+          <td width="100" background="f_rotulo2b.gif"><div align="center"><strong>Atributo</strong></div></td>
+          <td background="f_rotulo2b.gif"><div align="center"><strong>Significado</strong></div></td>
+          <td background="f_rotulo2b.gif"><div align="center"><strong>Posibles 
+              valores</strong></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>frameborder</strong></div></td>
+          <td><div align="center">aparece o no el borde del marco</div></td>
+          <td><div align="center"><span class="palabramarron"><strong>yes</strong></span> 
+              o <span class="palabramarron">1</span><br>
+              <span class="palabramarron"><strong>no </strong></span>o<span class="palabramarron"><strong> 
+              <span class="palabramarron">0</span></strong></span></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>name</strong></div></td>
+          <td><div align="center">nombre del marco</div></td>
+          <td><div align="center">cualquier valor</div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>noresize</strong></div></td>
+          <td><div align="center">si aparece, el usuario no podr&aacute; redimensionar 
+              el tama&ntilde;o de este marco</div></td>
+          <td><div align="center">no puede tomar valores</div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>marginwidth</strong></div></td>
+          <td><div align="center">anchura del margen con respecto a los bordes 
+              del marco</div></td>
+          <td><div align="center">un n&uacute;mero, acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje</div></td>
+        </tr>
+        <tr> 
+          <td class="atributoazul"><div align="center"><strong>marginheight</strong></div></td>
+          <td><div align="center">altura del margen con respecto a los bordes 
+              del marco</div></td>
+          <td><div align="center">un n&uacute;mero, acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje</div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>scrolling</strong></div></td>
+          <td><div align="center">se mostrar&aacute; o no la barra de desplazamiento 
+              cuando la p&aacute;gina del marco no se pueda visualizar completamente 
+              en &eacute;l</div></td>
+          <td><div align="center"><span class="palabramarron"><strong>yes</strong></span><br>
+              <span class="palabramarron"><strong>no</strong></span><br>
+              <span class="palabramarron"><strong>auto</strong></span></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>src</strong></div></td>
+          <td><div align="center">documento que se cargar&aacute; en el marco</div></td>
+          <td><div align="center">ruta y nombre del documento</div></td>
+        </tr>
+      </table>
+

@@ -1,0 +1,1 @@
+nombre=Freddie&edad=69

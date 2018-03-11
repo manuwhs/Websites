@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+<a name="ancla"></a>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20" text =#ffffff>
+<center><table  border="4" width=400 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Tutoriales SQL</H1></u></center></font></ta
+</td></tr>
+</table></center><br>
+
+Structured Query Language que no es mas que un lenguaje estándar de comunicación con bases de datos.
+Como sabemos una base de datos esta compuesta de tablas donde almacenamos registros catalogados en función de distintos campos (características). 
+<br>Los campos de textos pueden almacenar los tipos de variable normales, como String, numeros, booleanos.<br><br>
+Para crear una tabla debemos especificar diversos datos: El nombre que le queremos asignar, los nombres de los campos y sus características. Además, puede ser necesario especificar cuáles de estos campos van a ser índices y de qué tipo van a serlo. 
+<h2>Sintaxis</h2>
+Para crear una tabla usaremos la funcion Create que funciona asi.<br>
+<font color=00ffff>
+Create Table nombre_tabla (<br>
+nombre_campo_1 tipo_1<br>
+nombre_campo_2 tipo_2<br>
+nombre_campo_n tipo_n<br>
+Key(campo_x,...) )<br></font>
+<br>
+Para introducir datos en una tabla usaremos la funcion Insert que funciona asi.<font color=00ffff>
+Insert Into nombre_tabla <br>
+(nombre_campo1, nombre_campo2,...) <br>
+Values (valor_campo1, valor_campo2...) <br></font>
+Ejemplo:<br><font color=00ffff>
+Insert Into clientes <br>
+(nombre, apellidos, direccion, poblacion, codigopostal, email, pedidos) <br>
+Values ('Perico', 'Palotes', 'Percebe n°13', 'Lepe', '123456', 'perico@hotmail.com', 33) <br></font><br>
+Para borrar una tabla o un campo usaremos la funcion Delete.<br>
+Para borrar una tabla: <font color=00ffff>Delete From nombre_tabla<br></font>
+Cuando queremos eliminar solo una parte de la tabla, como por ejemplo lo referente a un campo cuyo nombre  es nombre y contenido es "Jesus". Tendriamos que ademas poner la sentencia WHERE seguida del campo y su valor.<br>
+Su metodo es asi: <font color=00ffff>Delete From nombre_tabla Where campo = valor</font><br>
+En muchos tutoriales os vendra que despues del Where se pone una condicion, esto tambien es verdad, al poner el campo y el valor eso ya es una condicion ya que si no existe no podra eliminarlo.
+<br><br>
+Para modificar el contenido de una tabla usaremos la funcion Update que es capaz de cambiar contenidos de los campos.
+Su estructura es esta: <font color=00ffff>Update nombre_tabla Set nombre_campo1 = valor  Where valor_por_el_que_se_cambia.</font>
+
+<br><br>
+La selección total o parcial de una tabla se lleva a cabo mediante la instrucción Select. En dicha selección hay que especificar: 
+<br>
+-Los campos que queremos seleccionar <br>
+-La tabla en la que hacemos la selección <br>
+

@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Cookies</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Las cookies son la unica manera que tiene Javascript para guardar informacion en el disco duro de alguien que visita nuestra pagina.<br>
+Una COOKIE es un pequeño elemento de información que se almacena en el cliente como parte del archivo cookies.txt.<br>
+Las cookies pueden ser leidas y modificadas.<br><br>
+Las cookies tienen unas limitaciones: <br>
+
+Máximo de 300 cookies en el archivo cookies.txt. Si se excede ese límite, se eliminan las menos recientes. <br>
+Máximo de 4 Kb por cookie. Si se excede el límite, se trunca la cookie dejando intacto el nombre, <br>siempre que éste no exceda los 4Kb. 
+20 cookies por servidor o dominio. Si se excede ese límite, se eliminan las menos recientes. 
+<br><br>
+La forma más sencilla de enviar una cookie con JavaScript es usando la instrucción:<br>
+document.cookie='cookie' <br>
+Para manejarse con las cookies existen varias funciones que tendremos que definir nosotros mismos, se conocen como:<br> setCookie, getCookie, delCookie.<br>
+Pero como tenemos que definirlas nosotros mismos, podemos ponerles el nombre que queramos y eso es lo que hare:<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>consultarCookie(nombre)</b></font><br>
+Esta funcion sirve para buscar una cookie en el ordenador del visitante, tiene un parametro, que es el nombre de la cookie que se busca.
+<pre><b><font color=00ffff>function consultarCookie(nombre){
+var buscamos = nombre + "=";
+      if (document.cookie.length > 0) {
+       i = document.cookie.indexOf(buscamos);
+            if (i != -1) {
+                 i += buscamos.length;
+                 j = document.cookie.indexOf(";", i);
+            if (j == -1)
+                j = document.cookie.length;
+                return unescape(document.cookie.substring(i,j));
+}}}</pre>
+</b>
+</font>
+<img src="ico2.jpg"> <b><font color=ff00ff>mandarCookie(nombre, valor, caducidad)</b></font><br>
+Esta funcion sirve para definir una cookie:
+<pre><b><font color=00ffff>function mandarCookie(nombre, valor, caducidad) {<br>
+        document.cookie = nombre + "=" + escape(valor) + 
+        ((caducidad == null) ? "" : ("; expires=" + caducidad.toGMTString()))
+}</pre>
+</b>
+</font>
+
+<img src="ico2.jpg"> <b><font color=ff00ff>eliminarCookie (name,path,domain)</b></font><br>
+Para borrar una cookie usaremos una función como la siguiente: 
+
+<pre><b><font color=00ffff>
+ function elimicarCookie(nombre,camino,domain){
+	   if(consultarCookie(nombre)){
+	      document.cookie=nombre+"="
+		  +((path==null)?"":";path="+path)
+		  +((domain==null)?"":";domain="+domain)+";
+		  expires=Thu,01-Jan-70 00:00:01 GMT";
+	   }
+	}
+
+</pre>
+</b>
+</font>
+
+
+      
+
+
+
+
+ <SCRIPT LANGUAGE="JavaScript">
+
+function consultarCookie(nombre){
+var buscamos = nombre + "=";
+      if (document.cookie.length > 0) {
+       i = document.cookie.indexOf(buscamos);
+            if (i != -1) {
+                 i += buscamos.length;
+                 j = document.cookie.indexOf(";", i);
+            if (j == -1)
+                j = document.cookie.length;
+                return unescape(document.cookie.substring(i,j));
+}}}
+
+function mandarCookie(nombre, valor, caducidad) {
+        document.cookie = nombre + "=" + escape(valor) + 
+        ((caducidad == null) ? "" : ("; expires=" + caducidad.toGMTString()))
+}
+
+var visitas = consultarCookie("contadorm")
+if (!visitas) 
+        visitas = 1
+else
+        visitas = parseInt(visitas) + 1  
+mandarCookie("contadorm", visitas)
+document.write("Has estado aquí  " + visitas + " veces.")
+</SCRIPT>

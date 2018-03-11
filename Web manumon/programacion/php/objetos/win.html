@@ -1,0 +1,151 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Objeto window</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+Es el objeto principal en la jerarquía y contiene las propiedades y métodos para controlar la ventana del navegador. De él dependen todos los demás objetos de la jerarquía. Al ser una clase tiene:<br>
+<h1>Propiedades:</h1>
+
+<img src="ico2.jpg"> <b><font color=ff00ff>closed  </b></font><br>
+Indica la posibilidad de que se haya cerrado la ventana. (Javascript 1.1) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>defaultStatus  </b></font><br>
+Texto que se escribe por defecto en la barra de estado del navegador. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>document  </b></font><br>
+Objeto que contiene el la página web que se está mostrando. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>Frame  </b></font><br>
+Un objeto frame de una página web. Se accede por su nombre. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>frames array  </b></font><br>
+El vector que contiene todos los frames de la página. Se accede por su índice a partir de 0. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>history  </b></font><br>
+Objeto historial de páginas visitadas. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>innerHeight  </b></font><br>
+Tamaño en pixels del espacio donde se visualiza la página, en vertical. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>innerWidth  </b></font><br>
+Tamaño en pixels del espacio donde se visualiza la página, en horizontal. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>length  </b></font><br>
+Numero de frames de la ventana. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>location  </b></font><br>
+La URL del documento que se está visualizando. Podemos cambiar el valor de esta propiedad para movernos a otra página. Ver también la propiedad location del objeto document. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>locationbar  </b></font><br>
+Objeto barra de direcciones de la ventana. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>menubar  </b></font><br>
+Objeto barra de menús de la ventana. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>name  </b></font><br>
+Nombre de la ventana. Lo asignamos cuando abrimos una nueva ventana. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>opener  </b></font><br>
+Hace referencia a la ventana de navegador que abrió la ventana donde estamos trabajando.
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>outherHeight  </b></font><br>
+Tamaño en pixels del espacio de toda la ventana, en vertical. Esto incluye las barras de desplazamiento, botones, etc. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>outherWidth  </b></font><br>
+Tamaño en pixels del espacio de toda la ventana, en horizontal. Esto incluye las barras de desplazamiento. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>parent  </b></font><br>
+Hace referencia a la ventana donde está situada el frame donde estamos trabajando.
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>personalbar  </b></font><br>
+Objeto barra personal del navegador. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>self  </b></font><br>
+Ventana o frame actual. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>scrollbars  </b></font><br>
+Objeto de las barras de desplazamiento de la ventana. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>status  </b></font><br>
+Texto de la barra de estado. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>statusbar  </b></font><br>
+Objeto barra de estado del navegador. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>toolbar  </b></font><br>
+Objeto barra de herramientas. (Javascript 1.2) 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>top  </b></font><br>
+Hace referencia a la ventana donde está situada el frame donde estamos trabajando. Como la propiedad parent. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>navigator</b></font><br>
+Es el objeto que guarda informacion sobre el navegador.
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> window  </b></font><br>
+Hace referencia a la ventana actual, igual que la propiedad self. 
+<h1>Ejemplos</h1>
+<h2>defaulStatus() y status()</h2>
+1- Aqui vamos a jugar un poco con la barra de estado. La barra de estado es esa barra que esta en la parte mas baja de la ventana de la web. Normalmente, esta barra no se modifica y su contenido es "Listo".
+<font color=00ffff><br>
+&ltscript&gt<br>
+window.defaultStatus="Esto es la barra de estado"<br>
+function cambiarstatus (texto) { <br>
+ window.status="barra de estado"}<br>
+&lt/script&gt<br></font><br>
+<font color=00ff00>
+&ltinput type=button value="Cambiar status" onClick="cambiarstatus ()"&gt</font><br><br>
+<script>
+window.defaultStatus="Esto es la barra de estado"
+function cambiarstatus () { 
+ window.status="Ahora se cambia la barra de estado"}
+</script>
+<input type=button value="Cambiar status" onClick=" cambiarstatus ()">
+<h2>navigator</h2>
+Como hemos dicho este objeto contiene datos sobre el navegador, aqui tienes un ejemplo de su uso:<br><font color=00ffff>
+&ltscript&gt<br>
+var codificador = navigator.appCodeName<br>
+var navegador = navigator.appName<br>
+var version = navigator.appMinorVersion<br>
+var plullings = navigator.pluyings<br>
+var usuario = navigator.userProfile<br>
+var lengua = navigator.systemLanguage<br>
+var ops = navigator.opsProfile<br>
+var enlinea = navigator.onLine<br>
+var cockies = navigator.cookieEnabled<br>
+var plataforma = navigator.platform<br>
+var CPU = navigator.cpuClass<br><br>
+document.write ( "navegador: "+ navegador +"&ltbr&gt" + "usuario: "+ usuario +"&ltbr&gt" + <br>
+"codificador: "+ codificador +"&ltbr&gt" + "plataforma: "+ plataforma +"&ltbr&gt"+ "cookies: "+ cockies +"&ltbr&gt" + <br>
+"pluyings: "+ plullings +"&ltbr&gt" + "CPU: "+ CPU +"&ltbr&gt" + "OnLine: "+ enlinea +"&ltbr&gt")<br>
+
+&lt/script&gt<br></font><br>
+
+<script>
+var codificador = navigator.appCodeName
+var navegador = navigator.appName
+var version = navigator.appMinorVersion
+var plullings = navigator.pluyings
+var usuario = navigator.userProfile
+var lengua = navigator.systemLanguage
+var ops = navigator.opsProfile
+var enlinea = navigator.onLine
+var cockies = navigator.cookieEnabled
+var plataforma = navigator.platform
+var CPU = navigator.cpuClass
+
+document.write ( "navegador: "+ navegador +"<br>" + "usuario: "+ usuario +"<br>" + 
+"codificador: "+ codificador +"<br>" + "plataforma: "+ plataforma +"<br>"+ "cookies: "+ cockies +"<br>" + 
+"pluyings: "+ plullings +"<br>" + "CPU: "+ CPU +"<br>" + "OnLine: "+ enlinea +"<br>")
+</script>

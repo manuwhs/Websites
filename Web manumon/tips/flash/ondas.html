@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="650" height="120" id="ondas" align="top">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="ondas.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="ondas.swf" quality="high" bgcolor="#000000" width="650" height="120" name="ondas" align="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto combina los efectos perlinNoise<br>
+y DisplazamentMapfilter para lograr hacer <br>este efecto onda. Las explicaciones las  <br>encontrareis  en el archivoFLA y el  <br>codigo que se usa está a derecha,<br> cambiando unos parámetro podremos hacer <br>efecto casacada o lago en vertical.
+<br><br>
+<center><a href="Efecto de lago.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+En este archivo flash encontrareis algunas<br> explicaciones, este efecto crea distorsion<br> y convulsusiones; y las aplica a una <br>imagen, y poniendo esos efectos en <br>puntos, el efecto se desplaza.<br> si mirais los tutoriales de esta pagina<br>lo entendereis bien.<br> Pero si quereis tenerlo sin mas,<br> teneis que importar una imagen al <br>archivo .fla y vincularla a AS2 <br>con el nombre:   imagen
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+import flash.display.*;<br>
+import flash.geom.*;<br>
+import flash.filters.*;<br><br>
+
+imagen = BitmapData.loadBitmap("imagen");<br><br>
+
+ancho = imagen.width;<br>
+largo = imagen.height;<br><br>
+
+createEmptyMovieClip("pelicula", 0)<br>
+pelicula.attachBitmap(imagen, 1);<br>
+
+punto = new Point();<br>
+punto2= new Point();<br>
+punto3 = new Point();<br>
+
+mapabit1 = new BitmapData(ancho, largo/6);<br>
+mapabit2 = new BitmapData(ancho, largo/3);<br>
+mapabit3 = new BitmapData(ancho, largo/2);<br>
+
+desp1 = new DisplacementMapFilter(mapabit1, new Point(0, 0), null, 4, 0, 20, "clamp");<br>
+desp2 = new DisplacementMapFilter(mapabit2, new Point(0, largo/6), null, 4, 0, 50, "clamp");<br>
+desp3 = new DisplacementMapFilter(mapabit3, new Point(0, largo/2), null, 4, 0, 120, "clamp")<br><br>
+
+onEnterFrame = function () { <br><br>
+
+mapabit1.perlinNoise(0, 2, 1, 0, true, true, 4, true, [punto]);   <br>
+mapabit2.perlinNoise(40, 4, 2, 0, true, true, 4, true, [punto2]);  <br>
+mapabit3.perlinNoise(80, 8, 1, 0, true, true, 4, true, [punto3]); <br><br>
+
+punto.y -= 0.2; <br>
+punto2.y -= 0.4; <br>
+punto3.y -= 0.8; <br>
+ pelicula.filters = [desp1,desp2,desp3]}</font></td></tr></center>

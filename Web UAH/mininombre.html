@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>mininombre2</title>
+    <link rel="stylesheet" type="text/css" href="css/Estilo.css">
+  </head>
+  <body onload="fonds();MuestraNavegador()">
+    <script type="text/javascript" src="scripts/local_storage_tx.js">
+    </script>
+    <script type="text/javascript" src="scripts/minivalidar.js">
+    </script>
+    <script type="text/javascript" src="scripts/fondo.js">
+    </script>
+    <div id="titulo" class="titul"> Introduzca Nombre y Email </div>
+    <div class="dato"> <br class="dato">
+      <form method="post" action="index.html" id="formulario" name="formulario">
+        <span class="blanco"> Introduzca su nombre </span><input id="nombre" name="nombre"
+
+          type="text"> <input onclick="setName()" value="Enviar Nombre" type="submit"></form>
+      <br class="dato">
+      <!--
+Esto de puede hacer de 2 maneras:1) action="index.html" y onclick = "setName()":  En cuyo caso, al darle al formulario nos vamos a la pagina principal y debido a pulsar el boton  se ejecuta una funcion que guarda las variables.2) action="scripts/local_storage_tx.js"    En este caso el formulario sera enviado a este archivo quien guardara la variable y cargara la web   index.html en la pagina otra vez    quien despues de guardar la variable nos llevara al index otra vezLo haremos de la primera    -->
+      <form name="miniform" action="index.html" onsubmit="return validate_Email_Regex()"
+
+        method="post"><span class="blanco"> Introduzca su email</span> <input id="email"
+
+          name="email" type="text"> <input value="Enviar email" type="submit">
+        <br>
+      </form>
+      <br class="dato">
+      <span class="blanco"> <span id="naveg"></span> </span> </div>
+    <div id="enlace" style="background-color:orange;color:purple;text-align:center;">
+      <a href="index.html">volver a pagina principal</a> </div>
+    <div id="pie" class="pie"> Universidad de Alcalá </div>
+    
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Tipos Lenguaje Programacion</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+Atendiendo a distintas caracteristicas, los lenguajes de programacion se pueden clasificar en:
+<h1>Según su nivel de abstracción </h1>
+Segun el parecido que tengan estos lenguajes al lenguaje humano se clasifican en:
+<h3>Lenguaje de bajo nivel</h3>
+Los lenguajes de bajo nivel son lenguajes de programación que se acercan al funcionamiento de una computadora.<br>
+* Lenguaje maquina: Es el lenguaje de más bajo nivel  que consta de 0 y 1 (codigo maquina) y es el unico que entiende<br>
+directamente el ordenador, todos los demas lenguajes deben ser primero transformados a este para poder ser ejecutados.<br>
+Requiere saber el funcionamiento interno del hardware ya que nos comunicaremos con él directamente y por tanto<br>
+ el codigo maquina que funcione en un ordenador podria no funcionar en otro ya que puede tener distinto hardware.<br>
+ A éste le sigue el lenguaje ensamblador, ya que al programar en ensamblador se trabajan con los registros de memoria<br>
+ de la computadora de forma directa.<br><br>
+* El lenguaje ensamblador: consiste en una serie de instrucciones que corresponden al flujo de órdenes ejecutables<br>
+que pueden ser cargadas en la memoria de una computadora.<br>
+Estas instrucciones son palabras mnemónicas que son palabras que sustituyen a un código de instruccion (Lenguaje de máquina),<br>
+con lo cual resulta más fácil la programación, es de aquí de donde se aplica el concepto de lenguaje ensamblador.<br>
+Un ejemplo común de mnemónico es la instrucción MOV, que le indica al microprocesador que debe mover datos de un lugar a otro.<br>
+ El microprocesador no entiende palabras, sino números binarios, por lo que es necesaria la traducción del término mnemónico<br>
+ a código objeto mediante un ensamblador.<br>
+
+<h3>Lenguaje de medio nivel</h3>
+Hay lenguajes de programación que son considerados por algunos expertos como lenguajes de medio nivel (como el lenguaje C)<br>
+ al tener ciertas características que los acercan a los lenguajes de bajo nivel pero teniendo, al mismo tiempo,<br>
+ ciertas cualidades que lo hacen un lenguaje más cercano al humano y, por tanto, de alto nivel.<br>
+<h3>Lenguaje de alto nivel</h3>
+Los lenguajes de alto nivel se caracterizan por expresar los algoritmos de una manera adecuada a la capacidad cognitiva humana,<br>
+en lugar de a la capacidad ejecutora de las máquinas.<br>
+Estan compuestos por instrucciones ya elavoradas, que corresponden a instrucciones ejecutables de la computadora.<br>
+Estas instrucciones son mas genericas que las de los lenguajes ensambladores lo que presenta ventajas y desventajas:<br>
+* Ventajas de los lenguajes de alto nivel:<br>
+- Posibilidad de escribir código independiente de la máquina. <br>
+- Menor dificultad en la programación y en la comprensión de los programas. <br>
+* Desventajas de los lenguajes de alto nivel:<br>
+- Menor adaptación al equipo. <br>
+- Uso mayor de memoria y menor velocidad.<br><br>
+Como ejemplo de este tipo de lenguaje esta el Java y el PHP que son lenguajes interpretados<br>
+o el Pascal que es un lenguaje compilado.
+
+
+<h1>Según su forma de ejecucion</h1>
+Naturalmente, un programa que se escribe en un lenguaje de alto nivel también tiene que traducirse a un código objeto (maquina).
+Los programas traductores que pueden realizar esta operación pueden ser compiladores o interpretes.
+La diferencia entre ambos es que los lenguajes compilados son grabados en archivos de lenguaje de maquina mediante un compilador
+y al abrir el archivo su ejecucion sera mas rapida porque ya esta traducido, mientras que los interpretados se guardan en lenguaje
+de alto nivel y son traducidos a tiempo real por los interpretes, por lo que son mas lentos
+<h3>Lenguajes compilados</h3> 
+
+Este tipo de lenguaje pueden generar muchas líneas de código de máquina por cada proposición del programa fuente. <br>
+Se requiere una corrida de compilación (traducirlo) antes de procesar los datos de un problema.<br>
+Es decir, cuando creamos el archivo de alto nivel, es traducido por un compilador y guardado en codigo maquina.<br>
+
+Los compiladores son aquellos cuya función es traducir un programa escrito en un determinado lenguaje a un idioma<br>
+que la computadora entienda (lenguaje máquina con código binario).<br>
+
+Al usar un lenguaje compilado (como lo son los lenguajes del popular Visual Studio de Microsoft),<br>
+el programa desarrollado nunca se ejecuta mientras haya errores.
+
+<h3>Lenguajes interpretados</h3>
+Se puede también utilizar una alternativa diferente de los compiladores para traducir lenguajes de alto nivel.<br>
+ En vez de traducir el programa fuente y grabar en forma permanente el código objeto que se produce durante la corrida de <br>
+compilación para utilizarlo en una corrida de producción futura, el programador sólo carga el programa fuente en la computadora<br>
+ junto con los datos que se van a procesar. <br>
+A continuación, un programa intérprete, almacenado en el sistema operativo del disco,<br>
+ o incluido de manera permanente dentro de la máquina, convierte cada proposición del programa fuente en lenguaje de máquina<br>
+ conforme vaya siendo necesario durante el proceso de los datos. No se graba el código objeto para utilizarlo posteriormente.<br><br>
+
+La siguiente vez que se utilice una instrucción, se le debe interpretar otra vez y traducir a lenguaje máquina.<br>
+Por ejemplo, durante el procesamiento repetitivo de los pasos de un ciclo, cada instrucción del ciclo tendrá que volver<br>
+ a ser interpretado cada vez que se ejecute el ciclo, lo cual hace que el programa sea más lento en tiempo de ejecución<br>
+ (porque se va revisando el código en tiempo de ejecución) pero más rápido en tiempo de diseño<br>
+ (porque no se tiene que estar compilando a cada momento el código completo).<br>
+ El intérprete elimina la necesidad de realizar una corrida de compilación después de cada modificación del programa cuando<br>
+ se quiere agregar funciones o corregir errores; pero es obvio que un programa objeto compilado con antelación deberá ejecutarse<br>
+ con mucha mayor rapidez que uno que se debe interpretar a cada paso durante una corrida de producción.<br>
+
+<h1>Según el paradigma de programcion</h1>
+Un paradigma de programación representa un enfoque particular o filosofía para la construcción del software. 
+No es mejor uno que otro sino que cada uno tiene ventajas y desventajas. 
+También hay situaciones donde un paradigma resulta más apropiado que otro.
+<h3>Lenguaje imperativo</h3>
+La programación imperativa, es un paradigma de programación que describe la programación en términos<br>
+del estado del programa y sentencias que cambian dicho estado.<br>
+Los programas imperativos son un conjunto de instrucciones que le indican al computador cómo realizar una tarea.<br>
+La implementación de hardware de la mayoría de computadores es imperativa;<br>
+ya que lo que tenemos que decirle al hardware es como ha de actuar;<br>
+prácticamente todo el hardware de los computadores está diseñado para ejecutar código de máquina,<br><br>
+Los primeros lenguajes imperativos fueron los lenguajes de máquina de los computadores originales. <br>
+En estos lenguajes, las instrucciones fueron muy simples, lo cual hizo la implementación de hardware fácil,<br>
+pero obstruyendo la creación de programas complejos.<br><br>
+Los lenguajes imperativos de alto nivel usan variables y sentencias más complejas, pero aún siguen el mismo paradigma.<br>
+Algunos ejemplos son: Pascal, Java o PHP
+<h3>Lenguaje funcional</h3>
+La programación funcional es un paradigma de programación declarativa basado en la utilización de funciones matemáticas.<br>
+Los programas escritos en un lenguaje funcional están constituidos únicamente por definiciones de funciones, <br>
+entendiendo éstas no como subprogramas clásicos de un lenguaje imperativo, sino como funciones puramente matemáticas, <br>
+en las que se verifican ciertas propiedades como la transparencia referencial <br>
+(el significado de una expresión depende únicamente del significado de sus subexpresiones), y por tanto, <br>
+la carencia total de efectos laterales.<br>
+Otras características propias de estos lenguajes son la no existencia de asignaciones de variables <br>
+y la falta de construcciones estructuradas como la secuencia o la iteración <br><br>
+
+Existen dos grandes categorías de lenguajes funcionales: los funcionales puros y los híbridos. <br>
+La diferencia entre ambos estriba en que los lenguajes funcionales híbridos son menos dogmáticos que los puros, <br>
+al admitir conceptos tomados de los lenguajes imperativos, como las secuencias de instrucciones o la asignación de variables. <br>
+En contraste, los lenguajes funcionales puros tienen una mayor potencia expresiva, <br>
+conservando a la vez su transparencia referencial, algo que no se cumple siempre con un lenguaje funcional híbrido.<br><br>
+
+Como ejemplo de funcionales puro pondremos el Miranda y como hibrido el Perl
+<h3>Lenguaje logico</h3>
+
+La programación lógica consiste en la aplicación de la lógica humana para el diseño de lenguajes de programación;<br>
+ no debe confundirse con la disciplina de la lógica computacional.<br>
+
+La programación lógica comprende dos paradigmas de programación: la programación declarativa y la programación funcional. <br>
+La programación declarativa gira en torno al concepto de predicado, o relación entre elementos. <br>
+La programación funcional se basa en el concepto de función (que no es más que una evolución de los predicados), <br>
+de corte más matemático.<br>
+Este lenguaje sirve para crear inteligencia artificial.<br>
+Como ejemplo ponemos el Prolog
+
+<h3>Lenguaje Orientado a Objetos</h3>
+La Programación Orientada a Objetos (POO) es un paradigma de programación que usa objetos y sus interacciones<br>
+para diseñar aplicaciones y programas de computadora.<br>
+Como ejemplo ponemos el Perl, el Java, el PHP o el Javascript.
+
+
+
+
+

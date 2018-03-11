@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff">
+<a name="ancla"></a>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20" text =#ffffff>
+<center><table  border="4" width=700 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Vinculos e Hipervinculos</H1></u></center></font>
+
+</table></center><br>
+
+Un hiperenlace, hipervínculo, o vínculo, no es más que un enlace, que al ser pulsado lleva de una página o archivo. <br>
+
+Aquellos elementos (texto, imágenes, etc.) sobre los que se desee insertar un enlace han de encontrarse entre las etiquetas <strong>&lta&gt y &lt/a&gt</strong>.<br>
+
+A través del atributo <strong>href </strong>se especifica la página o archivo a la que está asociado el enlace, la página que se visualizará cuando el usuario haga clic en el enlace.<br>
+
+Por ejemplo, para insertar el enlace:<br>
+
+<a href="http://manumonhacker.iespana.es/">Visita esta pagina web</a><br>
+
+Habría que escribir:<br>
+
+<font color=00ff00> &lta href="http://manumonhacker.iespana.es/"&gtVisita esta pagina web&lt/a&gt</font><br><br>
+Este tipo de referencia se llama referencia absoluta y te lleva a un documento externo, es decir una ubicacion de internet.<br>
+Como es habreis fijada hay que escribir la direccion entre comillas dobles e incluyendo http://<br>
+El otro tipo de referencia es la referancia relativa y sirve para abrir documentos dentro propios, que esten junto a este en la misma carpeta o en una subcarpeta.
+Me explico, una web esta formado por un conjunto de archivos y carpetas, relacionados entre sí, todos ellos se encuentran en la carpeta principal llamada <strong>carpeta raiz</strong>.
+Para poder acceder a un archivo, debe estar como minimo dentro de la misma carpeta que este archivo .html. <br>
+Por ejemplo, para insertar el enlace:<br>
+
+<a href="principal/vinculos.jpg">Imagen que esta en la misma carpeta</a><br>
+
+Habría que escribir:<br>
+
+<font color=00ff00> &lta href="imagen.jpg"&gtVisita esta pagina web&lt/a&gt</font><br>
+En caso de que el archivo de destino, estubiese en una subcarpeta, entoces escribiriamos:<br>
+<font color=00ff00> &lta href="carpeta/imagen.jpg"&gtVisita esta pagina web&lt/a&gt</font><br><br>
+El destino del enlace determina en qué ventana va a ser abierta la página vinculada, se especifica a través del atributo <strong>target </strong>al que se le puede asignar los siguientes valores:
+<br><br>
+<table width=* height=* border="1" bgcolor=#010739 cellpadding =5 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff> _blank:</font></td><td><font color=#ffffff>Abre el documento vinculado en una ventana nueva del navegador.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> _parent: </font></td><td><font color=#ffffff>Abre el documento vinculado en la ventana del marco que contiene el vínculo o en el conjunto de marcos padre.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> _self: </font></td><td><font color=#ffffff>Es la opción predeterminada. Abre el documento vinculado en el mismo marco o ventana que el vínculo</font></td></tr>
+<tr><td valign=top><font color=#ffffff> _top: </font></td><td><font color=#ffffff>Abre el documento vinculado en la ventana completa del navegador.</font></td></tr>
+</table><br>
+Ejemplos:<br>
+<font color=00ff00> &lta href="http://manumonhacker.iespana.es/"  target="_blank"&gtVisita esta pagina web&lt/a&gt</font><br>
+<font color=00ff00> &lta href="http://manumonhacker.iespana.es/"  target="_parent"&gtVisita esta pagina web&lt/a&gt</font><br>
+<font color=00ff00> &lta href="http://manumonhacker.iespana.es/"  target="_self"&gtVisita esta pagina web&lt/a&gt</font><br>
+<font color=00ff00> &lta href="http://manumonhacker.iespana.es/"  target="_top"&gtVisita esta pagina web&lt/a&gt</font><br><br>
+
+Los colores de los vínculos pueden especificarse a través de las propiedades de la página, en la etiqueta &ltbody&gt. <br>Estos colores se asignan a través de los atributos link (vínculo), alink (vínculo activo), y vlink (vínculo visitado).<br>
+
+* <strong>link</strong> permite determinar el color de los enlaces sin visitar (enlace que no ha sido pulsado ninguna vez).<br>
+
+* <strong>alink</strong> permite determinar el color del enlace activo (enlace que acaba de ser pulsado).<br>
+
+* <strong>vlink</strong> permite determinar el color de los enlaces visitados (enlaces que ya han sido pulsados).<br>
+Ejemplo: <font color=00ff00>&ltbody link="#FF0000" vlink="#FF0099" alink="#FF9900"&gt</font><br><br>
+
+Cuando se tienen documentos extensos, divididos en varios apartados, es preferible poder ir directamente al apartado <br>deseado como ir al comienzo del documento.<br>
+
+Para ello se utilizan las anclas, o puntos de fijación, muy útiles a la hora de crear índices.<br>
+
+Un ancla necesita que se inserten las &lta &gt y  &lt/a &gt, con el atributo <strong>name</strong>, que puede tomar cualquier valor inventado por el usuario, se recomienda no utilizar caracteres especiales.
+
+<br>Para insertar un punto de fijacion escribimos por ejemplo:<br>
+
+<font color=00ff00>&lta name="miancla"&gt&lt/a&gt</font><br>
+
+Para referirnos a este punto de fijacion, y dirigirnos a esa parte concreta de la pagina usamos el siguiente codigo:<br>
+<font color=00ff00>&lta href="#miancla"&gtEnlace al ancla&lt/a&gt</font><br>
+Si clickeamos sobre el texto "Enlace al ancla" iremos a parar a la parte donde pusimos el ancla. Ejemplo:<br>
+<a href="#ancla">Ir arriba</a><br><br>
+Mediante esta etiqueta, podremos abrir la aplicación Outlook Express para escribir un correo electrónico, cuyo destinatario será el especificado en el enlace. Esto se consigue gracias a <strong>mailto:correo</strong>. Ejemplo<br>
+<font color=00ff00>&lta href="mailto:manumon_hacker@hotmail.com"&gtEnviar un Email&lt/a&gt</font><br>
+<a href="mailto:manumon_hacker@hotmail.com">Enviar un Email</a><br><br>
+Por ultimo saber que mediante este tipo de hipervinculos, sirven tambien para que la gente se descargue ficheros cuando lo pulsan. Cuando el archivo al que va dirigido el vinculo es un archivo comprimido,Word, Flash... en vez de abrirlo se abre una ventana de descarga. Ejemplo:
+<font color=00ff00>&lta href="carta.doc" tarjet=_blank &gthaz clic aqu&iacute; para descargarte el fichero&lt/a&gt</font><br>
+ <a href="resumenes/segundo/sociales/TEMA 5.doc">Tema 5 de sociales</a><br><br>
+Tambien, en vez de usar palabras como vinculo, podemos usar imagenes mediante la etiqueta &ltimg src=""&gt que ya estudiaremos más adelante. Ejemplo:
+<font color=00ff00>&lta href="resumenes/segundo/sociales/TEMA 5.doc"&gt&ltimg src=resumenes/ico.jpg border=no&gt&lt/a&gt</font>
+
+
+
+
+
+

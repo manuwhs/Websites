@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center><img src="nubes.jpg">
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto nieve lo que hace es<br>crear una funcion llamada nevar<br>en la cual va importando los copos<br>estos copos tienen nombre igual <br>y a la vez diferente, ya que<br>su nombre siempre va a ser<br>"polo"+ un numero que incrementa<br>y en el momento justo en el que se <br>importa se llama copo, en ese momento,<br>se le van dando porpiedades <br>aleatorias, y se le imprime la <br>funcion monevar(), por la cual<br>se mueven.
+<br><br>
+<center><a href="Efecto nuves.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+La última función es una funcion que <br>crea aleatoriedad entre el <br>intervalo de dos numeros.<br>Tambien antes de eso, está el efecto<br>iluminacion, que ilumina los copos
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+import flash.display.*;<br>
+import flash.geom.*;<br>
+import flash.filters.*;<br><br>
+
+createEmptyMovieClip("nubes", 0);<br>
+
+img = new BitmapData(400, 200,true);<br><br>
+
+clon1 = img.clone();<br>
+clon2 = img.clone();<br><br>
+
+nubes.attachBitmap(img, 0);<br><br>
+
+nubes._xscale = 100;<br>
+nubes._yscale = 100;<br>
+
+punto = new Point();<br><br>
+
+dMap = new DisplacementMapFilter(img, null, 8, 8, 0, 0, "warp");<br><br>
+onEnterFrame = function () { <br>
+
+punto.x += 1;  <br>
+
+dMap.scaleX -= .8;  <br>
+dMap.scaleY -= -.4; <br><br>
+
+img.perlinNoise(60, 50, 5, 9, true, true, 7, true, [punto]);  <br>
+
+img.merge(clon1, img.rectangle, null, 20, 23, 215);  <br>
+
+clon2.copyPixels(img, img.rectangle, null);  <br>
+img.applyFilter(clon2, img.rectangle, null, dMap);};</font></td></tr></center>

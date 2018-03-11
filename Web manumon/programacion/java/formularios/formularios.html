@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Formularios</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+Ahora vamos a ver como trabajar con formularios, los formularios son objetos del objeto document asique para referirnos a uno, debemos poner antes document.<br>
+Para acceder a un formulario desde el objeto document podemos hacerlo de dos formas:<br>
+
+* A partir de su nombre, asignado con el atributo NAME de HTML. <br>
+* Mediante la matriz de formularios del objeto document, con el índice del formulario al que queremos acceder. <br>
+<br>
+Para acceder por ejemplo a este formulario:<br><font color=00ff00>
+&ltFORM name="form1"&gt <br>
+&ltINPUT type=text name=campo1&gt <br>
+&ltINPUT type=text name=campo2&gt <br>
+&lt/FORM&gt</font><br>
+Usaremos esta gerarquia:<br>
+<font color=00ffff>document.form1 </font><br>
+O esta suponiendo que sea el primer formulario de la web:<br>
+<font color=00ffff>document.forms[0]  </font><br><br>
+Si queremos dirigirnos a uno de los campos del formulario usariamos:<br>
+<font color=00ffff>document.form1.campo1</font><br>
+o <br>
+<font color=00ffff>document.form1.elements[0]</font><br><br><br>
+Aqui teneis una serie de objetos de los formularios, aunque antes miraos las propiedades y metodos de form.<br><br>
+<table bgcolor=000000 border=2 cellspacing=0 cellpadding=10>
+<tr><td><a href="texto.html">Campo deTexto</a></td>
+<td><a href="chec.html">Checkbox</a>  </td>
+<td><a href="boto.html">Botones de radio</a>  </td>
+<td><a href="sele.html">Menu select</a>  </td>
+<td><a href="text.html">Textarea</a>  </td></tr></table>
+
+
+<h1>Propiedades</h1>
+<img src="ico2.jpg"> <b><font color=ff00ff>action  </b></font><br>
+Es la acción que queremos realizar cuand se submite un formulario. Se coloca generalmente una dirección de correo o la URL a la que le mandaremos los datos. Corresponde con el atributo ACTION del formulario. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>elements array  </b></font><br>
+La matriz de elementos contiene cada uno de los campos del formulario. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>encoding  </b></font><br>
+El tipo de codificación del formulario 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>length  </b></font><br>
+El número de campos del formulario. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>method  </b></font><br>
+El método por el que mandamos la información. Corresponde con el atributo METHOD del formulario. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>name  </b></font><br>
+El nombre del formulario, que corresponde con el atributo NAME del formulario. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>target  </b></font><br>
+La ventana o frame en la que está dirigido el formulario. Cuando se submita se actualizará la ventana o frame indicado. Corresponde con el atributo target del formulario. 
+
+
+<h1>Metodos</h1>
+<img src="ico2.jpg"> <b><font color=ff00ff>submit() </b></font><br>
+Para hacer que el formulario se submita, aunque no se haya pulsado el botón de submit. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>reset() </b></font><br>
+Para reinicializar todos los campos del formulario, como si se hubiese pulsado el botón de reset. (Javascript 1.1) 
+
+<h1>Ejemplo</h1>

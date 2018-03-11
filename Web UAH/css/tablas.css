@@ -1,0 +1,44 @@
+
+/* Configuracion de las pestañas */
+ul.tabs{
+	float:right;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+ul.tabs li{float:left;
+	float:right;
+	margin:1px;
+	padding:4px;
+	border: 1px;
+	background:purple;
+}
+ul.tabs li a{
+	text-decoration:none;
+	color:#fff;
+	font-size:17px;
+	padding:5px;
+	outline:none;
+	}
+
+ul.tabs li:hover{background:blue;}
+
+
+/* Configuracion del panel que contiene la tabla */
+
+.contenedor_tab{
+	float:left;
+	padding-right:10px;
+	margin:10px auto;
+	background: #99CCCC;
+	border:1px solid #333;
+}
+
+.contenido_tab{
+	padding:10px;
+	font-size:1.2em;
+	width:800px;
+	}
+	
+

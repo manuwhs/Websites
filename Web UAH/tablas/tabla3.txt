@@ -1,0 +1,52 @@
+<table align="center">
+            <tbody>
+              <tr>
+                <td>Ciudad</td>
+                <td>Temperatura (º)</td>
+                <td>Humedad (%)</td>
+                <td>Dirección de viento</td>
+                <td>Velocidad del viento (km/h)</td>
+                <td>Lluvia (mm) últimas 2 horas</td>
+              </tr>
+              <tr>
+                <td>Guadalajara</td>
+                <td>17</td>
+                <td>15</td>
+                <td>SO</td>
+                <td>18</td>
+                <td>0.3</td>
+              </tr>
+              <tr>
+                <td>A Coruña</td>
+                <td>11</td>
+                <td>72</td>
+                <td>SO</td>
+                <td>321</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Zamora</td>
+                <td>15</td>
+                <td>26</td>
+                <td>O</td>
+                <td>225</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Jaen</td>
+                <td>10</td>
+                <td>12</td>
+                <td>S</td>
+                <td>11</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Almeria</td>
+                <td>21</td>
+                <td>56</td>
+                <td>N</td>
+                <td>7</td>
+                <td>2.7</td>
+              </tr>
+            </tbody>
+</table>

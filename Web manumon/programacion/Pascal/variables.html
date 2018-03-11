@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Variables</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+Una variable es un nombre asociado a un elemento de datos que está situado en posiciones contiguas<br>
+de la memoria principal, y su valor puede cambiar durante la ejecución de un programa. <br>
+Una variable es un contenedor (objeto) donde se almacena un dato, un espacio donde podemos guardar cualquier <br>
+clase de información que necesitemos para realizar las acciones de nuestros programas. <br><br>
+
+Toda variable pertenece a un tipo de dato concreto, en Pascal, cuando declaremos una variable, <br>
+se debe indicar el tipo al que pertenece. Así, tendremos variables enteras, reales, booleanas, etc. <br>
+Una vez declarada, ya en el cuerpo del programa le daremos un valor, y despues la utilizaremos.<br>
+<h2>Vida de una variable</h2>
+<h3>Declaracion de variables</h3>
+Declarar variables consiste en definir y de paso informar al sistema de que vas a utilizar una variable. <br>
+Toda variable que vaya a ser utilizada en Pascal tiene que ser previamente declarada. <br>
+Para declarar las variables, usaremos la palabra clave var y depues el nombre de las variables y su tipo,<br>
+si vamos a declarar mas de una variable de un tipo podemos escribir el nombre de las variables <br>
+separadas por comas y despues el tipo. <br>
+Para asignarle un tipo a una variable usaremos el operador dos puntos " : ". De esta manera:<br>
+var<br>
+variable1,variable2,variable3:tipo1;<br>
+varianle4, variable5:tipo2;<br>
+Ejemplo de declaracion de variables:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+var<br>
+nombre,apellido,lugar:String;<br>
+telefono,direccion:real;
+<br>
+</td></tr></table>
+<h3>Iniciacion de variables</h3>
+Esto no es más que darle un valor inicial a una variable. <br>
+Así como lo primero que se hace con una variable es declararla, lo siguiente tiene que ser darle un valor.<br>
+Esta iniciacion de variables se debe hacer dentro del cuerpo del programa.<br>
+Principalmente, existen dos maneras de otorgar valores iniciales a variables: <br>
+
+<h4>Mediante una sentencia de asignación</h4>
+Podemos darle un valor a una variable igualandola a dicho valor mediante el operador " := ". De esta manera:<br>
+variable1 := valor1;<br>
+variable2 := valor2;<br>
+...<br>
+Ejemplo:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+var<br>
+nombre,String;<br>
+telefono:real;<br>
+begin<br>
+nombre := 'Manumonhacker'<br>
+telefono := 924251225<br>
+end.
+</td></tr></table>
+
+<h4>Mediante uno de los procedimientos de entrada de datos (read o readln)</h4>
+Estas dos funciones que daremos mas adelante, lo que hacen es pedir que introduzcamos unos caracteres <br>
+mediante el teclado y cuando los hallamos metido, le damos a Enter para continuar.<br>
+Su estructura es esta:<br>
+read(variable) o readln(variable)<br>
+Ejemplo:<br><br>
+<table width="200" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+var<br>
+nombre,String;<br>
+telefono:real;<br>
+begin<br>
+readln(nombre)<br>
+readln(telefono)<br>
+end.
+</td></tr></table>
+<h4>Utilización de variables</h4>
+Una vez declarada e iniciada una variable, es el momento de utilizarla. <br>
+Esta es la parte que presenta un mayor abanico de posibilidades que ya iremos viendo
+<h2>Ambito de una variable</h2>
+Hemos hablado de las variables como contenedores de informacion, ahora vamos hablar de su ambito:<br>
+Se le llama ámbito de las variables al lugar donde estas están disponibles. <br>
+Por lo general, cuando declaramos una variable hacemos que esté disponible en el lugar donde se ha declarado.<br>
+Segun el ambito hay dos tipos de variables:<br>
+<h3> Variables globales</h3>
+Son las que están declaradas en el ámbito más amplio posible, es decir,<br>
+son las que se pueden utilizar en cualquier parte: en el cuerpo principal y en los subprogramas.<br>
+Las variables globales en Pascal son aquellas que estan declaradas fuera de cualquier subprograma,
+es decir, declaradas donde hemos visto hasta el momento, ya que los subprogramas (rutinas),
+las daremos mas adelante.<br>
+El valor de estas variables puede ser alterado por los procedimientos, pero las variables locales<br>
+no pueden ser alteradas por el cuerpo principal ni por otros procedimientos.<br>
+<h3>Variables locales</h3>
+ Son aquellas variables que esten declaradas dentro de una rutina (subprograma).<br>
+ Solo podemos acceder a ellas en la rutnia en la que vallan.<br>
+<h3>Ejemplo de variables locales y globales<br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+PROGRAM Variables;<br>
+VAR<br>
+Hola : String;<br>
+Numero : Integer;<br><br>
+
+PROCEDURE prueba;<br>
+VAR<br>
+Adios : String;<br>
+BEGIN<br>
+Adios := 'Adios, que les vaya bien';<br>
+Numero :=20;<br>
+WriteLn (Adios); WriteLn (Numero);<br>
+END;<br><br>
+
+BEGIN<br>
+Hola := 'Hola, bienvenidos al programa';<br>
+WriteLn (Hola);<br>
+Numero:=10; <br>
+Writeln(Numero); prueba;<br>
+readln;<br>
+END.
+</td></tr></table>

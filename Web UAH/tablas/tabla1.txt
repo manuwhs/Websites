@@ -1,0 +1,52 @@
+ <table align="center">
+            <tbody>
+              <tr>
+                <td>Ciudad</td>
+                <td>Temperatura (º)</td>
+                <td>Humedad (%)</td>
+                <td>Dirección de viento</td>
+                <td>Velocidad del viento (km/h)</td>
+                <td>Lluvia (mm) últimas 2 horas</td>
+              </tr>
+              <tr>
+                <td>Alcala de H.</td>
+                <td>25</td>
+                <td>48</td>
+                <td>NO</td>
+                <td>12</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Barcelona</td>
+                <td>30</td>
+                <td>55</td>
+                <td>S</td>
+                <td>10</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Madrid</td>
+                <td>19</td>
+                <td>20</td>
+                <td>SO</td>
+                <td>10</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Sevilla</td>
+                <td>24</td>
+                <td>35</td>
+                <td>s</td>
+                <td>5</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Valencia</td>
+                <td>26</td>
+                <td>58</td>
+                <td>SE</td>
+                <td>12</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>

@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Unidades</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Unidades</h1>
+Turbo Pascal permite el acceso a un número considerable de constantes, tipos de datos, variables,<br>
+procedimientos y funciones predefinidos. Como son muchos y en un programa es muy raro que se utilicen todos,<br>
+están repartidos en grupos relacionados entre sí llamados Unit (Unidades).<br><br>
+
+Una Unidad es una librería de declaraciones que se pueden introducir en un programa <br>
+y que permite dividir el código y compilarlo por separado, es decir:<br>
+Una Unidad es un conjunto de constantes, tipos de datos, variables, procedimientos y funciones predefinidos.<br>
+Cada unidad es “casi” un programa en Turbo Pascal, normalmente un conjunto de datos, tipos de datos <br>
+y subprogramas que pueden usarse desde otro programa.<br>
+Pascal divide sus funciones, procedimientos... predefinidos en librerias para que los programas se ejecuten mas rapido,<br>
+ya que si no vamos a usar un tipo de declaraciones, es mejor que no se compilen para que no ocupen tiempo de lectura.<br>
+<h2>Declaracion</h2>
+Para declarar una unidad, o lo que es lo mismo, dejarla lista para ser utilizada, se utiliza la keyword USES <br>
+que debe ir inmediatamente despues de la sentencia PROGRAM, seguida de los nombres de las unidades que se utilizarán. <br>
+De esta manera ----> USES nombre_unidades<br>
+Las unidades estándar de turbo pascal son: <br>
+Crt, Dos, Graph, Overlay, Printer, System.<br>
+Estas unidades las daremos en los siguientes apartados de este tema.<br>
+<h2>Creacion</h2>
+Podemos crear nuestras propias Unidades, compilarlas y utilizarlas en otro programa.<br>
+Las unidades estan compuestas por cuatro partes, para crearlas, deberemos definirlas;<br>
+<h3>Declaracion</h3>
+Es obligatoria, provee el nombre de la unidad que se creará. Su suntaxis es: <br>
+UNIT nombre_de_la_unidad; <br><br>
+Ejemplo: <br>
+
+UNIT prueba; 
+<h3>Interfaz</h3>
+Esta sección se declara con la palabra INTERFACE, en esta sección se encuentran las declaraciones de todos<br>
+los elementos que pueden ser utilizados por el programa que llama a la unidad, por ejemplo otras unidades, variables,<br>
+constantes, procedimientos y funciones. <br>
+En esta sección no se incluyen los códigos de los procedimientos ni funciones, unicamente su declaración.
+Esta es la parte declarativa de la Unidad, Ejemplo: <br><br>
+INTERFACE<br>
+USES Crt, Dos;<br>
+VAR<br>
+Numero : Integer;<br>
+CONST<br>
+Columnas = 10;<br>
+PROCEDURE Colocar(Cad1 : String; X, Y : Integer);<br><br>
+En este ejemplo, la Unidad que tenga este interfaz poseera la libreria de las unidades Crt y Dos,<br>
+ademas de la variable predefinida Numero, la contante predefinida Columnas y el procedimiento<br>
+predefinido Colocar.
+<h3>Implementacion</h3>
+La sección de implementación es exclusiva para la unidad que se está creando, <br>
+contiene declaraciones de etiquetas, variables, constantes, así como el contenido de los procedimientos y funciones <br>
+declarados en la sección de interfaz. La palabra usada para declarar esta parte es IMPLEMENTATION.<br>
+
+IMPLEMENTATION<br>
+USES Crt;<br>
+PROCEDURE Colocar(Cad1 : String; X, Y : Integer);<br>
+BEGIN<br>
+GotoXY(X,Y);<br>
+Write(Cad1);<br>
+END;<br><br>
+Como se puede observar tambien se ha declarado aqui la unidad Crt, mediante "USES Crt".<br>
+Esto se ha hecho asi porque necesitabamos usar una funcion que posee esa unidad dentro del procedimiento "colocar".<br>
+Al declarar una unidad aqui solo se declararan las funciones que usemos en esta parte,<br>
+y no todas como sucede si lo declaramos en la parte de INTERFACE.<br>
+<h3>Inicialización </h3>
+Esta sección se utiliza para inicializar los valores de las variables, no es indispensable y por lo mismo no siempre se incluye. <br>
+Su sintaxis es parecida a la del cuerpo principal de un programa, se inicia con BEGIN y termina con un END. <br><br>
+<hr>
+<br>
+Asi pues, para crear una Unidad debemos definir las 4 partes anteriores. Ejemplo:<br>
+<font color="00ffff"><b>
+UNIT Prueba;<br>
+INTERFACE<br>
+PROCEDURE Centrar(Cad1 : String; renglon : Integer); <br>
+IMPLEMENTATION<br>
+USES Crt;<br>
+VAR C : Integer; <br><br>
+
+PROCEDURE Centrar(Cad1 : String; renglon : Integer);<br>
+BEGIN<br>
+C := (80 - Length(Cad1)) DIV 2<br>
+GotoXY (C,renglon);<br>
+Write(Cad1);<br>
+END; <br><br>
+
+BEGIN<br>
+END. <br>
+</font></b><br>
+<hr>
+<br>
+<h3>Compilacion y uso de la Unidad</h3>
+Cuando tengamos lista nuestra unidad, la compilamos en el Disk, no en Memory, y se creara un archivo .TPU.<br>
+Una vez compilada una unidad se puede incorporar al programa agregando la sentencia USES<br>
+ de la que se había hablado al principio, ya declaradas las unidades que se utilizarán se puede hacer uso de todos<br>
+ los procedimientos y funciones incluidas como si estuvieran escritas en el mismo programa. <br>
+

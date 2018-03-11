@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+<style>
+h3{color:'00ffff'; size:3}
+</style>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Gestion de directorios</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<p>
+Comando: PROMPT<br>
+Sintaxis: prompt [ texto o parametros ]<br>
+Definición: Este comando sirve para mostrar en pantalla un texto deseado. Mediante una serie de signos<br>
+podemos hacer que sean restituidos por valores ya almacenados como la hora, la fecha, etc. <br>
+Los que
+sabéis programar en scriptting veréis que el uso de estos signos es muy similar al uso de identificadores.<br>
+Ejemplo: C:\>prompt El verdadero poder se encuentra en OrioN ScripT.$_ Hoy es dia $d y son las<br>
+$._Telee una nueva orden $p$g .<br>
+Signos devolutorios de valores:<br>
+$ Este signo, es el que siempre se ha de colocar, una vez que es leído por el MSDOS, sabe que ha de<br>
+sustituir la cadena de carácter que le sigue por un valor almacenado.<br>
+$_ Procesa el efecto de retorno de carro, o lo que es lo mismo un salto de línea (intro).<br>
+$b Procesa una canalización ( | ).<br>
+$d Muestra en pantalla la fecha del sistema.<br>
+$e Representa el código ascii 27, tecla escape.<br>
+$g Muestra en pantalla el carácter “>”.<br>
+$h Procesa un retroceso, la tecla back space. Elimina el carácter anterior.<br>
+$l Muestra en pantalla el carácter, “<”.<br>
+$n Visualización de la unidad de trabajo por defecto.
+$p Visualiza el directorio de trabajo incluyendo la unidad.<br>
+$q Muestra el carácter “=”.<br>
+$t Muestreo de la hora del sistema.<br>
+$v Muestra la versión del MSDOS con la que estamos operando.<br>
+</p>
+<p>
+Comando: CLS<br>
+Sintaxis: cls<br>
+Función: Sus iniciales vienen de clean screen (limpiar pantalla). Su uso es muy simple, se introduce el<br>
+comando se pulsa intro, y se procesa un limpiada de pantalla. Solo queda el directorio en el que nos<br>
+encontrábamos, situado en la parte superior de la pantalla.<br>
+</p>
+<p>
+Comando: VER<br>
+Función: Este comando nos muestra en pantalla la versión que estamos usando del MSDOS.<br>
+Etimología: De versión en ingles.<br>
+Sintaxis: ver<br>
+</p>
+<p>
+Comando: DATE<br>
+Etimología: De fecha en ingles<br>
+Función: Nos muestra en pantalla la fecha almacenada por el sistema de forma diaria. En una línea<br>
+posterior nos facilita la posibilidad de cambiar la configuración de la fecha del sistema.<br>
+Sintaxis: [dd-mm-aa]<br>
+</p>
+<p>
+Comando: TIME<br>
+Etimología: Supongo que sabréis de donde viene jejeje.<br>
+Función: Funciona de la misma forma que el comando anterior. La única diferencia es que el anterior<br>
+muestra la fecha y este la hora, resulta bastante evidente, no ?. También nos permite la tarea de cambiar<br>
+la hora en una línea posterior al muestreo de la hora actual almacenada por el sistema.<br>
+Sintaxis: time<br>
+Atributos de los ficheros<br>
+Permiten asociar a los archivos unas características especiales (oculto, de sistema, de
+solo lectura, y de archivo).<br>
+Estas características pueden estar activadas o desactivadas en los archivos a los que se
+refieren.<br>
+Con este comando podrás visualizar y modificar atributos de ficheros.<br>
+1. De solo lectura ( r ): Protege a un fichero de forma que solo puede ser leido y
+no modificado ni borrado.<br>
+2. De archivo ( a ) : Sirve para saber si un determinado fichero ha sido o no
+modificado.<br>
+3. Oculto ( h ): Sirve para esconder un fichero.<br>
+4. De sistema ( s ) : Sirve para identificar los archivos propios del sistema, los
+cuales sirven para cargar el SO (sistema operativo).<br>
+</p>
+<p>
+Comando: ATTRIB<br>
+Para visualizar:<br>
+Sintaxis: attrib /s<br>
+Para modificar atributos:<br>
+Sintaxis: attrib <fichero> <+/-><a/h/s/a/r><br>
+Para listar con el dir ficheros con atributos:<br>
+Sintaxis: dir /a:h<br>
+Donde dir es el comando de listado de archivos, /a es la salida al comando attrib que<br>
+mirara solo los archivos :h con el modificador h (oculto).<br>
+</p>

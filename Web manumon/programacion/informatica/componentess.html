@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Componentes de un SO</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+<h2>Componentes</h2>
+<h4>Gestión de procesos</h4>
+Un proceso es un programa en ejecución que necesita recursos para realizar su tarea <br>como tiempo de CPU, memoria, archivos y dispositivos de E/S.
+<br> El SO es el responsable de:<br>
+* Crear y destruir los procesos. <br>
+* Parar y reanudar los procesos. <br>
+* Ofrecer mecanismos para que se comuniquen y sincronicen. <br>
+Los SO dan prioridad alta, media o baja segun la tarea, asi, se hacen primero las tareas con mayor prioridad, y cuando se cumplen<br>
+se eliminan, pero hay procesos que tienen prioridad muy baja por lo que puede que nunca lleguen a ejecutarse y se queden<br>
+en la lista de tareas para siempre por ello debemos darles de vez en cuando prioridad alta.<br>
+<h4>Gestión de la memoria principal (RAM)</h4>
+La memoria RAM es una gran tabla de palabras o bytes que se referencian cada una mediante una dirección única.<br>
+Este almacén de datos de rápido accesos es compartido por la CPU y los dispositivos de E/S, es volátil y pierde su contenido.<br>
+El SO es el responsable de:<br>
+* Conocer qué partes de la memoria están utilizadas y por quién. <br>
+* Decidir qué procesos se cargarán en memoria cuando haya espacio disponible. <br>
+* Asignar y reclamar espacio de memoria cuando sea necesario. <br>
+<h4> Gestión del almacenamiento secundario  </h4>
+Ya que es necesario guardar ciertos datos y programas en las memorias secundarias para que perduren y no sean volatiles.<br>
+El SO se encarga de:<br>
+* Planificar los discos. <br>
+* Gestionar el espacio libre. <br>
+* Asignar el almacenamiento. <br>
+<h4>El sistema de E/S</h4>
+Consiste en un sistema de almacenamiento temporal (caché), una interfaz de manejadores de dispositivos y otra para dispositivos concretos.<br>
+El sistema operativo debe gestionar el almacenamiento temporal de E/S y servir las interrupciones de los dispositivos de E/S.<br>
+<h4>El sistema de archivos</h4>
+Los archivos son colecciones de información relacionada, definidas por sus creadores.<br>
+Éstos almacenan programas (en código fuente y objeto) y datos tales como imágenes, textos, información de bases de datos, etc...<br>
+El SO es responsable de:<br>
+* Construir y eliminar archivos y directorios. <br>
+* Ofrecer funciones para manipular archivos y directorios. <br>
+* Establecer la correspondencia entre archivos y unidades de almacenamiento. <br>
+* Realizar copias de seguridad de archivos. <br><br>
+Existen diferentes Sistemas de Archivos, es decir, existen diferentes formas de organizar la información que se almacena en las <br>memorias
+ (normalmente discos) de los ordenadores. Por ejemplo, existen los sistemas de archivos FAT, FAT32, EXT2, NTFS...<br>
+<h4>El sistema de proteccion</h4>
+Mecanismo que controla el acceso de los programas o los usuarios a los recursos del sistema. El SO se encarga de:<br>
+* Distinguir entre uso autorizado y no autorizado. <br>
+* Especificar los controles de seguridad a realizar. <br>
+* Forzar el uso de estos mecanismos de protección. <br>
+<h4>El sistema de comunicacion</h4>
+Para mantener las comunicaciones con otros sistemas es necesario poder controlar el envío y recepción de información,<br>
+esto se hace a través de las interfaces de red. También hay que crear y mantener puntos de comunicación que sirvan a las aplicaciones<br>
+para enviar y recibir información, y crear y mantener conexiones virtuales entre aplicaciones que están ejecutándose localmente<br>
+y otras que lo hacen remotamente.<br>
+<h4>Intérprete de órdenes</h4>
+El shell de un SO es un programa informático que actúa como Interfaz de usuario para comunicar al usuario con el sistema operativo<br>
+mediante una ventana que espera ordenes escritas por el usuario en el teclado (por ej. PRINT CARTA.TXT),<br>
+los interpreta y los entrega al sistema operativo para su ejecución.<br>
+El shell es el interprete de ordenes y generalmente incorpora un lenguaje de programación<br> para automatizar las tareas como los comandos.<br>
+
+Hay dos tipos de intérpretes de órdenes:<br>
+
+* Alfanuméricos: las órdenes se expresan mediante un lenguaje específico,<br> usando las cadenas de caracteres introducidas por el terminal. <br>
+* Gráficos: normalmente las órdenes se especifican por medio de iconos y otros elementos gráficos. <br>
+
+<h4>Programas de sistema</h4>
+Son aplicaciones de utilidad que se suministran con el SO pero no forman parte de él.<br>
+Ofrecen un entorno útil para el desarrollo y ejecución de programas, siendo algunas de las tareas que realizan:<br>
+* Manipulación y modificación de archivos. <br>
+* Información del estado del sistema. <br>
+* Soporte a lenguajes de programación. <br>
+* Comunicaciones. <br>

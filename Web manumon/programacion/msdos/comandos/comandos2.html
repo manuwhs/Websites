@@ -1,0 +1,116 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+<style>
+h3{color:'00ffff'; size:3}
+</style>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Gestion de directorios</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<p>
+Comando: TYPE<br>
+Etimología: Pos lo de siempre, anglicismo.<br>
+Función: Ver el contenido de archivos de texto, haciendo un listado (no permite el uso de comodines).<br>
+Sintaxis: TYPE [unidad:]\[ruta]\[directorio]\<archivo><br>
+</p>
+<p>
+Comando: PRINT<br>
+Etimología: Pues de imprimir <br>
+Función: Imprime archivo de texto.<br>
+Sintaxis: : PRINT [unidad:]\[ruta]\[directorio]\<archivo><br>
+</p>
+<p>
+Comando: COPY<br>
+Etimología: Pos lo de siempre copy en el ingles de copiar.<br>
+Función: Este comando permite la reproducción o copia de archivos o ficheros (es lo mismo).<br>
+Sintaxis: copy <fichero-origen> <fichero-destino><br>
+</p>
+<p>
+Comando: MOVE<br>
+Función: Este comando mueve ficheros de un directorio a otro. Este comando vendría hacer<br>
+internamente una copia del archivo al directorio especificado a mover, luego borra el fichero de salida.<br>
+Sintaxis: move [/y] <origen> <destino><br>
+</p>
+<p>
+Comando: REN o RENAME<br>
+Etimología: Viene de la palabra inglesa rename (renombrar).<br>
+Función: Su función es dar un nuevo nombre a un fichero. No se puede renombrar y que haya dos<br>
+archivos con el mismo nombre, ni MSDOS ni Windows lo perm iten dentro de un mismo directorio. Si los<br>
+archivos llamados de forma igual se encuentran en directorios distintos si lo permiten. También podemos<br>
+usar en este comando los comodines del dir.<br>
+Sintaxis: rename <nombre-actual> <nombre-nuevo><br>
+</p>
+<p>
+Comando: DEL<br>
+Etimología: Su nombre viene como siempre del ingles (delete) <br>
+Función: Es el comando encargado de eliminar archivos. En este comando podemos usar los comodines<br>
+que usábamos en el comando dir.<br>
+Sintaxis: del [unidad:]\[ruta]\[directorio]\<archivo><br>
+</p>
+<p>
+Comando: ERASE<br>
+Función: Exactamente igual que el anterior, por ello no le daré mas importancia.<br>
+Sintaxis: erase [unidad:]\[ruta]\[directorio]\<archivo><br>
+</p>
+<p>
+Comando: FC<br>
+Etimología: Como siempre referencia al ingles (normal en la informática ?) file compare.<br>
+Función: Sirve para comparar dos ficheros y verificar así que las copias son exactas.<br>
+Sintaxis: FC fichero1 fichero2<br>
+</p>
+<p>
+Comando: UNDELETE<br>
+Etimología: UN (recupera) DELETE (el borrado), traducción chapucera by Quasi.<br>
+Función: Permite recuperar ficheros previamente borrados con la orden DEL. Posee tres parámetros<br>
+/LIST (presenta una lista de archivos recuperables), /ALL (recupera todos los archivos sin pedir<br>
+confirmaciones) y /DOS (crea una lista de archivos borrados por el dos y otra de archivos borrados por
+otro motivo).<br>
+Sintaxis: UBDELETE [parámetros]<fichero><br>
+</p>
+<p>
+Comando: XCOPY<br>
+Función: Con el COPY solo copiábamos archivos con este comando podemos copiar un directorio<br>
+entero, con sus subdirectorios y archivos.<br>
+Sintaxis: xcopy origen [destino]
+Donde origen es la ruta del directorio o archivo a copiar.<br>
+Parámetros: En este comando puedes incluir unos parámetros o modificadores que tendrá en cuenta a la<br>
+hora de ser ejecutado, estos son:<br>
+/P : Pide confirmación de SI o NO antes de copiar cada archivo.<br>
+/S : Indica que la copia debe hacerse extensiva a todos los subdirectorios.<br>
+/E : Copia también los directorios vacíos.<br>
+/W : Espera la confirmación antes de copiar los archivos.<br>
+/V : Verifica la correccion de la copia.<br>
+/D Obliga a hacer una copia selectiva solo de los ficheros de fecha igual o mayor a la especificada.<br>
+</p>
+<p>
+Comando: DOSKEY<br>
+Función: Este comando se encuentra residente en memoria y una vez activado, permite visualizar los<br>
+comandos de MSDOS introducidos con anterioridad.<br>
+</p>
+<p>
+Comando: VERIFY<br>
+Función: Comando que indica al sistema que archivos son escritos correctamente.<br>
+Sintaxis: verify (on/off)<br>
+</p>
+<p>
+Comando: EDIT<br>
+Función: En MSDOS podemos contar con un editor de texto, con una interface grafica para msdos.<br>
+Con este editor de texto implementado en MSDOS podemos editar cualquier archivo que contenga texto.<br>
+Sintaxis: edit [unidad:]\[ruta]\[directorio]\<archivo.ext (solo de texto)><br>
+Ejemplo: c:\>edit autoexec.bat<br>
+Con esto se nos abriría el editor de texto del MSDOS con el archivo de autoexec.bat listo para editar, no<br>
+metais la pezuña en este archivo si no conocemos su funcionamiento.<br>
+En caso de que el nombre de archivo pasado como parámetro al edit no exista, el edit abrirá un archivo<br>
+en blanco almacenado con ese nombre pero de forma temporal. Así que si queréis tenerlo, debéis<br>
+guardarlo con el edit en un directorio.<br>
+
+</p>

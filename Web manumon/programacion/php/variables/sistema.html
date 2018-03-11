@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=450 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Vaiables Sistema</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+Dada su naturaleza de lenguaje de lado servidor, PHP es capaz de darnos acceso a toda una serie de variables que nos informan sobre nuestro servidor y sobre el cliente. La información de estas variables es atribuida por el servidor y en ningún caso nos es posible modificar sus valores directamente mediante el script. Para hacerlo es necesario influir directamente sobre la propiedad que definen.
+<br><br>
+Variables:
+<br><br>
+<table cellspacing=0 cellpadding=4 border=2  bgcolor=#010739>
+<tr><td>Caracter</td><td>Efecto en la cadena</td></tr>
+<tr><td>$HTTP_USER_AGENT</td><td>Nos informa principalmente sobre el sistema operativo y tipo y versión de navegador utilizado por el internauta. Su principal utilidad radica en que, a partir de esta información, podemos redireccionar nuestros usuarios hacia páginas optimizadas para su navegador o realizar cualquier otro tipo de acción en el contexto de un navegador determinado.</td></tr>
+<tr><td>$HTTP_ACCEPT_LANGUAGE</td><td>Nos devuelve la o las abreviaciones de la lengua considerada como principal por el navegador. Esta lengua o lenguas principales pueden ser elegidas en el menú de opciones del navegador. Esta variable resulta también extremadamente útil para enviar al internauta a las páginas escritas en su lengua, si es que existen.</td></tr>
+<tr><td>$HTTP_REFERER</td><td>Nos indica la URL desde la cual el internauta ha tenido acceso a la página. Muy interesante para generar botones de "Atrás" dinámicos o para crear nuestros propios sistemas de estadísticas de visitas.</td></tr>
+<tr><td>$PHP_SELF</td><td>Nos devuelve una cadena con la URL del script que está siendo ejecutado. Muy interesante para crear botones para recargar la página.</td></tr>
+<tr><td>$HTTP_GET_VARS</td><td>Se trata de un array que almacena los nombres y contenidos de las variables enviadas al script por URL o por formularios GET</td></tr>
+<tr><td>$HTTP_POST_VARS</td><td>Se trata de un array que almacena los nombres y contenidos de las variables enviadas al script por medio de un formulario POST</td></tr>
+<tr><td>$HTTP_COOKIE_VARS</td><td>Se trata de un array que almacena los nombres y contenidos de las cookies. Veremos qué son más adelante.</td></tr>
+<tr><td>$PHP_AUTH_USER</td><td>Almacena la variable usuario cuando se efectúa la entrada a páginas de acceso restringido. Combinado con $PHP_AUTH_PW resulta ideal para controlar el acceso a las páginas internas del sitio.</td></tr>
+<tr><td>$PHP_AUTH_PW</td><td>Almacena la variable password cuando se efectúa la entrada a páginas de acceso restringido. Combinado con $PHP_AUTH_USER resulta ideal para controlar el acceso a las páginas internas del sitio.</td></tr>
+<tr><td>$REMOTE_ADDR</td><td>$REMOTE_ADDR</td></tr>
+<tr><td>$DOCUMENT_ROOT</td><td>Nos devuelve el path físico en el que se encuentra alojada la página en el servidor.</td></tr>
+<tr><td>$PHPSESSID</td><td>Guarda el identificador de sesión del usuario. Veremos más adelante en qué consisten las sesiones.</td></tr>
+</table> 
+<br>
+No todas estas variables están disponibles en la totalidad de servidores o en determinadas versiones de un mismo servidor. además, algunas de ellas han de ser previamente activadas o definidas por medio de algún acontecimiento. Así, por ejemplo, la variable $HTTP_REFERER no estará definida a menos que el internauta acceda al script a partir de un enlace desde otra página. 
+
+<h1>Variables superglobales</h1>
+
+A partir de PHP 4.1.0, se dispone de un conjunto de varibles de tipo array que mantienen información del sistema,<br>llamadas superglobales porque se definen automáticamente en un ámbito global. 
+<br><br>
+<table cellspacing=0 cellpadding=4 border=2 bgcolor=#010739>
+<tr><td>Caracter</td><td>Efecto en la cadena</td></tr>
+<tr><td>$GLOBALS </td><td>Contiene una referencia a cada variable disponible en el espectro de las variables del script. Las llaves de esta matriz son los nombres de las variables globales. $GLOBALS existe dese PHP 3. </td></tr>
+<tr><td>$_SERVER </td><td>Variables definidas por el servidor web ó directamente relacionadas con el entorno en don el script se esta ejecutando. Análoga a la antigua matriz $HTTP_SERVER_VARS (la cual está todavía disponible, aunque no se use). </td></tr>
+<tr><td>$_GET </td><td>Variables proporcionadas al script por medio de HTTP GET. Análoga a la antigua matriz $HTTP_GET_VARS (la cual está todavía disponible, aunque no se use). </td></tr>
+<tr><td>$_POST </td><td>Variables proporcionadas al script por medio de HTTP POST. Análoga a la antigua matriz $HTTP_POST_VARS (la cual está todavía disponible, aunque no se use). </td></tr>
+<tr><td>$_COOKIE </td><td>Variables proporcionadas al script por medio de HTTP cookies. Análoga a la antigua matriz $HTTP_COOKIE_VARS (la cual está todavía disponible, aunque no se use).</td></tr>
+<tr><td>$_FILES </td><td>Variables proporcionadas al script por medio de la subida de ficheros via HTTP . Análoga a la antigua matriz $HTTP_POST_FILES (la cual está todavía disponible, aunque no se use). Vea también Subiendo ficheros por método POST para más información. </td></tr>
+<tr><td>$_ENV</td><td>Variables proporcionadas al script por medio del entorno. Análoga a la antigua matriz $HTTP_ENV_VARS (la cual está todavía disponible, aunque no se use). </td></tr>
+<tr><td>$_REQUEST </td><td>Variables proporcionadas al script por medio de cuaquier mecanismo de entrada del usuario y por lo tanto no se puede confiar en ellas. La presencia y el orden en que aparecen las variables en esta matriz es definido por la directiva de configuración variables_order. Esta matriz no tiene un análogo en versiones anteriores a PHP 4.1.0. Vea también import_request_variables(). </td></tr>
+<tr><td>$_SESSION</td><td>Variables registradas en la sesión del script. Análoga a la antigua matriz $HTTP_SESSION_VARS (la cual está todavía disponible, aunque no se use). Vea también la sección Funciones para el manejo de sessiones para más información. </td></tr>
+</table> 

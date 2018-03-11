@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Propiedades de los objetos</H1></u></center></font>
+
+</table></center><br>
+La mayoria de los objetos, tienen propiedades que se pueden modificar mediante actionScript.<br>
+Para usar estas propiedades se debe colocar el nombre del objeto seguido de un punto ( . ) y después la propiedad y su valor. Las propiedades siempre comienzan con un guión abajo ( _ ). Algunas propiedades se pueden escribir sin el nombre del objeto al que hacen referencia delante, en ese caso, harán referencia a la película principal.<br>
+Propiedades:<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00>  _height</strong></font>:<br>
+
+Hace referancia a la altura del objeto en píxeles. Esto sirve tanto para saber su altura como para cambiarla. Ejemplo:<br>
+<font color=00ffff>Clip._height=200<br>
+trace(Clip._height)<br></font><br>
+<img src="ico2.jpg"> <strong><font color=00ff00>   _width</strong></font>:<br>
+
+Propiedad idéntica a la anterior, pero hace referencia a la anchura. Ejemplo:<br>
+<font color=00ffff>Clip._width=150<br>
+trace(Clip._width)</font>
+<br><br>
+
+<img src="ico2.jpg"> <strong><font color=00ff00> _x</strong></font>:<br>
+Esta propiedad hace referencia a la posicion del objeto en el eje de las x. Ejemplo:<br>
+<font color=00ffff>Clip._x=100</font>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _y</strong></font>:<br>
+Esta propiedad hace referencia a la posicion del objeto en el eje de las y. Ejemplo:<br>
+<font color=00ffff>Clip._y=100</font>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _xscale</strong></font>:<br>
+Esta propiedad hace al porcentaje de anchura del objeto. De tal modo que 100 es igual a la anchura real del objeto. Ejemplo:
+<font color=00ffff>Clip._xscale=100<br>Clip._xscale=200</font>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _yscale</strong></font>:<br>
+Esta propiedad hace al porcentaje de altura del objeto. De tal modo que 100 es igual a la altura real del objeto. Ejemplo:
+<font color=00ffff>Clip._yscale=100<br>Clip._yscale=200</font>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _visible</strong></font>:<br>
+
+Determina si el objeto está o no visible en nuestra película. Cuando vale 1 es visible, cuando vale 0, pasa a ser invisible. Ejemplo:<br>
+<font color=00ffff>Clip._visible=1<br>
+Clip._visible=0</font>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _rotation</strong></font>:<br>
+Hace referencia a la rotacion del objeto, la rotacion del objeto cuando es 0 es nula, es decir se ve tal cual lo dibujamos. Ejemplo:<br>
+<font color=00ffff>Clip._rotation = 20<br>Clip._rotation = -30</font>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _alpha</strong></font>:<br>
+
+Hace referencia a la opacidad del objeto al que afecte. La opacidad se puede definir como la no-transparencia. De modo que un 100% de transparencia equivale a un 0 de opacidad, o a un 0 de alpha. Ejemplo:<br>
+<font color=00ffff>Clip._alpha=50<br>
+Clip._alpha=0<br></font>
+<br>
+<img src="ico2.jpg"> <strong><font color=00ff00>  _framesloaded</strong></font>:<br>
+
+Son los fotogramas de un clip de película o de la película principal que el sistema lleva cargados en memoria. Muy útil para crear cargadores o "preloaders" que son los tipicos "Cargando...". Ejemplo:<br>
+<font color=00ffff>if(_framesloaded==10)  { trace(10) }<br></font>
+<br>
+<img src="ico2.jpg"> <strong><font color=00ff00>  _totalframes</strong></font>:<br>
+
+
+Devuelve la cantidad de fotogramas que contiene el clip de película al que hace referencia. Si se emplea sin ningún nombre delante, nos devuelve la cantidad de fotogramas de la película Flash actual. También usado en la creación de cargadores ya que este se conbina con el otro para crearlos. Ejemplo:
+<br><font color=00ffff>
+stop();<br>
+if(_framesloaded>=_totalframes)  { gotoAndPlay(2)}<br></font>
+<br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _xmouse</strong></font>:<br>
+Hace referencia a la posicion del raton en el eje de las x.
+<br><br>
+<img src="ico2.jpg"> <strong><font color=00ff00> _ymouse</strong></font>:<br>
+Hace referencia a la posicion del raton en el eje de las y.
+<br><br>

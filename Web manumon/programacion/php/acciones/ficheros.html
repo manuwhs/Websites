@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Ficheros</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+
+Podemos abrir, cerrar, escribir, crear y eliminar cualquier fichero.<br>
+<img src="ico2.jpg"> <b><font color=ff00ff>fopen ("nombre","modo")</b></font><br>
+Esta funcion, lo que hace es abrir el archivo que pongamos en "nombre" del modo que pongamos en "modo",
+es decir, cuando abrimos un archivo podemos leerlo simplemente, leer y borrar su contenido, leer y prepararlo para escritura...<br>
+Aqui teneis una tabla con los modos:<br><br>
+<table cellspacing=0 cellpadding=4 border=2  bgcolor=#010739>
+<tr><td>Modo</td><td>Efecto del modo</td></tr>
+<tr><td>"r"</td><td>Modo de solo lectura, el puntero se coloca al inicio del fichero.</td></tr>
+<tr><td>"r+"</td><td>Modo de lectura / escritura, el puntero se coloca al inicio</td></tr>
+<tr><td>"w"</td><td>Modo de escritura, si el fichero existe, se borran sus contenidos y si no existe se crea.</td></tr>
+<tr><td>"w+"</td><td>Modo lectura / escritura, si el fichero existe, se borran sus contenidos y si no existe se crea.</td></tr>
+<tr><td>"a"</td><td>Modo de escritura, si el fichero existe el puntero se coloca al final del fichero y si no existe se crea.</td></tr>
+<tr><td>"a+"</td><td>Modo de lectura / escritura, si el fichero existe el puntero se coloca al final del fichero y si no existe se crea.</td></tr>
+</table><br>
+En realidad, esta funcion en si no hace nada, sino que sirve identificador para otras funciones. Asi por ejemplo la funcion fwrite()<br>
+escribe algo en el archivo, pero necesita parametros, uno de ellos es el identificador del archivo que en el que vamos a escribir.<br>
+Es decir, que esta funcion lo unico que hace es poner a disposicion de otras funciones, un archivo. <br>
+Uno cosa que es de logica, es que si vamos a usar la funcion fwrite(), en la funcion fopen() tendremos que elegir algun modo que habilite escritura, si es solo de lectura, no podra escribir.
+<br>
+<font color=00ffff>
+&lt?php<br>
+$abrir = fopen ("visitas.txt","r+");<br>
+$abrir2 = fopen ("contador.php","a");<br>
+$abrir3 = fopen ("IP.html","w");<br>
+?&gt</font> <br>
+Como veis, a la hora de realizar la apertura del archivo, lo igualamos a una variable, esto es porque esta variable, nos servira de identificador cuando usemos las otras funciones.<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>fopen (identificador)</b></font><br>
+Esta funcion, lo que hace es cerrar la lectura del archivo, su unico parametro es el identificador, que ya sabemos lo que es.<br>
+<font color=00ffff>
+&lt?php<br>
+fclose ($abrir );<br>
+fclose ($abrir2 );<br>
+fclose ($abrir3 );<br>
+?&gt</font> <br>
+Aqui hemos cerrado la apertura de los tres archivos del ejemplo anterior.<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>fgets (identificador, tamaño)</b></font><br>
+Esta funcion sirve para leer la primera linea de codigo del identificador, ademas tiene un segundo parametro opcional que dice cuantos caracteres cogemos de esa linea. Esta funcion devuelve el contenido de la linea.<br>
+Si tenemos un archivo "archivo.txt" con este texto 'Hola me llamo Antonio', para cogerlo hariamos esto.<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+$abrir = fopen ($destino,"r");<br>
+$leer = fgets($abrir);<br>
+echo $leer<br>
+?&gt</font> <br>
+<br>
+<img src="ico2.jpg"> <b><font color=ff00ff>file ("archivo")</b></font><br>
+Esta funcion leer un archivo y lo guarda en un array por lineas, es decir, la primera linea es igual a la primera variable del array.
+<br>Tiene un solo parametro que es la direccion del archivo.
+<br>
+Si tenemos un archivo "archivo.txt" con este contenido:  <br>
+"Hola a todos soy Manuel<br>
+vivo en un sitio<br>
+y como cosas"<br>
+La forma de coger su contenido es esta:<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+$leer = file($destino);<br>
+echo $leer[0]."&ltbr&gt";<br>
+echo $leer[1]."&ltbr&gt";<br>
+echo $leer[2]<br>
+?&gt</font> <br>
+Aqui, se lee el archivo y se guarda en un array, como lo hemos igualado a la variable $leer es logico que <br>se convierta en un array, siendo $leer[0] la primera linea...
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>fwrite (identificador,string)</b></font><br>
+Vamos a ver, esta funcion escribe el string del segundo parametro, en el archivo del identificador, su uso es muy sencillo, y escribira en un sitio u otro del archivo dependiendo del modo del identificador.
+<br>Si tenemos un archivo llamado "archivo.txt" con este texto "Hola escritor", vamos a ver lo que pasa <br>si escribimos en el usando distintos modos.
+<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+$abrir = fopen ($destino,"r+");<br>
+fwrite($abrir,"ola")<br>
+?&gt</font> <br>
+Aver, si analizamos este codigo, vemos que abrimos el "archivo.txt" con el modo "r+" y luego escribimos ola. <br>
+Por haber usado el metodo "r+", al escribir, el puntero se coloca en el inico, y eso significa que lo que escribamos sustituira lo que halla escrito en el archivo, pero solo sustituira los caracteres que tenga, es decir, en este ejemplo el contenido del archivo quedaria <br>"olaa escritor" ya que el "ola" que hemos insertado, ha sustituido a los tres primero caracteres del archivo que eran "Hol"<br>
+Asique aunque le demos a escribir muchas veces lo mismo, solo lo escribira una por que sustituye caraceteres.
+<br>
+Siguiendo con el mismo archivo con el contenido "Hola escritor":<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+$abrir = fopen ($destino,"a");<br>
+fwrite($abrir,"ola")<br>
+?&gt</font> <br>
+En este caso, el puntero se coloca al final, esto quiere decir que escribe lo que pongamos sin reemplazar nada, <br>ademas al no reemplazar, cada vez que lo ejecutemos se volvera a escribir.<br>
+Esto quedaria asi "Hola escritor ola" y si volvemos a ejecutarlo, seria "Hola escritor olaola"<br>
+Siguiendo con el mismo ejemplo:<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+$abrir = fopen ($destino,"w");<br>
+fwrite($abrir,"ola")<br>
+?&gt</font> <br>
+El modo "w" lo que hace es borrar el archivo asique, el contenido del archivo se reduciria a lo que pongamos.
+
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>copy ("archivo","nuevo_archivo")</b></font><br>
+Esta funcion copia el archivo que pongamos en el primer parametro y le pone el nombre que le pongamos en el segundo.<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+copy ($destino,"copia.php");<br>
+?&gt</font> <br>
+Aqui creamos una copia de "archivo.txt" y ademas le cambiamos la extension.
+
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>rename ("archivo","nuevo_nombre")</b></font><br>
+Esta funcion cambia el nombre del archivo que pongamos por primer parametro y la da como nombre el segundo parametro.<br>
+Esto es muy util para cambiar la extension.<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+rename ($destino,"nombre_nuevo.php");<br>
+?&gt</font> <br>
+Aqui le cambiamos el nombre por "nombre_nuevo.php" y con ello le cambiamos la extension.
+
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>unlink ("archivo")</b></font><br>
+Esta funcion elimina un fichero<br>
+<font color=00ffff>
+&lt?php<br>
+$destino = "archivo.txt";<br>
+unlink ($destino);<br>
+?&gt</font> <br>
+Aqui se elimina "archivo.txt", ideal para joder una web.

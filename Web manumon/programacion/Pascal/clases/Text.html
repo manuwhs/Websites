@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Archivos de acceso secuencial</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+Los archivos de acceso secuencial son llamados también archivos de texto, <br>
+son aquellos archivos que están formados por cadenas de caracteres separadas <br>
+unas de otras por los códigos retorno de carro/avance de línea, <br>
+que corresponden a los caracteres 13/10 del código ASCII. <br>
+Es posible visualizar estos archivos con la orden TYPE del sistema operativo DOS y se pueden editar con cualquier editor de textos. <br>
+Son los archivos del block de notas, los archivos *.txt.<br>
+Este tipo de archivos solo permiten operaciones de lectura y escritura secuenciales, <br>
+la unica forma de modificarlos es agregando líneas al final del archivo. <br><br>
+
+Los pasos para leer o escribir en un archivo de este tipo son: <br>
+Abrir el archivo ya sea para lectura o escritura. <br>
+Leer o escribir datos en el archivo. <br>
+Cerrar el archivo <br>
+<h2>La Clase Text</h2>
+La Clase Text sirve para declarar un archivo .txt, osea un archivo secuencial.<br>
+Este tipo de datos sirven para que se les asigne la direccion de un archivo secuencial (*.txt).<br>
+Es decir el contenido de estas variables sera el archivo secuencial que le asignemos.<br>
+Ejemplo de declaracion de una variable tipo Text:<br><font color=00ffff><b>
+Var<br>
+archivotexto : Text;<br></font></b><br>
+Una vez declarada, seguimos los pasos para leer o escribir un archivo:
+<h3>Asignar el Archivo a la Variable</h3>
+
+Una vez declarada una variables de tipo Text, hay que asignarle un archivo secuencial.<br>
+Esto se hace mediante el siguiente metodo:<br>
+<font color=00ffff><b>* Assign(variable_text, direccion_archivo):</b></font><br>
+Mediante este metodo asignamos a la variable "variable_text" el archivo secuencial cuya direccion sea "direccion_archivo".<br>
+Siendo "variable_text" una variable tipo Text y direccion_archivo la direccion de un archivo secuencial. Ejemplo:<br>
+<font color=00ffff>Assign(archivotexto, 'C:\PRUEBA.TXT'):</font><br><br>
+<h3>Abrir el Archivo</h3>
+Una vez asignado el archivo a la variable hay que habrirlo, hay tres formas de abrirlo:<br>
+<font color=00ffff><b>* Append(variable_text):</b></font><br>
+Este procedimiento habre el archivo para que pueda ser escrito.<br>
+<font color=00ffff><b>* Rewrite(variable_text):</b></font><br>
+Este procedimiento abre el archivo para que pueda ser escrito y ademas elimina todo su contenido.<br>
+Ademas, si el archivo que pongamos en la direccion no existe, lo crea.
+<font color=00ffff><b>* Reset(variable_text):</b></font><br>
+Este procedimiento abre el archivo para que pueda ser leido.<br><br>
+<h3>Escribir o Leer el Archivo</h3>
+Una vez abierto, podemos escribir o leer, depende del procedimiento que hayamos usado para abrirlo:<br>
+
+# Para escribir en el archivo usamos los siguientes procedimientos:<br>
+<font color=00ffff><b>* write(variable_text, Contenido):</b></font><br>
+Mediante este procedimiento, escribimos en al archivo de la variable "variable_text" el contenido que
+escribamos en "Contenido". Al acabar de escribir en el archivo, el puntero se coloca al final de la 
+linea que hemos escrito.<br>
+<font color=00ffff><b>* writeLn(variable_text, Contenido):</b></font><br>
+Mediante este procedimiento, escribimos en al archivo de la variable "variable_text" el contenido que<br>
+escribamos en "Contenido". Al acabar de escribir en el archivo, el puntero se coloca al principio de la <br>
+linea que hemos escrito.<br><br>
+
+# Para leer los archivos usamos los siguientes procedimientos:<br>
+<font color=00ffff><b>* Read(variable_text, Linea):</b></font><br>
+Mediante este procedimiento, leemos una linea del contenido del archivo de la variable "variable_text"<br>
+y lo guardamos en la variable "Linea". Al leer la linea, deja el puntero en la misma linea que leyo los datos.<br>
+<font color=00ffff><b>* Read(variable_text, Linea):</b></font><br>
+Mediante este procedimiento, leemos una linea del contenido del archivo de la variable "variable_text"<br>
+y lo guardamos en la variable "Linea". Al leer la linea, deja el puntero en la siguiente linea.<br><br>
+Si ejecutamos el procedimiento Read una vez, la variable linea, sera igual al primer renglon del archivo,<br>
+si lo ejecutamos dos veces, la variable linea tambien sera igual al primer renglon, porque el puntero se deja<br>
+en la misma linea; mientras que con ReadLn, el puntero se deja en el siguiente renglon por lo que si lo usamos<br>
+dos veces, la segunda vez, Linea sera igual al 2º renglon, si lo usamos 3, Linea sera igual al 3º renglon...<br><br>
+Para leer todas las lineas que tiene un archivo sin saber cuantas tiene, usaremos la sentencia WHILE combinado con<br>
+la funcion <b><font color=00ffff>EOF(Archivo)</b></font>, esta funcion, comprueva si el puntero esta en la ultima linea del Archivo, si lo esta devuelve TRUE (1),<br>
+pero sino devuelve False (0), por eso, para leer y mostrar el contenido de un archivo secuencial usaremos esta estructura:<br>
+<b><font color=00ffff>WHILE NOT EOF(Archivo) DO<br>
+BEGIN<br>
+ReadLn(Archivo, Datos);<br>
+WriteLn(Datos);<br>
+END; <br></b></font>
+<h3>Cerrar el Archivo</h3>
+Para asegurar que toda la información se grabe en el disco correctamente es necesario cerrar el archivo<br>
+ antes de que se termine la ejecución del programa, de lo contrario se corre el riego de que la última información<br>
+ que se haya accesado no se grabe en su totalidad. <br>
+La instrucción para cerrar un archivo es Close, y su sintaxis es: <br>
+<b><font color=00ffff>Close (Archivo); </b></font>
+<h2>Ejemplo</h2>
+Para este ejemplo tendreis que crear un archivo llamado Texto.txt en el disco duro C:\<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+program secuenciales;<br>
+VAR<br>
+Archivo : Text;<br>
+Lineas : String;<br>
+Numero : Integer;<br><br>
+
+BEGIN<br>
+Assign(Archivo, 'C:\Texto.txt');<br>
+Rewrite(Archivo);<br>
+WriteLn(Archivo,' Este tutorial es una pasada ');<br>
+For Numero := 1 To 5 Do<br>
+Begin<br>
+writeLn(Archivo,Numero * 100);<br>
+end;<br>
+Close(archivo);<br><br>
+
+Reset(Archivo);<br>
+While not EOF(Archivo) DO<br>
+Begin<br>
+ReadLn(Archivo, Lineas);<br>
+writeLn (Lineas);<br>
+End;<br>
+Close(archivo);<br>
+ReadLn;<br>
+End.</td></tr></table>
+
+
+

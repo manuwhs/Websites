@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+<center><img src="transparencia.jpg">
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto nieve lo que hace es<br>crear una funcion llamada nevar<br>en la cual va importando los copos<br>estos copos tienen nombre igual <br>y a la vez diferente, ya que<br>su nombre siempre va a ser<br>"polo"+ un numero que incrementa<br>y en el momento justo en el que se <br>importa se llama copo, en ese momento,<br>se le van dando porpiedades <br>aleatorias, y se le imprime la <br>funcion monevar(), por la cual<br>se mueven.
+<br><br>
+<center><a href="Efecto transparencia.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+La última función es una funcion que <br>crea aleatoriedad entre el <br>intervalo de dos numeros.<br>Tambien antes de eso, está el efecto<br>iluminacion, que ilumina los copos
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+import flash.geom.*;<br>
+import flash.filters.*;<br>
+import flash.display.*;<br><br>
+img1 = BitmapData.loadBitmap("imagen1");<br>
+img2 = BitmapData.loadBitmap("imagen2");<br>
+createEmptyMovieClip("efecto",0);<br>
+sal = img2.clone();<br>
+efecto.attachBitmap(sal,0);<br><br>
+w = img1.width;<br>
+h = img1.height;<br><br>
+c=0x8080;<br>
+lim = img1.rectangle;<br>
+P0 = new Point();<br>
+Nm = new Matrix();<br><br>
+img1.threshold(img1,lim,P0,">",0xfae0e0,0,0xffffff);<br>
+BF = new BitmapData(w,h,false,c);<br><br>
+xy = img1.clone();<br>
+xx = new BitmapData(w,h,true,c);<br>
+yy = new BitmapData(w,h,true,c);<br>
+xy.colorTransform(lim,new ColorTransform(0,0,0,1,0,64,64,0));<br>
+xx.applyFilter(xy,lim,P0,new BevelFilter(4,45,0,0,0,1,4,4,1,4));<br>
+yy.applyFilter(xy,lim,P0,new BevelFilter(4,225,0,0,0,1,4,4,1,4));<br><br>
+BF.draw(xx);<br>
+BF.draw(yy,Nm,null,"add");<br><br>
+xx.dispose();<br>
+yy.dispose();<br>
+xy.dispose();<br>
+Mouse.hide();<br><br>
+dMap = new DisplacementMapFilter(BF,P0,2,2,-50,-50,"clamp");<br>
+CT = new ColorTransform(1,1,1,.4,0,0,0,0);<br><br>
+onMouseMove = function(){ <br>
+    Pt = new Point(_xmouse -w/2,_ymouse - h/2); <br>
+	dMap.mapPoint = Pt;   <br>
+	Nm.tx = Pt.x;  <br>
+	Nm.ty = Pt.y;   <br><br>
+	sal.copyPixels(img2,img2.rectangle,P0);<br>
+	sal.applyFilter(sal,img2.rectangle,P0,dMap); <br>
+	sal.draw(img1,Nm,CT,"multiply");}<br><br>
+onMouseMove();
+
+
+</font></td></tr></center>

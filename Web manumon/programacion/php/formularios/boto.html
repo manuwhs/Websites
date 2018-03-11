@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Botones de Radio</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+El botón de radio es un elemento de formulario que permite seleccionar una opción y sólo una, sobre un conjunto de posibilidades.<br>
+Se consiguen con la etiqueta &ltINPUT type=radio&gt.<INPUT type=radio name="ola"><INPUT type=radio  name="ola"><INPUT type=radio  name="ola"><br>
+Aunque para que solo podamos elegir uno de los botones, todos tienen que tener el mismo nombre.
+<h1>Propiedades</h1>
+<img src="ico2.jpg"> <b><font color=ff00ff>checked </b></font><br>
+Indica si está chekeado o no un botón de radio. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>defaultChecked </b></font><br>
+Su estado por defecto. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>value </b></font><br>
+El valor del campo de radio, asignado por la propiedad value del radio. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>Length (como propiedad del array de radios) </b></font><br>
+El número de botones de radio que forman parte en el grupo. Accesible en el vector de radios. 
+
+<h1>Metodos</h1>
+
+<img src="ico2.jpg"> <b><font color=ff00ff> blur()  </b></font><br>
+Retira el foco de la aplicación del campo de texto. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> focus()  </b></font><br>
+Pone el foco de la aplicación en el campo de texto. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> click()  </b></font><br>
+Es como si hiciésemos un click sobre el checkbox, es decir, cambia el estado del checkbox.
+<h1>Ejemplos</h1>
+<font color=00ffff><br>
+&ltINPUT type=radio name="deportes" value="Futbol" onClick=alert(this.value)&gt Futbol<br>
+&ltINPUT type=radio name="deportes" value="Baloncesto" onClick=alert(this.value)&gt  Baloncesto<br>
+&ltINPUT type=radio name="deportes" value="Tenis" onClick=alert(this.value)&gt  Tenis<br>
+&ltINPUT type=radio name="deportes" value="Boleybol" onClick=alert(this.value)&gt  Boleybol<br></font><br>
+
+¿Que deporte practicas?<br>
+<INPUT type=radio name="deportes" value="Futbol" onClick=alert(this.value)> Futbol<br>
+<INPUT type=radio name="deportes" value="Baloncesto" onClick=alert(this.value)> Baloncesto<br>
+<INPUT type=radio name="deportes" value="Tenis" onClick=alert(this.value)> Tenis<br>
+<INPUT type=radio name="deportes" value="Boleybol" onClick=alert(this.value)> Boleybol<br>

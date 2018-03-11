@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Introduccion</H1></u></center></font>
+
+</table></center><br>
+
+<font color=00ffff><strong>El ActionScript es el lenguaje de programación que ha utilizado Macromedia Flash </font></strong>desde sus comienzos, y que por supuesto, emplea Flash 8. A grandes rasgos, podemos decir que el ActionScript nos permitirá realizar con Flash 8 todo lo que nos propongamos, ya que nos da el control absoluto de todo lo que rodea a una película Flash. Absolutamente de todo.
+<br><br>
+<font color=00ffff><strong>El ActionScript es un lenguaje de programación orientado a objetos</font></strong>, tiene similitudes, por tanto, con lenguajes tales como los usados en el Microsoft Visual Basic, en el Borland Delphi etc... y aunque, evidentemente, no tiene la potencia de un lenguaje puramente orientado a objetos derivado del C o del Pascal como los anteriores, cada versión se acerca más a un lenguaje de este tipo. Así, la versión 2.0 estrenada en Flash MX 2004 es mucho más potente y mucho más "orientada a objetos" que su anterior versión 1.0 
+<br><br>
+<font color=00ffff><strong>En Flash 8, el Panel Acciones sirve para programar scripts con ActionScript</font></strong>. Esto es, que todo lo que introzcamos en dicho Panel se verá reflejado después en nuestra película. Debemos tener claro desde un principio que el Panel Acciones puede hacer referencia a Fotogramas u objetos, de modo que el código ActionScript introducido afectará tan sólo a aquello a lo que referencia el Panel.
+<br><br>
+El Panel Acciones se divide en 2 partes, a la izquierda tenemos una ayuda facilitada por Flash que nos da acceso de un modo rápido y muy cómodo a todas las acciones, objetos, propiedades etc... que Flash tiene predefinidos. Estos elementos están divididos en carpetas, que contienen a su vez más carpetas clasificando de un modo eficaz todo lo que Flash pone a nuestra disposición. Para insertarlos en nuestro script bastará con un doble clic sobre el elemento elegido. 
+<br><br><img src="pan.jpg"><br><br>
+
+<h1>Conceptos basicos</h1>
+<font color=00ffff><strong>En resumen, ActionScript es un lenguaje con el que manipular los objetos de una pelicula flash.</font></strong><br>
+Ahora vamos a ver los conceptos más basicos de este programa:<br><br>
+<img src="ico2.jpg"><font color=ff00ff><strong>Script: </font></strong>Código escrito en cualquier lenguaje de programación que realiza una tarea determinada. Así por ejemplo, el código ActionScript necesario para que al pulsar un botón de Flash pasemos al fotograma siguiente es un script. <br>
+<br>
+<img src="ico2.jpg"><font color=ff00ff><strong>Variable:</font></strong>Las variables son contenedores de información, y dicha información puede ser cualquiera, desde un numero, texto o hasta un valor booleano. Ejemplo:<br>
+
+Si tenemos la expresión:    <font color=00ff00>      numero = 3;</font><br>
+
+Tenemos que numero es una variable que toma el valor 3. Se llama variable precisamente porque puede cambiar de valor en cualquier momento durante la ejecución de nuestra película Flash. Todos los datos que se manejan normalmente son variables.
+<br>
+<br><img src="ico2.jpg"><font color=ff00ff><strong>Expresión / Sentencia:</font></strong>  Conjunto de operadores, constantes, variables o acciones. Provocan un resultado o una acción determinada y SIEMPRE deben ir terminados por ' ; ' (punto y coma).<br>
+<br>
+<img src="ico2.jpg"><font color=ff00ff><strong>Función:</font></strong>Una función es una porción de código (ActionScript en nuestro caso) que tiene un nombre determinado y que realiza una labor concreta. Ejemplo, la siguiente definición de función:<br>
+<font color=00ff00>
+function IncrementaX(x) {<br>
+x = x + 1;<br>
+}<br></font>
+
+Realiza la función de tomar la variable "x" y sumarle uno a su valor. <br><br>
+
+ <img src="ico2.jpg"><font color=ff00ff><strong>Accion:</font></strong> Flash llama Acción a funciones que él mismo ha implementado y que no requieren ser definidas para ser usadas. Basta por tanto, con escribir la llamada a la función. Estas acciones son lo que usaremos la mayoría de las veces, pues resultan sumamente fáciles de usar y muy potentes.<br>
+
+Por ejemplo<font color=00ff00> "gotoAndPlay(3)"</font> es una acción que provoca que Flash pase a ejecutar el fotograma 3.<br>
+
+Ahora que entendemos qué son las funciones, deberemos comprender también, que en alguna parte, Flash ha definido la función "gotoAndPlay" (tal y como hemos hecho nosotros anteriormente con la función "IncrementaX") y ha escrito un código que provoca el efecto ya comentado. Por suerte todo esto no nos debe preocupar, Flash 8 se encarga de todo. Nos basta con conocer las acciones y saber cómo usarlas.
+<br><br>
+<img src="ico2.jpg"><font color=ff00ff><strong>Parametro:</font></strong> Un parámetro es una variable que entra o sale de una acción o de una función. Ponemos un ejemplo para clarificar esta definición:
+<br>
+Tenemos la siguiente definición de función:<br>
+
+ 
+<font color=00ff00>
+function Suma5(p_entrada, p_salida)<br> {
+
+p_salida = p_entrada + 5;<br>
+
+}</font>
+

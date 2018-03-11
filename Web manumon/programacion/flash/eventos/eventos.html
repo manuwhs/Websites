@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+<a name="ancla"></a>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20" text =#ffffff>
+<center><table  border="4" width=400 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Eventos</H1></u></center></font></ta
+</td></tr>
+</table></center><br>
+<strong><font color=ff00ff>Los eventos son aquellas acciones que surgen como respuesta a alguna acción llevada a cabo por el usuario.
+<br></strong></font>Los eventos normalmente estan dirigidos a los clips de pelicula.<br>
+Para que un evento este dirigido a un clip de pelicula, debemos poner el nombre del clip mas un "." antes de poner el evento.<br>
+Hay muchos eventos diferentes:<br><br>
+<img src=ico2.jpg > <font color=00ff00><strong>onEnterFrame</font></strong> Es un evento lo que hace es repetir la sentencia de una funcion cada fotograma. <br>
+Cuando tenemos una accion ya hecha y queremos que la repita cada fotograma, su estructura es esta: onEnterFrame= miFuncion
+<br>En caso contrario, podemos definir una sentenci con la siguiente estructura es esta: onEnterFrame=function () {sentencia}. <br>Ejemplo 1:<br>
+<font color=00ffff>var numero=10<br>
+onEnterFrame=function () { numero += 1}<br></font>
+Esto hara que cada fotograma, se le añada uno a la variables numero. <br>Ejemplo 2:<br>
+<font color=00ffff>numero=10<br>
+function incrementar(){numero++; trace (numero)}<br>
+onEnterFrame = incrementar<br></font>
+Esto hara que cada fotograma, se le añada uno a la variables numero.<br>
+Ejemplo 3:<br><font color=00ffff>
+Clip.onEnterFrame=function () {this._rotation += 5}</font>
+<br>Aqui se realiza este evento dentro de un clip de pelicula y hace que cada fotograma gire 5 grados.<br><br>
+<img src=ico2.jpg > <font color=00ff00><strong>onPress</font></strong>: Detecta cuando presionas con el raton sobre un objeto y realiza una sentencia.<br>
+En cuanto a la sentencia que realiza, al igual que en el caso anterior, puedes definir una sentencia nueva o introcucir el nombre de la funcion. Su estructura es esta: Clip.onPress = function () {sentencia}. Ejemplo:<br>
+<font color=00ffff>function pulsado() {trace("pulsado2")}<br>
+Clip.onPress = function () {trace( "pulsado")};<br>
+Clip.onPress = pulsado;</font><br>
+Aqui estan los dos ejemplos de como realizar la sentencia, mediante una accion ya definida, y creando una sentencia.<br>
+En realidad de las dos funciones, solo se realizaria la ultima osea, que mostraria "pulsado2". Esto es solo los dos tipos de opciones.
+<br><br>
+
+<img src=ico2.jpg > <font color=00ff00><strong>onRelease</font></strong>: Detecta cuando sueltas el raton sobre un objeto y realiza una sentencia.<br>
+Su estructura es esta: Clip.onRelease = function () {sentencia}. Ejemplo:<br>
+<font color=00ffff>function soltado() {trace("soltado2")}<br>
+Clip.onRelease = function () {trace( "soltado")};<br>
+Clip.onRelease= soltado;</font><br>
+Aqui estan los dos ejemplos de como realizar la sentencia, mediante una accion ya definida, y creando una sentencia.<br>
+En realidad de las dos funciones, solo se realizaria la ultima osea, que mostraria "soltado2".
+<br><br>
+<img src=ico2.jpg > <font color=00ff00><strong>onRollOver</font></strong>: Detecta cuando sueltas el raton se desplaza sobre el clip de pelicula.<br>
+Su estructura es esta: Clip.onRollOver = function () {sentencia}. Ejemplo:<br>
+<font color=00ffff>function dentro() {trace("dentro2")}<br>
+Clip.onRollOver = function () {trace( "dentro")};<br>
+Clip.onRollOver = dentro;</font><br>
+<br>
+<img src=ico2.jpg > <font color=00ff00><strong>onRollOut</font></strong>: Detecta cuando sueltas el raton se desplaza sobre el clip de pelicula.<br>
+Su estructura es esta: Clip.onRollOut = function () {sentencia}. Ejemplo:<br>
+<font color=00ffff>function fuera() {trace("fuera2")}<br>
+Clip.onRollOut = function () {trace( "fuera")};<br>
+Clip.onRollOut = fuera;</font><br>
+<br>
+<img src=ico2.jpg><font color=00ff00><strong>startDrag / stopDrag</font></strong>: Estas dos acciones, lo que hacen es, la primera arrastrar el objeto con el raton y la segunda parar de arrastrar el objeto con el raton. Ejemplo:<br>
+<font color=00ffff>
+Clip.onPress = function () {this.startDrag()};<br>
+Clip.onRelease = function () {this.stopDrag()};<br></font>
+Este codigo lo que hace es que al pulsar, el raton arrastra el objeto y al soltar ya no.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+
+
+<center><img src="fuego.jpg"></center>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este es un efecto muy complicado que<br>se explica en el FLA, <br>para que funcione debeis crear<br>un clip de pelicula y llamarlo cosa<br><br>
+<center><a href="Efecto fuego.fla"><img src=fla.jpg border=no></a></center>
+<br>
+Recordad que este efecto como tantos<br> otros que vienen a continuacion consumen <br> mucha RAM por eso solo he puesto una<br>  imagen sacada del efecto, pero teneis <br> el efecto arriba a la izquierda.
+<br>Solo funciona con clips de pelicula y siempre tiene <br>el mismo color, a no ser que lo cambies.
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+
+import flash.filters.*;<br>
+import flash.geom.*; <br>
+import flash.display.*;<br><br>
+
+ancho= 375<br>
+alto = 70<br><br>
+
+mapabit1 = new BitmapData(ancho, alto,false,0xffaa6600);<br>
+mapabit2 = new BitmapData(ancho, alto, false, 0xff000000); <br><br>
+
+createEmptyMovieClip("pelicula",10)<br>
+pelicula.attachBitmap(mapabit2, 1);<br>
+pelicula._x=0<br><br>
+clon1 = mapabit2.clone(); <br>
+clon2 = mapabit2.clone();<br>
+
+Mx = new Matrix(); <br>
+punto = new Point(); <br>
+R0= mapabit2.rectangle;<br><br>
+
+B1 = new BlurFilter(2, 4, 2);<br>
+CM1=new ColorMatrixFilter([0.33,0.33,0.33,0,0,   0,0,0,0,0,  0,0,0,.5,0,  0,0,0,1,0]);<br>
+CM2= new ColorMatrixFilter([.50,.5,0,0,0,  .02,.65,0,0,0,  0,0,.25,0,0,  0,0,0,1,0]);<br>
+DM1 = new DisplacementMapFilter(clon2,punto,1,2,-4,-24);<br><br>
+
+set.setInterval(flamatexto,40)<br><br>
+
+function flamatexto(){<br><br>
+
+	clon1.draw(this);<br>
+
+	clon2.draw(clon1);<br>
+
+	clon2.applyFilter(clon2, R0, punto, CM1);<br><br>
+
+	clon2.threshold(clon2, R0, punto, ">", 0xff330000, 0xff808080, 0x00ffffff);<br>
+
+	clon2.applyFilter(clon2, R0, punto, B1);<br>
+
+	mapabit2.draw(clon2, Mx, null, 8);<br>
+
+	clon2.perlinNoise(9, 18, 3, random(200), true, true, 11,false,[punto],"clamp");<br><br>
+	
+  clon2.draw(mapabit1, Mx, null, 6);<br>
+
+  mapabit2.applyFilter(mapabit2, R0, Pt, DM1);<br>
+  
+  mapabit2.applyFilter(mapabit2, R0, Pt, CM2);}<br><br>
+
+cosa.onEnterFrame= flamatexto;
+
+		</font></td></tr></center>

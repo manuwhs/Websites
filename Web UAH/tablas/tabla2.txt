@@ -1,0 +1,52 @@
+<table align="center">
+            <tbody>
+              <tr>
+                <td>Ciudad</td>
+                <td>Temperatura (º)</td>
+                <td>Humedad (%)</td>
+                <td>Dirección de viento</td>
+                <td>Velocidad del viento (km/h)</td>
+                <td>Lluvia (mm) últimas 2 horas</td>
+              </tr>
+              <tr>
+                <td>Santa Cruz de la Palma</td>
+                <td>22</td>
+                <td>60</td>
+                <td>NO</td>
+                <td>14</td>
+                <td>0.2</td>
+              </tr>
+              <tr>
+                <td>Caceres</td>
+                <td>21</td>
+                <td>25</td>
+                <td>N</td>
+                <td>11</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Jerez de la Frontera</td>
+                <td>22</td>
+                <td>45</td>
+                <td>O</td>
+                <td>18</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Bilbao</td>
+                <td>11</td>
+                <td>42</td>
+                <td>S</td>
+                <td>22</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>San Sebastian</td>
+                <td>14</td>
+                <td>63</td>
+                <td>S</td>
+                <td>25</td>
+                <td>17</td>
+              </tr>
+            </tbody>
+          </table>

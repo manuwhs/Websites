@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>String</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Los valores que pueden tomar los datos de tipo String son los de secuencias de caracteres alfanumericos<br>
+con longitudes que varían desde 1 hasta los 255 caracteres.<br>
+Asi que las variables que sean de tipo String solo pueden tener cadenas de carecteres hasta 255.<br>
+Estas cadenas van entrecomilladas ''.<br>
+<h2>Propiedades</h2>
+Las cadenas solo tienen una propiedad:<br>
+* <b><font color=00ffff> Length </b></font><br>
+Esta propiedad guarda el número de caracteres del String.
+<h2>Metodos</h2>
+* <b><font color=00ffff>Concat(cadena1,cadena2,cadena3..)</b></font><br>
+Este metodo concatena las cadenas que haya entre parentesis, es decir las une.<br><br>
+* <b><font color=00ffff>Pos(cadena1,cadena2)</b></font><br>
+Sirve para comprovar si la cadena1 esta dentro de la cadena2, es decir, dice si la cadena2 contiene a la cadena1.<br>
+Si encuentra la cadena dentro de la otra, devuelve la posicion inicial que ocupa dicha cadena dentro de la otra,<br>
+si no lo encuentra devuelve 0.<br><br>
+* <b><font color=00ffff>Copy(cadena,inicio,cantidad)</b></font><br>
+Esta funcion devuelve una subcadena de la cadena que pongamos.<br>
+La subcadena que devuelve es la subcadena de la cadena principal que empieza por el caracter que pongamos de "inicio"<br>
+y a partir de ese caracter, coge tantos caracteres como numero pongamos en "cantidad".<br><br>
+* <b><font color=00ffff>Insert(cadena1,cadena2, Posicion)</b></font><br>
+Este metodo introduce la cadena1 en la cadena2 en el lugar que pongamos en Posicion.<br><br>
+* <b><font color=00ffff>Delete(cadena,inicio,cantidad)</b></font><br>
+Esta funcion elimina de la cadena dada: Cadena es la cadena de la que se borraran los caracteres, <br>
+Inicio es el primer caracter que se borrara y cantidad es el numero de caracteres que se borraran a partir de Inicio.<br><br>
+* <b><font color=00ffff>Upcase(caracter)</b></font><br>
+Convierte un caracter en minucula a mayuscula.<br><br>
+
+* <b><font color=00ffff>Str(valor,cadena)</b></font><br>
+El procedimiento Str obtiene una cadena a partir de un valor numérico.<br>
+Donde valor es el número a convertir y Cadena es la variable donde se almacenará la cadena ya convertida.<br>
+Por ejemplo, si tenemos el numero 269, es procedimiento hara que la cadena valga '269'<br><br>
+* <b><font color=00ffff>Val(cadena,numero,codigo)</b></font><br>
+Esta funcion convierte una cadena numerica en un numero.<br>
+Donde cadena es la cadena que se convierte, numero la variable numerica a la que sera igualada la cadena hecha numero,<br>
+y codigo es una variable de tipo Integer cuyo valor sera 0 si la transformacion ha ocurrido correctamente o su valor<br>
+sera la posicion del caracter que haya producido un error.<br>
+<h2>Trabajar con Strings</h2>
+Aqui vamos a ver una serie de caracteristicas a la hora de trabajar con Strings:<br>
+* Podemos declarar nuevos types de String con la siguiente estructura:<br><b><font color="00ffff">
+ Type<br>
+ Cadena1 = String[numero]<br></font></b>
+Donde numero es la cantidad maxima de caracteres que puede tener una variable de ese tipo.<br>
+Asi, si ponemos un numero menos de 255, las variables que usen este tipo ocuparan menos memoria.<br><br>
+* Los caracteres de un String tambien tienen un nombre, como si fueran Arrays, es decir, la estructura de los nombre<br>
+de los caractres es esta: <br>
+<b><font color="00ffff">Cadena[numero_caracter]</font></b><br>
+Donde Cadena es la cadena y numero_caracter la posicion que ocupa el caracter dentro de la cadena.<br><br>
+* Para concatenar varias cadenas de usa el operador +.
+
+<h2>Ejemplo</h2>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+
+program cadenas;<br>
+var<br>
+cad1,cad2,cad3,cad4,cad5,cad6:String;<br>
+num1,num2,num3,num4,num5:Integer;<br>
+car1:char;<br>
+begin<br>
+cad1 := 'Esta pagina web es una pasada';<br>
+cad2 := 'web';<br>
+cad3 := '4987';<br>
+num1 := 1563;<br><br>
+
+num2 := Length(cad1);<br>
+cad4 := Copy(cad1,6,6);<br>
+cad5 := Concat(cad2,cad4);<br>
+Val (cad3,num3,num4);<br>
+Str (num1,cad6);<br>
+num5 := Pos (cad2,cad1);<br>
+car1 := Upcase('q');<br><br>
+
+writeln(cad1); writeln(cad2); writeln(cad3); writeln(num1);<br>
+writeln('');<br>
+writeln(num2); writeln(cad4); writeln(cad5); writeln(num3);<br>
+writeln(num4); writeln(cad6); writeln(num5); writeln(car1);<br>
+writeln('');<br><br>
+
+Delete(cad1,12,num2);<br>
+writeln(cad1);<br>
+readln;<br>
+end.
+</td></tr></table>

@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Formularios</H1></u></center></font>
+</font></td></tr>
+</table></center><br><br>
+
+Un formulario es un elemento que permite recoger datos introducidos por el usuario.
+
+Los formularios se utilizan para conocer las opiniones, dudas, y otra serie de datos sobre los usuarios, para introducir pedidos a través de la red, tienen multitud de aplicaciones.
+
+<br>
+Un formulario está formado, entre otras cosas, por etiquetas, campos de texto, menús desplegables, y botones.<br><br>
+Los formularios se insertan a través de las etiquetas <strong>&ltform&gt y &lt/form&gt</strong>. Entre dichas etiquetas habrá que insertar los diferentes campos de texto y botones para crear el formulario. Con HTML lo unico que podemos hacer es enviarlo por correo, asique tendremos que mandarlo procesar por otro lenguaje mas sofisticado. La etiqueta &ltform&gt tiene los siguientes atributos:<br>
+<br>
+
+
+<center><table width=* height=* border="1" bordercolor=#EAEAEA bgcolor=#010739 cellpadding =5 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff><strong>Atributo</strong></font></td><td><font color=#ffffff>Descripcion</font></td> <td><font color=#ffffff>Opciones</font></td></tr>
+<tr><td valign=top><font color=#ffffff><strong>action</strong></font></td><td width=300><font color=#ffffff>Indica el tipo de accion a llevar a cabo con el formulario.</font></td><td><font color=#ffffff>Enviarlo por correo o procesar con algun archivo.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> <strong>enctype</strong></font></td><td><font color=#ffffff>Indica el modo en que queramos que se lea el archivo.</font></td><td><font color=#ffffff>Puede ser leido como texto plano, entoces su valor sería "text/plain" o puede ser ejecutado, en ese caso omitiremos esta etiqueta.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> <strong> method</strong></font></td><td><font color=#ffffff>Indica la forma en la cual el formulario es enviado.</font></td><td><font color=#ffffff>Puede tomar como valor "get" o "post", el primero sirve para que no se puedan producir cambios como guardar el formulario y el segundo hace que si se puedan producir.</font></td></tr></table></center>
+<br>
+Vamos a explicar un par de cosas sobre la etiqueta action:<br>
+Cuando queremos que el formulario sea mandado por correo action sera igual a ---&gt action="mailto:formularios@fomulario.com"<br>
+Cuando queremos que el formulario sea procesado por algun archivo  action sera igual a ---&gt action="direccion del archivo"
+<br>Ejemplos de formulario:
+<font color=00ff00><br>
+&ltform action="mailto:formularios@formulario.com" method="post" enctype="text/plain" &gt ... &lt/form&gt<br>
+&ltform action="direccion.php" method="get"&gt ... &lt/form&gt<br>
+</font><br>
+<h1>Campos de texto</h1>
+Una de las cosas más importantes de un formulario, son los campos de texto, en ellos es donde escribimos la informacion.<br>
+Para insertar un área de texto largo es necesario incluir las etiquetas <strong>&lttextarea&gt y &lt/textarea&gt</strong> y para que sea leido por el formulario tiene que estar entre las etiquetas <strong>&ltform&gt y &lt/form&gt</strong> del formulario.
+Esta etiqueta tiene varios atributos:
+<br><br>
+<center><table width=* height=* border="1" bordercolor=#EAEAEA bgcolor=#010739 cellpadding =5 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff><strong>Atributo</strong></font></td><td><font color=#ffffff>Descripcion</font></td> </tr>
+<tr><td valign=top><font color=#ffffff><strong>name </strong></font></td><td width=300><font color=#ffffff>Indica el nombre del campo de texto.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> <strong>rows </strong></font></td><td><font color=#ffffff>Indica el número de líneas que podrán ser visualizadas .</font></td></tr>
+<tr><td valign=top><font color=#ffffff> <strong> cols </strong></font></td><td><font color=#ffffff>indica el número de caracteres por línea que podrán ser visualizado</font></td></tr></table></center>
+<br>
+Ejemplo de area de texto:<br>
+
+<font color=00ff00>
+&ltform action="mailto:formularios@formulario.com" method="post" enctype="text/plain" &gt &lttextarea name="ejemploarea" cols="90" rows="5"&gtEscribe el texto que quieras&lt/textarea&gt
+ &lt/form&gt<br>
+</font><br>
+<textarea name="ejemploarea" cols="90" rows="5">Escribe el texto que quieras</textarea><br><br>
+Existe tambien otra etiqueta de introduccion de texto corto, la etiqueta &ltinput&gt. Esta etiqueta tiene varios atributos:
+<br><br>
+
+<center><table width=600 height=* border="1" bordercolor=#EAEAEA bgcolor=#010739 cellpadding =5 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff><strong>Atributo</strong></font></td><td><font color=#ffffff>Descripcion</font></td> </tr>
+<tr><td valign=top><font color=#ffffff><strong>name </strong></font></td><td width=400><font color=#ffffff>Indica el nombre del campo de texto.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> <strong>type </strong></font></td><td><font color=#ffffff>Indica el tipo de texto que visualizaremos al escribir, si su valor es "text", se ve lo que escribimos, si es "password" se ven puntos.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> <strong> size </strong></font></td><td><font color=#ffffff>indica el tamaño de la caja de texto en funcion de los caracteres.</font></td></tr>
+<tr><td valign=top><font color=#ffffff> <strong>maxlength </strong></font></td><td><font color=#ffffff>Es el tamaño maximo de texto que puede ser tomado por el formulario</font></td></tr>
+<tr><td valign=top><font color=#ffffff><strong>value </strong></font></td><td><font color=#ffffff>Da un valor predefinido al campo de texto.</font></td></tr></table></center>
+<br><br>
+Ejemplo de area de texto:<br>
+
+<font color=00ff00>
+&ltform action="mailto:formularios@formulario.com" method="post" enctype="text/plain"&gt<br>  &ltinput type="password" name="contrasena" size=15 maxlength=10 value="contrasena"&gt
+ &lt/form&gt<br>
+</font><br>
+<input type="password" name="contrasena" size=15 maxlength=10 value="contrasena">
+
+<h1>Botones</h1>
+Hemos visto la etiqueta &ltinput&gtcomo campo de texto sin embargo esta etiqueta tambien sirve para crear botones.<br>
+Esto se logra gracias al atributo type="" que hemos visto antes:<br><br>
+<img src="ico2.jpg"> Si el valor es submit, al pulsar sobre el botón se enviará el formulario.<br>
+
+<img src="ico2.jpg"> Si el valor es reset, al pulsar sobre el botón se restablecerá el formulario, borrándose todos los campos del formulario que hayan sido modificados y adquiriendo su valor inicial.<br>
+
+<img src="ico2.jpg"> Si el valor es button, al pulsar sobre el botón no se realizará ninguna acción.<br><br>
+Ejemplo de botones:<br>
+<font color=00ff00>
+&ltform action="mailto:formularios@formulario.com" method="post" enctype="text/plain"&gt<br>  &ltinput type="submit" name="contrasena" size=10  value="Enviar"&gt
+ &lt/form&gt<br>
+</font><br>
+
+<input type="submit" name="contrasena" size=10 value="Enviar">
+<br><br>
+Tambien se pueden crear más tipos de botones modificando otra vez el atributo type:<br>
+<img src="ico2.jpg"> Cuando es igual a checkbox se forma una caja de seleccion.<input name="casilla" type="checkbox" value="acepto" checked><br>
+<img src="ico2.jpg"> Cuando es igual a radio se forman se forma una caja de seleccion circular, para que solo una pueda ser selecciona tienen que tener el mismo name.<input name="prefiere" type="radio" value="estudiar" checked><input name="prefiere" type="radio" value="trabajar"><input name="prefiere" type="radio" value="trabajar"><input name="prefiere" type="radio" value="trabajar">
+<br><br><font color=00ff00>
+&ltinput name="casilla" type="checkbox" value="acepto" checked&gt<br>
+&ltinput name="prefiere" type="radio" value="estudiar" checked&gt<br>
+&ltinput name="prefiere" type="radio" value="aprender"&gt<br>
+&ltinput name="prefiere" type="radio" value="mejorar"&gt<br>
+&ltinput name="prefiere" type="radio" value="algo"&gt</font>
+<h1>Listas</h1>
+Los campos de selección se utilizan para insertar menús y listas desplegables.
+
+Para insertar uno de estos menús o listas es necesario insertar las etiquetas <strong>&ltselect&gt y &lt/select&gt</strong>.<br>
+Estas etiquetas tambien tienen atributos como:<br>
+<img src="ico2.jpg"> name: indica el nombre de la lista.<br>
+<img src="ico2.jpg"> size: indica el numero de elementos de la lista que se muestran a la vez.<br>
+<img src="ico2.jpg"> multiple: si aparece, se pueden seleccionar varios objetos de la lista alludado por la tecla Ctrl<br>
+<img src="ico2.jpg"> disabled: si aparece indica que la lista estará desactivada.<br><br>
+Entre estas dos etiquetas, se va insertando &ltoption&gt y &lt/option&gt para indicar cada una de las opciones.<br>
+Mediante el atributo value="" indicaremos el valor a enviar en caso de que se elija esa opcion.
+Ejemplo de lista:<br>
+
+<font color=00ff00>
+&ltform action="mailto:formularios@formulario.com" method="post" enctype="text/plain"&gt<br> &ltselect name="estaciones" size=1&gt<br> 
+  &ltoption value="uno"&gtPrimavera&lt/option&gt<br>
+  &ltoption value="dos"&gtVerano&lt/option&gt<br>
+  &ltoption value="tres"&gtOtoño&lt/option&gt   <br>
+  &ltoption value="cuatro"&gtIncierno&lt/option&gt<br>
+&lt/select&gt<br>
+ &lt/form&gt<br></font>
+
+<form action="mailto:formularios@formulario.com" method="post" enctype="text/plain">
+<select name="estaciones" size=1>
+<option value="uno">Primavera</option>
+<option value="dos">Verano</option>
+<option value="tres">Otoño</option> 
+<option value="cuatro">Incierno</option>
+</select>
+</form>
+<h1>Subir archivos</h1>
+Si la etiqueta input tiene como tipo "file" ---><font color=00ff00>&ltinput type=file&gt</font><br>
+Entonces servira para enviar un archivo que buscaremos en nuestro PC a la web.<br>
+Ejemplo:<br><font color=00ff00>
+&ltform name="manda" action="subirmusica.php" enctype="multipart/form-data" method="post"&gt<br>
+&ltinput type=file name="archivo" id="archivo"&gt<br>
+&ltinput type=submit VALUE="Sube musica"&gt<br>
+&lt/form&gt</font>
+<br><br>
+Deberemos tambien añadir un campo oculto para indicar el maxico tamaño del archivo en bytes:<br>
+<font color=00ff00>&ltinput type="hidden" name="MAX_FILE_SIZE" value="1000000"&gt </font>
+<br><br>
+Para poder manipular el archivo que nos envien, debemos saber PHP.<br><br>
+<center><form name="manda" action="subirmusica.php" enctype="multipart/form-data" method="post">
+<input type=file name="archivo" id="archivo">
+<input type=submit VALUE="Sube musica">
+</form> </center>

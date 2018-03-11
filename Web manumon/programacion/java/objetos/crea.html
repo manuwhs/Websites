@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Crear Clases</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+Ahora vamos a aprender a crear  nuestras propias clases para asi poder crear nuestros propios objetos.<br>
+Para crear una clase debemos crear una funcion especial, que se encargará de construir el objeto en memoria e inicializarlo. <br>Esta función se le llama constructor en la terminología de la programación orientada a objetos. <br>
+El nombre de estas funcion tiene que empezar por mayuscula y su estructura es esta:<br><font color=00ffff>
+function MiClase (valor_inicializacion) { <br>
+    //Inicializo las propiedades y métodos <br>
+    this.miPropiedad = valor_inicializacion <br>
+    this.miMetodo = nombre_de_una_funcion_definida }<br></font><br>
+Utiliza la palabra this para declarar las propiedades y métodos del objeto que se está construyendo. This hace referencia al objeto que se está construyendo, pues recordemos que a esta función la llamaremos para construir un objeto. A ese objeto que se está construyendo le vamos asignando valores en sus propiedades y también le vamos asignando nombres de funciones definidas para sus métodos. Al construir un objeto técnicamente es lo mismo declarar una propiedad o un método, solo difiere en que a una propiedad le asignamos un valor y a un método le asignamos una función. 
+<br><br><h2>Trabajar con propiedades</h2>
+Ya que sabemos como crear propiedades, debemos saber que les podemos dar un valor inicial o que dicho valor lo indique el creador del objeto al crearlo. Estas propiedades pueden ser modificadas y explotadas.<br><br>
+Vamos a hacer un ejemplo de propiedades:<br>
+<font color=00ffff>
+function AlumnoUniversitario(nombre, edad){ <br>
+    this.nombre = nombre <br>
+    this.edad = edad<br>
+    this.universidad = null }
+</font><br>
+Aqui hemos creado el objeto AlumnoUniversitario, al que le podemos poner dos datos de entrada, y hemos creado tres propiedades. Ahora crearemos un objeto de esta clase:<br>
+<font color=00ffff>var alumno = new AlumnoUniversitario ("Manuel", 20)<br>
+alumno.universidad = Badajoz<br>
+document.write (alumno.nombre)<br>
+
+</font>
+
+Ahora creamos un objeto de esta clase, le ponemos los parametros que se pueden poner y luego mostramos en pantalla la propiedad nombre del objeto alumno.
+<h2>Trabajar con metodos</h2>
+Para crear un metodo, antes debemos crear una funcionm que se contruye con el objetivo de usarla de metodo en esa clase.<br>
+Una vez creada la funcion, el metodo se indica el la clase igual que la funcion: <font color=00ffff> this.metodo = nombre_funcion </font><br><br>
+Vamos a ver un ejemplo sobre los metodos:<br>
+<font color=00ffff>
+&ltscript&gt<br>
+
+function matriculate (num_matricula) { <br>
+    this.numMatricula = num_matricula } <br><br>
+function imprimete(){ <br>
+    document.write("<br>Nombre: " + this.nombre) <br>
+    document.write("<br>Edad: " + this.edad) <br>
+    document.write("<br>Número de matrícula: " + this.numMatricula) }<br><br>
+
+function AlumnoUniversitario(nombre, edad){ <br>
+    this.nombre = nombre <br>
+    this.edad = edad <br>
+    this.numMatricula = null <br>
+    this.matriculate = matriculate <br>
+    this.imprimete = imprimete} <br>
+&lt/script&gt<br></font>
+Vamos a ver, el primer parrafo es una funcion que tiene un paramtro de entrada, esta funcion hace que el parametro de entrada sea igual la propiedad numMatricula de la clase en la que valla como metodo.<br>
+El se segundo parrafo lo que hace es mostrar en pantalla propiedades de la clase en la que valla como metodo.<br>
+El tercero es la clase, en ella hay dos paramtros de entrada que se convierten en el resultado de dos propiedades, despues hay otra propiedad sin definir y por ultimo hay dos metodos cuyas funciones estan ya definidas.<br><br>
+Ahora crearemos un objeto de esta clase:<br><font color=00ffff>
+&ltscript&gt<br>
+alumno = new AlumnoUniversitario("Hector", 22)<br>
+alumno.matriculate(521)<br>
+alumno.imprimete()<br>
+&lt/script&gt</font><br>
+Hemos creado un objetode la clase AlumnoUniversitario y con los dos parametros iniciales hemos definido dos propiedades.
+Despues hemos invocado un metodo de la clase y le hemos dado el paramtro 521, este metodo lo que hara darle a la propiedad  this.numMatricula el valor del numero que hallamos puesto entre los parentesis.<br>
+Por ultimo hemos usado el metodo imprimete() para mostrar en pantalla los datos del alumno.<br>
+<br>Como habreis visto, a la hora de delcarar la funcion, ponemos la funcion sin los parentesis "()" y a la hora de usarlo si.

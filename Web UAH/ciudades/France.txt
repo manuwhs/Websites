@@ -1,0 +1,5 @@
+	<option value="Toulouse"></option>
+            <option value="Marseille"></option>
+            <option value="Guadacacara"></option>
+            <option value="Valencia"></option>
+            <option value="Barcelona"></option>

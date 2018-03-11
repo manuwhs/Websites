@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+<body bgcolor=#000022>
+<body leftmargin="70" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#ffffff bgcolor=#000000 cellpadding =0>
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Trabajar con mapas de bits 2</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Paquete import flash.geom.*</h1>
+# Como ya hemos dicho, este paquete solo sirve para difinir figuras grometricas. Para ello usa:<br>
+<b><u><font color=00ff00>1) Point():</b></u> </font>Esta funcion lo que hace es crear un punto de coordenadas, sirve por ejemplo para colocar objetos o efectos en partes del escenario o la imagen. Entre el parentesis colocamos las coordenadas. Ejemplo:<br>
+ <font color=00ffff>import flash.geom.*;<br>
+punto1=new Point()<br>
+punto2=new Point(30,20)<br></font>
+<b><u><font color=00ff00>2) Rectangle():</b></u>  </font>Esta funcion genera un area, podemos o bien crearla o bien indicamos un objeto del que coger su area. 
+<br>Para coger el area de un objeto su estructura es esta:  var area = mapabit.rectangle.<br>
+Si queremos crear uno nuevo, su estructura es esta. var area = new Rectangle (posicion x, posicion y, anchura, altura).<br>
+Ejemplo:<br><font color=00ffff>
+import flash.geom.*;<br>
+var area = mapabit.rectangle;<br>
+var area2 = new Rectangle(0,0,200,300)<br></font><br>
+<b><u><font color=00ff00>2) Matrix():</b></u>  </font> Esta funcion representa una matriz de transformación que determina cómo asignar puntos de un espacio de coordenadas a otro. Al definir las propiedades del objeto Matrix y aplicarlas a un objeto MovieClip o BitmapData es posible realizar varias transformaciones gráficas en el objeto. Estas funciones de transformación son la traslación (cambio de posición x e y), giro, cambio de escala y sesgo.
+<br>Es decir, es una funcion que modifica el tamaño, giro e inclinacion del objeto al que se aplica.<br>
+Su estructura es esta: new Matrix(paramtros). Esta funcion tiene varios parametros:
+1)  
+

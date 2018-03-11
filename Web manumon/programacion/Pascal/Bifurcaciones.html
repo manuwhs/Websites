@@ -1,0 +1,167 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Bifurcaciones</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Bifurcaciones condicionales</h1>
+Las estructuras condiciones permiten determinar si se da una determinada situacion y, <br>
+seguidamente ejecutar las instrucciones que se especifiquen. <br>
+De este tipo son las siguientes estructuras.
+<h3>IF...THEN...ELSE</h3>
+El IF se traduce como el "si" condicional, el THEN como "entonces" y el ELSE como "en caso contrario".<br>
+Esta expresión es utilizada para ejecutar una sentencia en el caso que una condición establecida sea verdadera, <br>
+de lo contrario se podra ejecutar una sentencia distinta.<br>
+Su estructura es esta:<br><font color=00ffff><strong>
+IF condición THEN <br>
+BEGIN <br>
+instrucciones;<br>
+END<br><br>
+ELSE<br>
+BEGIN <br>
+instrucciones;<br>
+END;</strong></font><br>
+Esta estructura nos dice que si "condicion" es verdadera, se realizaran las instrucciones que van despues de THEN,<br>
+si es falsa, se realizaran las que van despues de ELSE.<br>
+Como condicion podemos poner una comparacion de 2 valores, una variable booleana...<br><br>
+
+Si os fijais, el END del grupo de instrucciones que va despues de THEN, no lleva punto y coma ";", <br>
+esto es debido a que si lo ponemos daremos por finalizada la estructura y el ELSE nos dara error,<br>
+si no pusieramos la parte del ELSE, si tendriamos que poner el punto y coma ";".<br>
+Dentro de ese primer grupo de instrucciones, las instrucciones que lo forman si van separadas por ";".<br>
+Recordad que si solo queremos ejecutar una instruccion no hara falta ponerla entre BEGIN y END<br>
+ya que estas son para agrupar un grupo de instrucciones.<br>
+En tal caso, la instruccion que va despues del THEN tampoco llevaria punto y coma ";".<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+Program IF_THEN_ELSE;<br>
+VAR<br>
+Contador : Integer;<br>
+
+BEGIN<br>
+contador:=1;<br>
+IF contador=10 THEN<br>
+BEGIN<br>
+writeln('contador es igual a 10');<br>
+END<br>
+ELSE<br>
+BEGIN<br>
+contador:= contador + 1;<br>
+writeln('contador es menor a 10');<br>
+END;<br>
+END.
+</td></tr></table>
+<br>
+Tambien podemos combinar esta estructura condicional con un ELSE de esta estructura para decir que<br>
+si la condicion principal es falsa y pero otra condicion es verdadera ejecutar esa accion, su estructura seria esta:<br>
+<font color=00ffff><strong>
+IF condición THEN <br>
+BEGIN <br>
+instrucciones;<br>
+END<br><br>
+ELSE IF condicion2 THEN<br>
+BEGIN <br>
+instrucciones;<br>
+END<br>
+ELSE<br>
+BEGIN <br>
+instrucciones;<br>
+END;</strong></font><br>
+</strong></font><br>
+<h3>CASE</h3>
+Esta forma de control se utiliza cuando se va a evaluar una expresión, variable o constante <br>
+que puede contener varios datos diferentes (valores) y en cada dato deberá realizar una acción especial. <br>
+Esta estructura puede ser utilizada para variables, pero es mucho mas util para Arrays (matrices).<br>
+Su estructura es esta:<br>
+<pre>
+CASE selector OF
+      valor1 : sentencia1;
+      valor2 : sentencia2;
+              ...
+      valorN : sentenciaN;
+      ELSE sentencia_else;
+   END;
+</pre>
+Esta estructura funciona de la siguiente manera:<br>
+Tenemos una expresion, el "selector" que puede ser una variable, contastante o expresion.<br>
+Y lo que hacemos es ir provando valores, si el "selector" tiene el "valor1" entoces se ejecutara la "sentencia1",<br>
+si el selector tiene el "valor2" se ejecutara la "sentencia2".<br>
+Al final de cada sentencia para cada valor, escribimos punto y coma ";".<br>
+Cuando hallamos puesto todos los valores que queramos probar, podemos poner una sentencia <br>
+que diga que si el "selector" no tiene ninguna de esos valores, entonces se ejecute,<br>
+esta sentencia es la que va despues del ELSE, la "sentencia_else".<br>
+Para terminar la estructura escribimos END; con " ; ", este END no tiene BEGIN.<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+
+PROGRAM 1Case;<br>
+VAR<br>
+Numero : Integer;<br>
+BEGIN<br>
+WriteLn('Introduzca un número entero del 1 al 5: ');<br>
+ReadLn(Numero);<br>
+CASE Numero OF<br>
+1 : WriteLn('El número fué 1');<br>
+2 : WriteLn('El número fué 2');<br>
+3 : WriteLn('El número fué 3');<br>
+4 : WriteLn('El número fué 4');<br>
+5 : WriteLn('El número fué 5');<br>
+END;<br>
+readln;<br>
+End.
+</td></tr></table>
+<h1>Bifurcaciones incondicionales</h1>
+Son aquellas que modifican la lectura del programa sin ninguna condicion.
+Existen dos tipos:
+<h3>GOTO</h3>
+La sentencia GOTO es una sentencia utilizada para alterar el flujo del programa, es decir, <br>
+para ir a ejecutar una sentencia en un lugar diferente del programa y no la linea siguiente. <br>
+Para utilizar este tipo de salto es necesario declarar etiquetas, que no son otra cosa que <br>
+el identificador que marcará el lugar a donde se dirigirá el flujo del programa al momento de usar el GOTO. <br>
+La declaración de etiquetas se hace antes que la de constantes y variables, <br>
+la palabra reservada para su declaración es LABEL. <br>
+El nombre de la etiqueta es un nombre de un identificador como cualquier otro, pero al utilizarse debe terminar con dos puntos ":".<br>
+Para dirigirnos a la etiqueta usaremos esta estructura:  GOTO etiqueta;<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+PROGRAM Uso_del_GOTO;<br>
+LABEL<br>
+Etiqueta1;<br>
+BEGIN<br>
+WriteLn('Esta linea si se escribirá');<br>
+GOTO Etiqueta;<br>
+WriteLn('Esta linea no se escribirá');<br><br>
+
+Etiqueta1:<br>
+WriteLn('Se efectuó el brinco');<br>
+END.  
+</td></tr></table>
+
+<h3>HALT</h3>
+La instrucción HALT provoca la terminación inmediata de un programa, sin importar las siguientes instrucciones. <br>
+Normalmente se utiliza en casos de error, se despliega un mensaje y se termina el programa. Ejemplo:<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+PROGRAM Uso_de_HALT;<br>
+
+BEGIN<br>
+WriteLn('Primera linea del programa');<br>
+WriteLn('Terminará la ejecución del programa');<br>
+HALT<br>
+END. 
+</td></tr></table> 
+
+	

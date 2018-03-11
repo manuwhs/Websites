@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Estructuras de control de flujo</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Estructuras de control de flujo</h1>
+# Las estructuras de control de flujo no son mas que una serie de instrucciones que nos ayudan a controlar<br>
+el flujo del programa, es decir, nos ayudan a crear ciclos, bifurcaciones, condicionales...<br>
+Segun la forma en la que lo ayuden a controlar hay tres tipos:<br>
+* Sentencias repetitivas.<br>
+* Bifurcaciones condicionales.<br>
+* Bifurcaciones incondicionales.
+<h2>Sentencias repetitivas</h2>
+<h3>Ciclo For</h3>
+El ciclo FOR repite una sentencia un determinado número de veces que se indica al momento de llamar al ciclo. <br>
+Esta sentencia crea un bucle condicional cuya estructura es esta: <br>
+<font color=00ffff><b>FOR identificador := inicio TO fin DO <br>
+BEGIN<br>
+instrucciónes;<br>
+END;</font></b> <br>
+Lo que hace este bucle es repetir una sentencia hasta que se cumpla una condicion, por eso es condicional.<br>
+Estos bucles funcionan diciendo que se repita una sentencia tantas veces como una variable con un numero entero<br>
+tenga que incrementar su valor en 1 para llegar a otro valor.<br><br>
+En la estructura el "identificador" es la variable de numero entero, que tiene que ser declarada antes, <br>
+el "inicio" es el valor inicial que se le da a la variable y el "fin" es el valor al que tiene que llegar<br>
+incrementandose en 1 cada vez que se ejecute la sentencia<br>
+Por ultimo "instruccion" es la sentencia que se repetira, en caso de que solo queremos dar 1 instruccion,<br>
+no hara falta ponerla entre begin y end; ya que es una intruccion simple. Ejemplo:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+
+PROGRAM Ciclo_FOR;<br>
+VAR<br>
+Numero : Integer;
+<br><br>
+BEGIN<br>
+FOR Numero := 1 to 50 DO<br>
+WriteLn(Numero);<br>
+END. 
+
+</td></tr></table>
+<br>
+Una de las limitaciones de los ciclos FOR es que una vez iniciado el ciclo se ejecutará el número de veces predefinido <br>
+sin posibilidad de agregar o eliminar ciclos. <br>
+Es posible hacer que un ciclo cuente hacia atrás, es decir que la variable en lugar de incrementarse se decremente. <br>
+Para ésto cambiamos la palabra TO por DOWNTO, y colocamos el valor mayor a la izquierda y el menor a la derecha.
+<h3>Ciclo While</h3>
+Los ciclos WHILE ofrecen la ventaja de que la ejecución se realiza mientras se cumpla una condición que demos, <br>
+por lo tanto es posible controlar el número de repeticiones una vez iniciado el ciclo.<br>
+La diferencia con For es que en este tipo de ciclos podemos poner la condicion que queramos,<br>
+pero debido a ello, tendremos que poner la instruccion para que a medida que se repita el ciclo,<br>
+se cumpla la condicion para que el ciclo deje de ejecutarse.<br>
+Por ejemplo, si la condicion para que deje de ejecutarse es que una variable llegue a un valor, <br>
+tendremos que poner dentro del ciclo que se repita la instruccion de que el valor de la variable incremente.<br>
+
+<font color=00ffff><b>WHILE condición DO <br>
+BEGIN<br>
+instrucciones;<br>
+END;</font></b> <br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+PROGRAM Ciclo_WHILE;<br>
+VAR<br>
+Numero : Integer;<br><br>
+
+BEGIN<br>
+Numero := 1;<br>
+WHILE Numero <= 50 DO<br>
+BEGIN<br>
+WriteLn (Numero);<br>
+Numero := Numero +1;<br>
+END;<br>
+readln;<br>
+END. 
+
+</td></tr></table>
+<h3>Ciclo Repeat-Until</h3>
+Este tipo de ciclos es muy parecido a los ciclos WHILE, la diferencia entre ambos es que en WHILE la <br>
+condición se evalúa al principio del ciclo, en cambio en REPEAT-UNTIL se evalúa al final, <br>
+lo que significa que en un ciclo REPEAT-UNTIL la sentencia se ejecutará por lo menos una vez, <br>
+cosa que puede no ocurrir en el ciclo WHILE.<br>
+Su estructura es esta:<br>
+<font color=00ffff><b>
+REPEAT<br>
+BEGIN<br>
+instrucciones;<br>
+END;<br>
+UNTIL condicion<br></font></b>
+Donde "instrucciones" son las instrucciones que se repetiran y "condicion" es la condicion que hara<br>
+que paren de repetirse la instrucciones. Dentro de "instrucciones" deben estar aquellas que hagan que<br>
+en un periodo finito de repeticiones se cumpla la condicion. Ejemplo:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+PROGRAM Ciclo_RepeatUntil;<br>
+VAR<br>
+Numero : Integer;<br>
+BEGIN<br>
+Numero := 1;<br>
+REPEAT<br>
+begin<br>
+WriteLn (Numero);<br>
+Numero := Numero + 1;<br>
+end;<br>
+UNTIL Numero = 50;<br>
+END.
+</td></tr></table>

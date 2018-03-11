@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="600" height="120" id="ondas" align="top">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="bandera.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="ondas.swf" quality="high" bgcolor="#000000" width="600" height="120" name="ondas" align="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto combina los efectos perlinNoise<br>
+y DisplazamentMapfilter para lograr hacer <br>este efecto bandera. Las explicaciones las  <br>encontrareis  en el archivo FLA y el  <br>codigo que se usa está a derecha,<br> cambiando unos parámetro podremos hacer <br>efecto casacada o lago en vertical.
+<br><br>
+<center><a href="Efecto viento.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+En este archivo flash encontrareis algunas<br> explicaciones, este efecto crea distorsion<br> y convulsusiones; y las aplica a una <br>imagen, y poniendo esos efectos en <br>puntos, el efecto se desplaza.<br> si mirais los tutoriales de esta pagina<br>lo entendereis bien.<br> Pero si quereis tenerlo sin mas,<br> teneis que importar una imagen al <br>archivo .fla y vincularla a AS2 <br>con el nombre:   imagen. <br>Pero deciros que aquí se dibuja <br>una imagen dentro de otra para<br>que se mueva toda la imagen de dentro.
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+import flash.display.BitmapData;<br>
+import flash.geom.*;<br>
+import flash.filters.DisplacementMapFilter<br><br>
+
+imagen = BitmapData.loadBitmap("bandera");<br><br>
+
+ancho = imagen.width;<br>
+alto = 4*imagen.height/3;<br><br>
+
+
+mapaimagen = new BitmapData(ancho, alto);<br>
+mapabit = new BitmapData(ancho, alto);<br><br>
+
+mapaimagen.draw(imagen, new Matrix(1, 0, 0, 1, 0, alto/7));<br><br>
+
+createEmptyMovieClip("pelicula", this.getNextHighestDepth());<br>
+
+pelicula.attachBitmap(mapaimagen, 0);<br>
+pelicula._y=100<br>
+pelicula._x=100<br><br>
+
+punto = new Point();<br>
+
+desMap = new DisplacementMapFilter(mapabit, null, 8, 8, 24, 20, "clamp");<br><br>
+
+onEnterFrame = function () { <br><br>
+
+mapabit.perlinNoise(ancho/2, 2*alto, 1, 0, true, true, 8, true, [punto]);<br><br>
+
+punto.x -= 20<br>
+punto.y -= 10<br><br>
+
+pelicula.filters = [desMap];}</font></td></tr></center>

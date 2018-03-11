@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>
+Manumonhacker.Principal
+</title>
+
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text =ffffff>
+<body bgcolor=#000022 >
+<body leftmargin="50" topmargin="10">
+<STYLE type="text/css"> 
+input {background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 10pt}
+textarea{background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 10pt; scrollbar-track-color: #000000; }
+<body >
+<!-- 
+BODY { 
+scrollbar-face-color: #2a2a2a; 
+scrollbar-highlight-color: #000000; 
+scrollbar-3dlight-color: #808080; 
+scrollbar-darkshadow-color: #000000; 
+scrollbar-shadow-color: #242424; 
+scrollbar-arrow-color: #FFffff; 
+scrollbar-track-color: #000022; 
+} 
+--> 
+</STYLE> 
+
+<style>
+select {Background-color:000000;color:cornsilk; font-size=17;}
+</style>
+<center>
+
+                 <font color=#ffffff face="Times New Roman" size=3>
+      
+<center><table width=600><tr><td align=middle>
+<select name="animaciones" size=1 onChange=capa.innerHTML=animaciones.value>
+<option value="principal/animaciones.jpg"> <center> Animaciones </center></option>
+<option value="<embed name='casa' src='principal/anima/cohete.swf' quality='high' bgcolor='#000022' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>" >Cohete</option>
+<option value="<embed name='casa' src='principal/anima/poke2.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Fusion</option> 
+<option value="<embed name='casa' src='principal/anima/poke.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Lucha</option>
+<option value="<embed name='casa' src='principal/anima/poke3.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Lucha 2</option>
+<option value="<embed name='casa' src='principal/anima/nave.swf' quality='high' bgcolor='#000022'  width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Nave</option>
+<option value="<embed name='casa' src='principal/anima/goku.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Goku</option>
+
+</select>
+</td><td align=middle>
+<select name="webcam" size=1 onChange=capa.innerHTML=webcam.value>
+<option value="<embed name='casa' src='principal/cam/camnormal.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">  <center>Web Cam  </center></option>
+<option value="<embed name='casa' src='principal/cam/camnormal.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>" >Normal</option>
+<option value="<embed name='casa' src='principal/cam/camfuego.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Fuego</option> 
+<option value="<embed name='casa' src='principal/cam/camagua.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Agua</option>
+</select>
+</td><td align=middle>
+<select name="efectos" size=1 onChange=capa.innerHTML=efectos.value>
+<option value="<embed name='casa' src='principal/efectos/camnormal.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">  <center> Efectos </center>  </option>
+<option value="<embed name='casa' src='principal/efectos/gravedad.swf' quality='high' bgcolor='#ffffff' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>" >Gravedad</option>
+<option value="<embed name='casa' src='principal/efectos/lago.swf' quality='high' bgcolor='#000022' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Onda</option> 
+<option value="<embed name='casa' src='principal/efectos/agua.swf' quality='high' bgcolor='#000022' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Agua</option>
+<option value="<embed name='casa' src='principal/efectos/fuego.swf' quality='high' bgcolor='#000022' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Fuego</option>
+<option value="<embed name='casa' src='principal/efectos/Efecto nieve.swf' quality='high' bgcolor='#000000' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Nieve y Rayo</option>
+<option value="<embed name='casa' src='principal/efectos/viento.swf' quality='high' bgcolor='#000022' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Bandera</option>
+<option value="<embed name='casa' src='principal/efectos/bienvenidos.swf' quality='high' bgcolor='#000022' width=590 height=442 align='middle' allowScriptAccess='sameDomain' type='application/x-shockwave-flash' pluginspage='http://www.macromedia.com/go/getflashplayer'>">Elementos</option>
+
+</select>
+</td><td align=middle>
+<select name="juegos" size=1 onChange=capa.innerHTML=juegos.value>
+<option value="cuno">  <center> Juegos </center>  </option>
+<option value="cdos" >Normal</option>
+<option value="ctres">Fuego</option> 
+<option value="ccuatro">Agua</option>
+</select>
+</td></tr></table>
+</center>
+<br>
+
+<table border=2 cellspacing=0><tr><td>
+<div id="capa" style="width:590px; height:442px; z-index:3; visibility: visible; background-color: #000022"> 
+</div>
+</td></tr></table>
+
+
+
+<form name="comentar" action="foro.php" method="post">
+<table cellspacing=0 cellpadding=15>
+<tr><td><font size=5 color=cornsilk>Mensaje: 
+</font><input type="submit" name="enviar" value="Enviar"> 
+<input type="reset" name="borrar" value="Borrar"> <input type=button VALUE="Actualizar" onClick="location.reload()"><br>
+<input type="hidden" name="horita">
+<textarea name="mensaje" rows="10" cols="45" ></textarea>
+</td><td valign= top><br><br><br>
+<font size=5 color=cornsilk>Nombre: </font><input type="text" name="nombre" size=25 ><br><br>
+<font size=5 color=cornsilk>Web: </font><input type="text" name="web" size=30 value="http://" onKeydown="numeros()"><br><br>
+<font size=5 color=cornsilk>Msn: </font><input type="text" name="msn" size=30 value="@hotmail.com">
+</td></tr></table>
+</form>
+
+
+
+
+
+
+
+

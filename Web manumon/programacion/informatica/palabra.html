@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Palabras</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h3>BITS</h3>
+Bit es el acrónimo de Binary digit. (dígito binario). Un bit es un dígito del sistema de numeración binario. <br>
+La Real Academia Española (RAE) ha aceptado la palabra bit con el plural bits.<br>
+Mientras que en el sistema de numeración decimal se usan diez dígitos, en el binario se usan sólo dos dígitos, el 0 y el 1. <br>
+Un bit o dígito binario puede representar uno de esos dos valores, 0 ó 1.<br>
+Un byte, es un octeto de bits, es decir 8 bits.
+
+<h3>ANCHO DE BANDA</h3>
+El ancho de banda representa la cantidad de información transferida por segundo entre una unidad y otra.<br>
+Por ejemplo, decir que “el ancho de banda entre la memoria y la CPU es de 133 MB/s”,<br>
+quiere decir que en un segundo se pueden transferir 133 millones de bytes entre las unidades citadas.<br>
+Desde el punto de vista de los cálculos que realiza la ALU el byte es una unidad de información relativamente pequeña,<br>
+por lo que se utiliza otra unidad superior denominada “palabra”.<br>
+
+<h3>PALABRAS</h3>
+Una palabra está formada por un número entero de bytes (1, 2, 4, 8 ó 16) y representa:<br>
+- Los datos con los que opera la ALU<br>
+- Las unidades de información que se transfieren entre la memoria principal y la CPU.<br>
+Una palabra es una cadena finita de bits que son manejados como un conjunto por la máquina.<br>
+Una palabra es una unidad de informacion.<br>
+<br>
+Los tamaños mas usados de palabras son el bytes (8 bits), medias palabras (16 bits), palabras (32 bits)<br>
+y algunos incluso permiten acceder a dobles palabras (64 bits).<br>
+Lo que quiere decir que una palabra sea por ejemplo de 8 bits es que es una cadena en binario, de 0 y 1 de
+8 caracteres en total, como por ejemplo: 10011011.<br>
+Si fuera la palabra de 10 bytes, pos entonces por ejemplo seria: 1010011011.<br>
+El numero de bits de una palabra tambien indica el numero maximo de combinaciones diferentes<br>
+de 0 y 1 que se pueden hacer, por ejemplo si es de 2 bits, solo se podran dar 4 combinaciones (00,01,10,11).<br>
+El numero de combinaciones que se pueden hacer con un numero X de bits es 2<sup>x</sup>.<br><br>
+
+La CPU contiene en su interior elementos para memorizar temporalmente la información correspondiente 
+a una palabra, los cuales se denominan REGISTROS.
+Así, por ejemplo, cuando la ALU realiza una suma, ésta se efectúa entre dos datos que temporalmente la UC
+los almacena en dos registros, el resultado de la operación, a su vez, debe almacenarse en un registro
+(suele utilizarse uno de los registros de los sumandos).
+
+<H2>UTILIZACION DE LAS PALABRAS</H2>
+Las unidades de tamaño de palabra (bytes, medias palabras, palabras...) se pueden utilizar para nombrar:<br>
+<h3>Números enteros:</h3>
+Los contenedores de valores numéricos enteros pueden estar disponibles en varios tamaños diferentes,<br>
+dependiendo del numero que se nombre.<br>
+Los tamaños más pequeños normalmente se utilizan sólo por eficiencia en la utilización de memoria,<br>
+cuando se cargan en el procesador, sus valores normalmente son mayores, contenedores de tamaño palabra.<br><br>
+<h3>Números en coma flotante:</h3> 
+Los contenedores para valores numéricos en coma flotante son típicamente una palabra o un múltiplo de una palabra.<br>
+Coma flotante o punto flotante es un método de representación de números reales normalmente decimales <br>
+que se puede adaptar al orden de magnitud del valor a representar (escala de exponentes), <br>
+usualmente trasladando la coma decimal mediante un exponente hacia la posición de la primera cifra significativa del valor.<br>
+De esta forma, con un número dado de dígitos representativos se obtiene mayor precisión que con la coma fija, <br>
+debido a que el valor de estos dígitos es siempre significativo sea el que sea el orden de magnitud del número a representar. <br>
+Debido a esta adaptación, permite representar un rango mucho mayor de números.<br><br>
+<h3>Direcciones:</h3> 
+Los contenedores para direcciones de memoria tienen que ser capaces de expresar el rango necesario de valores,<br>
+ pero no excesivamente grandes. A menudo el tamaño utilizado es el de la palabra pero puede ser un múltiplo o una fracción.<br>
+<h3>Registros:</h3> 
+Los registros son diseñados con un tamaño apropiado para el tipo de dato que almacenan, p.ej. enteros,<br>
+ números en coma flotante o direcciones. Muchas arquitecturas de computadores utilizan registros de "propósito general" <br>
+que pueden albergar varios tipos de datos, estos registros se dimensionan para permitir los más grandes de estos tipos <br>
+y el tamaño típico es el tamaño de palabra de la arquitectura.<br><br>
+<h3>Transferencia memoria-procesador:</h3> 
+Cuando el procesador lee del subsistema de memoria a un registro o escribe el valor de un registro en memoria,<br>
+ la cantidad de datos transferidos es a menudo una palabra. En los subsistemas de memoria simples,<br>
+ las palabras son transferidas sobre el bus de datos de memoria, que típicamente tiene un ancho de una palabra o media palabra.<br>
+ En los subsistemas de memoria que utilizan cache, la transferencia de tamaño palabra se produce entre el procesador<br>
+ y la caché de nivel uno, en los niveles más bajos de la jerarquía de memoria las grandes transferencias <br>
+(con múltiplos de la longitud de palabra) son normalmente utilizadas.<br>
+<h3>Resolución de unidades de dirección</h3>
+Es una arquitectura dada, los sucesivos valores de direcciones designan sucesivas unidades de memoria.<br>
+ En muchos ordenadores, la unidad puede ser un carácter o una palabra (algunos han utilizado una resolución de bit).<br>
+ Si la unidad es una palabra, entonces se puede acceder a una gran suma de memoria utilizando una dirección de un tamaño dado. <br>
+Por otra parte, si la unidad es un byte, se pueden direccionar caracteres individuales<br>
+(p.ej. seleccionados durante la operación de memoria).<br>
+<h3>Instrucciones:</h3>
+ Las instrucciones máquina normalmente son fracciones o múltiplos de la longitud de palabra de la arquitectura.<br>
+ Esta es una elección natural ya que las instrucciones y los datos normalmente comparten el mismo subsistema de memoria.<br>
+ En la arquitectura Harvard el tamaño de palabra de instrucciones y datos no está relacionado.<br>
+

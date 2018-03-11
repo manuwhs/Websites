@@ -1,0 +1,64 @@
+div.titul { background-color:slateblue; margin-bottom: 0px; color:white;text-align:center;font-size : 200%; font-weight:bold }
+
+div.pie{ background-color:slateblue; margin-bottom: 0px; color:white;text-align:center;font-size : 100% ; font-weight:bold }
+
+div.medioi { background-color:orange;width:40%;height:25px;float:left; color:purple;text-align:center; font-weight:bold}
+
+div.dato {; color : White; height:100%; width:100%}
+
+div.mediod{ background-color:darkorange; color:blue; height: 25px; width:60%; float: left; font-weight:bold;text-align:center;}
+
+div.medio {background-color:blue; height: 250px; width: 50%; float: left;font-weight:bold }
+
+h1.naranja {color:darkorange;text-align:center;font-size:150%;margin-left:20px}
+
+.blanco {color:white;font-weight:bold;margin-left:15px}
+
+.imagen { src:images/imag.png; height:90; width:90;}
+ 
+input {background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 10pt}
+
+casa { background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 10pt}
+
+.centro { text-align:center;}
+
+div.tablas {border-width:2; color:white; font-weight:bold; margin-left:10px}
+
+.botoncillo { height:15px; margin-top:3px; margin-left:3px; onfocus:"color = orange"}
+
+textarea{background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 10pt; scrollbar-track-color: #000000; }
+
+.error { text-align:center;
+ color:red;
+ font-weight:bold;
+margin-left:10px;
+animation: blink 1s infinite}
+
+@keyframes anim1 {
+	from {transform:rotateY(0deg);}
+	to {transform:rotateY(360deg)}
+}
+@keyframes blink {
+	25% {color: orange}
+	50% {color: red}
+	75% {color: orange}
+	100% {color: red}
+}
+
+
+div.imagen {
+	animation: anim1 3s;
+	animation-iteration-count: infinite;
+	text-align:center;
+}
+
+
+BODY { 
+scrollbar-face-color: #2a2a2a; 
+scrollbar-highlight-color: #000000; 
+scrollbar-3dlight-color: #808080; 
+scrollbar-darkshadow-color: #000000; 
+scrollbar-shadow-color: #242424; 
+scrollbar-arrow-color: #FFffff; 
+scrollbar-track-color: #000022; 
+} 

@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Funciones</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+<strong><font color=ff00ff>Una función es un bloque de código que podemos utilizar en cualquier parte del archivo SWF con sólo llamarla, <br>
+ademas realizan una sentencia y/o devuelven un valor.</strong></font>
+<br>Para empezar una funcion, escribimos el codigo function, despues el nombre que le des a la funcion, y luego entre () las variables externas que se puedan poner en la funcion, si no las hay o si no las quieres poner, pones solo (). Ejemplo:
+<br> <font color=#00ff00> function miFuncion() {<br>
+	var miVariable = 1;<br>
+	trace(miVariable);<br>
+}<br></font>
+Esta funcion define una funcion que es igual a 1 y luego la muestra en el Panel de Salida el numero 1.<br><br>
+Para invocar una funcion tenemos que escribir el nombre de la misma seguida de las variables entre parentesis. Ejemplo:
+<br> <font color=#00ff00>miFuncion() <br></font>
+Al escribir este codigo se ejecutara la funcion, si lo escribimos dos veces, lo hara dos veces, etc.<br>
+Flash tambien incorporpora funciones ya definidas por el llamadas acciones.<br><br>
+Aqui se explica mejor la funcion creadora de funciones "function":<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff> function: </strong></font>Es la sentencia de sentencias.<br>
+Esta sentencia sirve para crear tus propias funciones. Funciona asi: function miFuincion(){sentencia}.
+<br>Donde miFuncion es el nombre de la funcion y los parentesis sirven para crear nuevas variables, con las que nos manejaremos en la funcion y que al invocar la funcion, entre los parentesis solo tengamos que poner unos valores que sustituiran a las variables que antes hemos creado.  En cado de no querer definir ese tipo de variables solo ponemos (). <br>
+Primer ejemplo:<br>
+
+<font color=00ffff>function decirsi () {trace("si")}<br>
+decirsi ()<br></font>
+Aqui, definimos la funcion "decirsi" cuya sentencia lo que hace es mostrar en el Panel de Salida la palabra "si".<br>
+En la segunda linea invocamos la funcion.<br>
+Segundo ejemplo:<br>
+
+<font color=00ffff>numero = 10<br>
+numero2 = 20<br>
+function suma() {trace(numero+numero2)}<br>
+suma ()<br></font>
+Aqui hemos definido dos funciones que equivalen a dos numeros, luego hemos creado una funcion que interactua con es esas dos variables, entoces carga esas dos variables en la funcion y la ejecuta. En este ejemplo, el resultado seria "30".<br>
+Tercer ejemplo:<br>
+<font color=00ffff>
+function suma (sumando1,sumando2) { var sumar = sumando1+sumando2 ; return sumar}<br>
+trace(suma(10,3))
+<br></font>
+Aqui se crea la funcion suma, y dos variables indefinidas entre los parentesis. En la sentencia de la funcion se crea una nueva variable a la que se le da el valor de la suma de las dos variables creadas entre los parentesis y con la sentencia return se devulve el valor de la variable suma. Despues, cuando invocamos la funcion, entre los parentesis introducimos dos valores, que sustituiran a las variables que creamos antes. Ademas lo que hacemos es mostrar con la accion "trace" la funcion en el Panel de Salida. Mostrar 13.
+<br><br>

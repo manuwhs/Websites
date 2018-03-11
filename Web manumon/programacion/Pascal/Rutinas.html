@@ -1,0 +1,162 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Rutinas (subprogramas)</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Rutinas</h1>
+Una rutina es una serie de instrucciones con un único nombre (identificador), <br>
+que pueden ser activadas muchas veces utilizando el mismo.<br>
+Las rutinas cumplen la funcion de encapsular codigo y hacerlo mas manejable y accesible.<br>
+En lugar de reescribir el código completo de esa rutina cada vez que se necesite,<br>
+unicamente se hace una referencia a la rutina mediante las llamadas a procedimientos y funciones. <br>
+Existen tambien un monton de procedimientos y funciones en las bibliotecas de las unidades,<br>
+que podemos utilizar llamando a su keyword (identificador).<br>
+
+En Pascal, una rutina puede asumir dos formas: un procedimiento y una función. <br><br>
+En teoría: <br>
+* Un procedimiento es un conjunto de instrucciones que realizan una tarea concreta para resolver un determinado problema.<br>
+* Una función es un conjunto de instrucciones que realizan una tarea y devuelve un valor. <br>
+
+Por lo que esta dos rutinas de diferencian en que una función tiene un resultado, un valor de salida, y un procedimiento no. <br>
+Ambos tipos de rutinas pueden tener múltiples parámetros, de tipos de datos dados; y realizar tareas.<br><br>
+En la práctica:<br>
+La diferencia entre funciones y procedimientos es muy limitada:<br>
+* Se puede hacer una llamada a una función para realizar cierta tarea y luego saltarse el resultado<br>
+(que podría ser un código de error opcional o algo similar) <br>
+* O se puede hacer una llamada a un procedimiento que transmite un resultado dentro de sus parámetros.<br><br>
+Como veis la diferencia entre funcion y procedimiento es que las funciones devuelven un valor siempre, <br>
+pero este valor muchas veces es obviado ya que usamos las funciones para resolver problemas, igual que los procedimientos.<br><br>
+
+<h2>Procedimientos</h2>
+Las funciones y procedimientos se declaran antes del cuerpo principal del programa y despues de haber declarado <br>
+el encabezado, las unidades, constantes, tipos y variables del programa. <br>
+La estructura de declaracion mas simplre de un procedimiento es la siguiente:<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+<pre>
+procedure [titulo];
+begin 
+              [instrucciones]
+end;</pre>
+
+</td></tr></table>
+<br>
+Como veis empieza con la keyword procedure, que sirve para declarar un procedimiento, seguida del nombre del procedimiento,<br>
+este nombre se convierte en una keyword (identificador), que nos servira para llamar al procedimiento.<br>
+Despues escribimos las instrucciones del procedimiento entre las keywords "begin y end;".<br>
+Como veis, el "end" de los procedimientos no termina en punto "." sino en punto y coma ";".<br><br>
+Como si se tratara del cuerpo principal escribimos las intrucciones, esto quiere decir que dentro de un<br>
+procedimiento podemos llamar a otros procedimientos y declarar variables que seran "locales".<br>
+Los procedimientos se llaman como dijimos en el tema de las instrucciones simples, mediante su nombre, <br>
+es nombre tambien puede ir acompañado de parametros, cosa que daremos mas adelante en este tema.<br>
+Aqui teneis un ejemplo de procedimiento:<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+program procedimiento;<br>
+procedure titular;<br>
+begin <br>
+WriteLn ('Programa de Turbo Pascal');<br>
+readln;<br>
+end;<br>
+begin<br>
+titular; (*llamada al procedimiento*)<br>
+end.
+</td></tr></table>
+<br>
+<h3>Parametros</h3>
+Para poder pasar información entre el programa principal y procedimientos, o entre procedimientos usamos los parámetros.<br>
+Los parametros son canales de comunicación de datos, son variables que definimos al llamar al procedimiento,<br>
+y que desepeñaran una funcion dentro de este.<br>
+Los parámetros son opcionales y si no se necesitan no se deben usar. <br><br>
+
+Para utilizarlos es necesario declararlos son la siguiente sintaxis: <br>
+PROCEDURE nombre (lista de parámetros); <br><br>
+La lista de parámetros esta compuesta de los nombres de los mismos y del tipo de datos que representan, <br>
+los del mismo tipo se separan con comas "," y cada tipo diferente se separa con punto y coma ";". Ejemplo: <br>
+
+Procedure Ejemplo(a, b : Integer; c, d : String); <br><br>
+
+Para llamar a un procedimiento que utiliza parámetros se pueden utilizar como tales otras variables o constantes,<br>
+siempre y cuando sean del mismo tipo que los declarados.<br>
+Para darle un valor a los parametros, al llamar al procedimiento, debemos escribir el valor de dichos parametros <br>
+entre parentesis y el primer valor que pongamos equivaldra al primer parametro que hallamos definido, el 2º al 2º.....<br>
+Vamos a llamar al procedimiento que hemos definido antes y le vamos a dar valores:<br>
+
+Ejemplo(1, 2, 'Hola', 'Adios'); <br><br>
+
+Una vez sabido esto crearemos un ejemplo con parametros:<br><br>
+<font  face="Arial" color="yellow">
+<pre>
+PROGRAM Parametros;
+VAR
+Saludo : String;
+
+PROCEDURE Imprime_5 (a : String);
+VAR
+Contador : Integer;
+BEGIN
+FOR contador := 1 to 5 DO 
+{Imprime 5 veces la cadena almacenada }
+WriteLn(a); 
+{en la variable "a", que es la información}
+END; 
+{que llega como parámetro }
+
+BEGIN
+Saludo := 'Bienvenidos al programa';
+Imprime_5 (Saludo); 
+{llama al procedimiento Imprime_5, usando como}
+{parámetro la variable Saludo }
+Imprime_5 ('Fin'); 
+{Utiliza la cadena "fin" como parámetro }
+END. </pre></font>
+<h2>Funciones</h2>
+
+Las funciones son, al igual que los procedimientos, un conjunto de sentencias que se ejecutan constantemente, 
+la diferencia entre éstas y los procedimientos es que las funciones regresan un valor. 
+La declaración de las funciones se realiza de la siguiente forma: <br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+<pre>
+FUNCTION [titulo](parámetros) : tipo_de_datos; 
+begin 
+              [instrucciones]
+end;</pre>
+
+</td></tr></table>
+<br>
+Donde [titulo] sera el identificador, "parametros", los parametros, al igual que en los procedimientos <br>
+y "tipo_de_datos" el valor que devolvera la varriable.<br>
+<font  face="Arial" color="yellow">
+<pre>
+PROGRAM Funciones;
+VAR
+X, Y, Z : Real;
+
+FUNCTION Promedio (a, b : Real) : Real;
+{Promedio de dos números reales}
+BEGIN
+Promedio := (a + b) / 2;
+END;
+
+BEGIN
+X := 5.89;
+Y := 9.23;
+Z := Promedio (X, Y);
+{Iguala Z al valor devuelto por la función Promedio}
+WriteLn('El promedio de ',X,' y ',Y,' es: ',Z);
+END. 
+</pre></font>

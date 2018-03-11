@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Acciones</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Las <strong><font color=ff00ff>Acciones son funciones predefinidas de ActionScript</strong></font>, es decir: <br>Flash 8 las crea, y nosotros sólo tenemos que usarlas de la manera que se nos indica.<br> No tenemos que definir las funciones ni nada por el estilo, ni siquiera necesitamos saber cómo están hechas... Lo importante es que están listas para usar, lo que facilita el uso de este lenguaje de programación y sobre todo, haga muy rápido comenzar a programar. <br>
+Las acciones son practicamento todos los codigos predefinidos por flash, incluyendo los eventos, sentencias, funciones...
+<br><strong><font color=ff00ff>Para invocar estas acciones, escribimos su nombre y sus parametros en el caso de que los haya.</font></strong><br>Existen distintos tipos de acciones:
+<h1>Acciones - Control de Película</h1>
+Estas acciones se emplean, para  <strong><font color=ff00ff>controlar el flujo de nuestra película </strong></font>, para indicar a Flash en todo momento qué fotograma tiene que mostrar, cuándo tiene que parar, dónde seguir etc...
+ Acciones:<br>
+<br> <img src="ico2.jpg"> <strong><font color=00ff00> stop():</strong></font> Detiene la reproducción de la película. Se puede usar en un fotograma, cuando queramos detenernos en él.
+<br>No tiene parametros. Ejemplo:  <font color=00ff00>play()</font><br>  
+<img src="ico2.jpg"> <strong><font color=00ff00> play():</strong></font> Da comienzo a la reproducción de la película, generalmente porque algo la ha detenido.
+<br>No tiene parametros. Ejemplo:  <font color=00ff00>stop()</font><br>  
+<br>
+<img src="ico2.jpg"> <strong><font color=00ff00>gotoAndPlay(): </strong></font>Mueve la cabeza lectora al fotograma que le indiquemos. Tiene dos paramtros: La escena y el fotograma.
+<br>Ejemplo: <font color=00ff00>gotoAndPlay("1","10")</font><br>
+Esto significa que cuando la cabeza lectora pase por el fotograma que tenga este codigo, ira al fotograma 10 de la escena 1.
+<br>Tambien, podemos poner solo un parametro, en tal caso seria el fotograma. <font color=00ff00>gotoAndPlay("10")</font>. Ira al fotograma 10.
+<br> <img src="ico2.jpg"> <strong><font color=00ff00>gotoAndStop():</strong></font> Funciona igual que el anterior solo que al ir al fotograma indicado, la pelicula se para.
+<br> <img src="ico2.jpg"> <strong><font color=00ff00>nextFrame():</strong></font> Hace que el lector de fotogramas valla al siguiente fotograma. No tiene parametros.
+<br> <img src="ico2.jpg"> <strong><font color=00ff00>prevFrame():</strong></font> Hace que el lector de fotogramas valla al anterior fotograma. No tiene parametros.
+<br> <img src="ico2.jpg"> <strong><font color=00ff00>stopAllSounds():</strong></font> Para todos los sonidos en reproducion. No tiene parametros.
+
+
+<h1>Acciones - Navegador / Red</h1> 
+
+<img src=ico2.jpg> <strong><font color=00ff00>fscommand: </strong></font> Esta acción, es capaz de ejecutar ciertos comandos muy potentes. Su uso es el siguiente:<br>
+fscommand("comando","true / false").
+Comandos:<br>
+*  <strong><font color=ff00ff>fullscreen: </strong></font>Si se activa pone nuestra película a pantalla completa.
+<br>
+* <strong><font color=ff00ff>allowscale: </strong> </font>Controla el redimensionamiento de los objetos insertados en la película cuando el usuario estira los bordes de la misma (o de la página web en la que se encuentre) ¿Queremos mantener las proporciones? Este comando nos permite controlarlo.
+<br>
+* <strong><font color=ff00ff>showmenú: </strong> </font>Si has visto el menú que aparece al pulsar el botón derecho del ratón sobre una película Flash, seguro que has pensado en hacerlo desaparecer ... puede que no interese que los usuarios puedan moverse a sus anchas por nuestra película. Ejecutando esta sentencia del modo adecuado (false), podremos ocultarlo.
+<bR>
+* <strong><font color=ff00ff>trepallkeys:</strong></font>  Sirve para detectar las pulsaciones de todas las teclas durante la reproducción de nuestras películas. <br>
+Ejemplos:<br><font color=00ff00>
+fscommand("fullscreen", "true"); <br>
+fscommand("showmenu", "false");<br></font><br>
+<img src=ico2.jpg> <strong><font color=00ff00>getURL:</strong></font> Esta acción se emplea para abrir el navegador web y abrir la página web que deseemos.
+ <br>Tiene varios parametros y funciona asi:<br>
+getURL(url , ventana , "variables").<br>
+
+*  <strong>url:  </strong>Dirección web a la que queremos acceder (se abrirá una ventana).
+<br>
+*  <strong>ventana: </strong> Parámetro OPCIONAL. Modo en el que queremos abrir la ventana en la ventana actual (_self) en otra nueva (_blank)...
+<br>
+*  <strong>variables: </strong> Parámetro OPCIONAL, puede haber varios. Si la página lo permite (es ASP, PHP etc...) podemos enviarle variables.
+<br>Ejemplo:<br>
+<font color=00ff00>
+getURL("http://manumonhacker.iespana.es/", "_blank");</font><br>
+Esta funcion tambien sirve para ir a un archivo que tengamos. Si el archivo estuviera en la misma carpeta que el archivo, donde antes hemos colocado la direccion colocamos el nombre el archivo; si el archivo esta en una subcarpeta, colocamos el nombre de la carpeta primero, despues la barra "/" y luego el nombre del archivo.
+Ejemplo:<br>
+<font color=00ff00>
+getURL("foto.jpg","_blank")<br><br></font>
+
+
+
+<img src=ico2.jpg> <strong><font color=00ff00>loadMovie / loadMovieNum:</strong></font> Esta acción permite cargar nuevas películas Flash o imágenes en nuestra película de forma dinámica 
+<br>Tiene varios parametros y funciona asi:<br>
+loadMovieNum(url , nivel / destino, variables)<br>
+
+*  <strong>url: </strong> Dirección absoluta donde está situada la película SWF o la imagen JPEG<br>
+
+*  <strong>nivel / destino: </strong> Nivel donde cargaremos la película, teniendo en cuenta que el nivel básico es el 0, luego va el 1 y así sucesivamente. Cada nivel superior se sitúa delante del anterior y toma el control. Si lo usamos como destino, aquí deberemos introducir el nombre del movieclip donde cargaremos la película o el nombre del marco si estamos cargando un fichero SWF en una página HTML con marcos.
+<br>
+*  <strong>variables:  </strong>Parámetro OPCIONAL. Podemos enviar variables.
+<br><br>
+<img src=ico2.jpg> <strong><font color=00ff00>LoadVars():</strong></font> Esta accion sirve para poder importar variables de otros archivos. <br>
+Para poder usarlo primero debes crear un objeto LoadVars y posteriormente podrá utilizar los métodos de dicho objeto LoadVars para enviar y cargar los datos.
+
+<h1>Acciones Varias</h1> 
+<img src=ico2.jpg> <strong><font color=00ff00>trace():</strong></font> Muestra en el Panel de Salida lo que le indiquemos. Esta funcion biene muy bien para saber propiedades de los objetos y comprovar si algo funciona correctamente. Ejemplo:
+<font color=00ff00><br>trace("algo"); trace(2); trace (ancho).</font><br><br>
+<img src=ico2.jpg> <strong><font color=00ff00>getTimer():</strong></font> Devuelve el número de milisegundos transcurridos desde que se inició la reproducción del archivo SWF. <br><br>
+<img src=ico2.jpg> <strong><font color=00ff00>setInterval():</strong></font> Esta accion crea una repeticion de una funcion cada numero de milisegundos que digamos.<br>
+Funciona asi:
+setInterval(funcion, intervalo en milisegundos)<br>
+* funcion: Es el nombre de la funcion. Ejemplo: miFuncion. Como os habreis fijado, no se ponen los ().<br>
+* intervalo en milisegundos: El numero de milisegundo que tarde en repetirse la funcion. Ejemplo: 100.
+<br>Ejemplo:<br>
+<font color=00ff00>function decirsi () {trace("si")}<br>
+setInterval(decirsi,150)</font> <br><br>
+<img src=ico2.jpg> <strong><font color=00ff00>clearInterval():</strong></font> Detiene la llamada a setInterval(). Ejemplo:<br>
+<font color=00ff00>clearInterval(decirsi)</font>
+
+
+
+
+
+
+
+

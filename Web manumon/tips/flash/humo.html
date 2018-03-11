@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="550" height="120" id="ondas" align="top">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="humo.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="ondas.swf" quality="high" bgcolor="#000000" width="550" height="120" name="ondas" align="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto nieve lo que hace es<br>crear una funcion llamada nevar<br>en la cual va importando los copos<br>estos copos tienen nombre igual <br>y a la vez diferente, ya que<br>su nombre siempre va a ser<br>"polo"+ un numero que incrementa<br>y en el momento justo en el que se <br>importa se llama copo, en ese momento,<br>se le van dando porpiedades <br>aleatorias, y se le imprime la <br>funcion monevar(), por la cual<br>se mueven.
+<br><br>
+<center><a href="Efecto humo.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+La última función es una funcion que <br>crea aleatoriedad entre el <br>intervalo de dos numeros.<br>Tambien antes de eso, está el efecto<br>iluminacion, que ilumina los copos
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+createEmptyMovieClip("humo",0);<br><br>
+colores=[0xffcccccc,0xffaaaadd,0xff222222];<br>
+alphas=[50,45,0];<br>
+ratios=[20,50,125];<br><br>
+Pt=new flash.geom.Point();<br>
+Mx= new flash.geom.Matrix();<br>
+Mx.createGradientBox(100,190,0,0,-30);<br><br>
+with (llama){ <br>
+       beginGradientFill("radial",colores,alphas,ratios,Mx,"pad","RGB",0);<br><br>
+	   moveTo(30,-50);<br>
+	   lineTo(30,100);<br>
+	   lineTo(100,100);<br>
+	   lineTo(100,-50);<br>
+	   lineTo(0,0);<br>
+	   endFill();<br>
+	   _yscale = 600;<br>
+	   _y= -60;}<br><br>
+	   
+ola = new flash.display.BitmapData(llama._width,llama._height+10);<br>
+dM=new flash.filters.DisplacementMapFilter(ola,null,1,1,20,40,"ignore");<br>
+onEnterFrame=function(){  <br><br>
+    Pt.y +=2;Pt.x -=.05; <br>
+	ola.perlinNoise(11,21,1,0,true,true,1,false,[Pt]);<br>
+	llama.filters=[dM];}<br>
+
+
+</font></td></tr></center>

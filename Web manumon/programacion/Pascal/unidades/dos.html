@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>DOS</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+La Unidad dos realiza un gran número de rutinas de utilidad para el tratamiento de archivos. <br>
+Estas rutinas permiten ejecutar funciones relacionadas con el sistema operativo.<br>
+<h2>Rutinas</h2>
+
+<font color="00ffff"><b>*Function DiskFree(unidad:word):longint </b></font><br>
+Proporciona el número de bytes libres en la unidad de disco especificada. <br>
+Unidad = 0, indica la unidad por defecto, Unidad = 1, unidad A:, Unidad = 2, unidad B. <br><br>
+
+<font color="00ffff"><b>*Function DiskSize(unidad:word):longint </b></font><br>
+Proporciona el número de bytes de capacidad de la unidad.
+
+<font color="00ffff"><b>*Procedure Exec(programa, lineaOrdenes:string) </b></font><br>
+Ejecuta el programa especificado en la línea de órdenes. Realiza una salida temporal hacia el DOS a fin de ejecutar un programa. <br>
+Programa = Nombre del programa a ejecutar <br>
+lineaOrdenes = Línea de órdenes adicionales al programaEjemplo: Exec(‘\command.com’,’dir *.PAS’); <br><br>
+
+<font color="00ffff"><b>*Procedure GetDate(var año,mes,dia,diasemana: word) </b></font><br>
+Devuelve la fecha del reloj interno del sistema operativo <br><br>
+
+<font color="00ffff"><b>*Procedure GetTime(var hora, minutos, segundos, centésimas:word)</b></font><br>
+Devuelve la hora actual del sistema operativo (reloj interno) <br><br>
+
+<font color="00ffff"><b>*Procedure SetDate(año,mes,dia,diasemana : word) </b></font><br>
+Establece la fecha del reloj interno.<br><br>
+
+<font color="00ffff"><b>*Procedure SetTime(hora,minutos,segundos,centésima:word)</b></font><br>
+Establece la hora del sistema operativo.

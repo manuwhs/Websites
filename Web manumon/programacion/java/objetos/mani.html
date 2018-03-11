@@ -1,0 +1,48 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Manipulacion</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br><br>
+<h1>Instanciar objetos </h1>
+
+Instanciar un objeto es la acción de crear un ejemplar de una clase para poder trabajar con él luego. <br>
+Recordamos que un objeto se crea a partir de una clase y la clase es la definición de las características y funcionalidades de un objeto.<br>
+Con las clases no se trabaja, estas sólo son definiciones, para trabajar con una clase debemos tener un objeto instanciado de esa clase. <br>
+<br>
+En javascript para crear un objeto a partir de una clase se utiliza la instrucción new, de esta manera. <br><br>
+<font color=00ffff>
+var miObjeto = new miClase() <br><br>
+</font>
+En una variable que llamamos miObjeto asigno un nuevo (new) ejemplar de la clase miClase. <br>
+Los paréntesis se rellenan con los datos que necesite la clase para inicializar el objeto, si no hay que meter ningún parámetro los paréntesis se colocan vacíos. <br>
+En realidad lo que se hace cuando se crea un objeto es llamar al constructor de esa clase y el constructor es el encargado de crearlo e inicializarlo. Hablaremos sobre esto más adelante. 
+
+<h1>Acceder a propiedades y métodos de los objetos </h1>
+
+En Javascript podemos acceder a las propiedades y métodos de objetos de forma similar a como se hace en otros lenguajes de programación, con el operador punto ("."). <br>
+
+Las propiedades se acceden colocando el nombre del objeto seguido de un punto y el nombre de la propiedad que se desea acceder. De esta manera: 
+<br><br><font color=00ffff>
+miObjeto.miPropiedad = valor de la propiedad <br>
+<br></font>
+Para llamar a los métodos utilizamos una sintaxis similar pero poniendo al final entre paréntesis los parámetros que pasamos a los métodos. Del siguiente modo: 
+<br><font color=00ffff>
+miObjeto.miMetodo(parametro1,parametro2) <br>
+<br></font>
+Si el método no recibe parámetros colocamos los paréntesis también, pero sin nada dentro. 
+<br><font color=00ffff>
+miObjeto.miMetodo() 
+</font>

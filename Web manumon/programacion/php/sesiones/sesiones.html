@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Las Sesiones</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+En PHP a veces resulta necesario crear variables personales de cada usuario y que se puedan usar variables todo el tiempo tantas veces como queramos. Para eso se crearon las sesiones.<br>
+Digamos que las sesiones son una manera de guardar información, específica para cada usuario, durante toda su visita.<br>
+Nos sirven para almacenar información que se memorizará durante toda la visita de un usuario a una página web.<br>
+Para ello, primeros indicamos que iniciamos sesion y luego declaramos variables.<br>
+<h1>Sintaxis</h1>
+Ahora veremos las funciones para manejarse con funciones y como funcionan:<br>
+<img src="ico2.jpg"> <b><font color=ff00ff> session_start () <br></b></font><br>
+Es funcion inicia la sesion del usuario, puede o crearla o continuarla.<br>
+Al hacer session_start() PHP internamente recibe el identificador de sesión almacenado en la cookie o el que se envíe a través de la URL. Si no existe tal identificador se sesión, simplemente lo crea. 
+<br>Esta funcion debe escribirse antes de la etiqueta html. Ejemplo:<br><font color=00ffff>
+&lt? <br>
+session_start(); <br>
+?&gt <br>
+&lthtml&gt<br>
+&lthead&gt<br>
+</font><br>
+Una vez iniciada la sesión podemos utilizar variables de sesión a través de $_SESSION, que es un array asociativo.
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> $_SESSION["variable"]<br></b></font><br>
+Esta funcion es la que crea las variables de una sesion, en realidad es un array que almacena las variables de sesion.<br>
+Es importante saber que estas variables son diferentes a las demas en que estas se guardan en el navegador.
+Su estructura es $_SESSION["variable"] = contenido_variable. Ejemplo:<br>
+
+<font color=00ffff>
+&lt;?
+<br>
+session_start();
+<br>
+?&gt;
+<br>
+&lt;html&gt;
+<br>
+&lt;head&gt;
+<br>
+	&lt;title&gt;Generar variable de sesión&lt;/title&gt;
+<br>
+&lt;/head&gt;
+<br>
+&lt;body&gt;
+<br>
+&lt;?
+<br>
+$_SESSION["mivariabledesesion"] = "Hola este es el valor de la variable de sesión";
+<br>
+?&gt;
+<br>
+&lt;/body&gt;
+<br>
+&lt;/html&gt;
+</font>
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>session_register('variable')<br></b></font><br>
+Esta función, además de crear o recuperar la sesión para la página en la que se incluye también sirve para introducir una nueva variable de tipo sesión. Ejemplo:<br>
+
+<font color=00ffff>
+&lt?<br>
+session_register('contador');<br>
+?&gt<br>
+&ltHTML&gt<br>
+&ltHEAD&gt<br>
+&ltTITLE&gtcontador.php&lt/TITLE&gt<br>
+&lt/HEAD&gt<br>
+&ltBODY&gt<br>
+&lt?<br>
+If (isset($contador)==0)<br>
+{$contador=0;}<br>
+++$contador;<br>
+echo "&lta href=\"contador.php\"&gtHas recargado esta página $contador veces&lt/a&gt";<br>
+?&gt<br>
+&lt/BODY&gt<br>
+&lt/HTML&gt <br>
+<br><br>
+Otras funciones referidas a sesiones son:<br><br>
+<table cellpadding=4  cellspacing= 0 border=2> 
+<tr> <td>Funcion</td><td>Descripcion</td></tr>
+<tr> <td>Session_id()</td><td>Nos devuelve el identificador de la sesión.</td></tr>
+<tr> <td>Session_destroy()</td><td>Da por abandonada la sesión eliminando variables e identificador.</td></tr>
+<tr> <td>Session_unregister('variable')</td><td>Abandona una variable sesión</td></tr></table>
+
+

@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Variables</H1></u></center></font>
+
+</table></center><br>
+
+<br><br>
+<font color=ff00ff><strong>Las variables son contenedores donde podremos almacenar información para trabajar con ella.</font></strong> <br>Esta información puede ser modificada y leida. Las variables pueden estar precedidas o no de <strong>"var"</strong>.<br>Este atributo le dara mayor independencia a la variable.
+<h1>Tipos de variables</h1>
+Segun el tipo de informacion que contengan existen 8 tipos de variables:<br>
+
+
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>Number:  </strong></font>puede almacenar números enteros o decimales, positivos o negativos. El signo decimal en ActionScript es el punto (.). Podrás realizar operaciones matemáticas con estas variables. <br>
+Ejemplo: <font color=00ffff> var numero=11<br></font>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>String: </strong></font>puede almacenar cadenas de caracteres, es decir, un conjunto de caracteres alfanuméricos. Las variables de tipo String deben ir entre comillas dobles ("). <br>
+Ejemplo: <font color=00ffff> var letras = "Solo palabras"<br></font>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>Boolean: </strong></font> Puede almacenar sólo dos valores, o true (verdadero) o false (falso). 
+<br>Ejemplo:  <font color=00ffff>var verdadero = true   /    var falso = false<br><br></font>
+
+
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>MovieClip:  </strong></font>Es una variable que almacena un Clip de pelicula para asi poder controlarlo mejor.<br>
+Ejemplo: <font color=00ffff> var pelicula = Clip<br></font>
+
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>Object: </strong></font> El tipo de datos Object (objeto) se define mediante la clase Object. La clase Object sirve de base para todas las definiciones de clases en ActionScript y le permite organizar unos objetos dentro de otros (objetos anidados). <br>Ejemplo:  <font color=00ffff>var objeto = objeto<br><br></font>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>null: </strong></font>El tipo de datos null (nulo) contiene el valor null. Este valor significa "ningún valor", es decir, no hay datos. Puede asignar el valor null en distintas situaciones para indicar que una propiedad o variable no tiene ningún valor asignado.<br>
+Ejemplo: <font color=00ffff> var nada = null<br></font>
+<img src="ico2.jpg"> <strong><font color=ff00ff>undefined: </strong></font>El tipo de datos undefined (no definido) contiene un valor: undefined. Este es el valor predeterminado de las instancias de la clase Object. Sólo puede asignar el valor undefined a variables que pertenezcan a la clase Object<br>Ejemplo:  <font color=00ffff>var nada = undefined<br></font>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff> Void </strong></font> El tipo de datos Void (vacío) sólo contiene un valor: void. Este tipo de datos se usa para designar funciones que no devuelven un valor. Void es un tipo de datos complejo que hace referencia al tipo de datos Void simple. <br>Ejemplo: <font color=00ffff> var vacio = Void  <br></font>
+<br>
+De todas estas variables, las mas importantes son las tres primeras. <br>
+Tambien, podemos indicar de que tipo es una variable cuando la escribimos, aunque no es necesario. Ejemplo:<br>
+<font color=00ffff>
+var numero:Number = 10<br>
+var letras:String = "letra"<br>
+var sonido:Sound = musica<br>
+var Clip:MovieClip = Clip<br>
+</font>
+
+
+<h1>Ambito de variables</h1>
+El ambito de las varibles es el sitio donde puedan utilizarse las variables. Existen tres tipos de ambitos:<br>
+<img src="ico2.jpg"> <strong><font color=ff00ff>Linea de tiempo: </strong></font><br>Son aquellas que se colocan sobre <strong>“la linea de tiempo”</strong> ya sea la linea principal, o la de un MovieClip. <br>Estas variables pueden ser consultadas y modificadas cuantas veces querramos siempre y cuando nos encontremos en dicha linea de tiempo o hagamos referencia a ella.<br>
+Ejemplo:<br>
+<font color=00ffff>
+var cinco=5 <br>
+var saludo=”hola”<br></font>
+<i>Como veis la primera varibles contiene el numero cinco y la segunda la palabra hola. <br>Este tipo de variables puede escribirse sin el "var"</i><br>
+<br>
+<img src="ico2.jpg"> <strong><font color=ff00ff>Variables locales:</strong></font> <br>Estas variables solo existen dentro de una función. Ejemplo:<br>
+<br><font color=00ffff>
+function miFuncion() {<br>
+	var miVariable= 1;<br>
+	trace(miVariable);<br>
+}<br></font>
+<i>Podemos observar que agregamos el pre “var” el cual le dara independencia a esta variable. Esta variable con el prefijo “var” se destruira cuando el proceso avandone la función.</i>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff>Variables globales:<br></strong></font> Estas variables son vistas desde cualquier lugar de nuestro swf y pueden ser consultadas o modificadas siempre.<br>
+Para crear una de estas variables, tiene que llevar el prefijo <strong>(_global)</strong>. Ejemplo<br>
+<font color=00ffff>
+_global.numero=8<br>
+_global.palabra=”hola”</font><br>
+
+

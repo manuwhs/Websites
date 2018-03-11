@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff">
+<body bgcolor=#000022>
+<body leftmargin="70" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Trabajar con mapas de bits</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<font color=#ffffff face="Times New Roman" >
+# Vamos a empezar por lo elemental, Flash 8 posee funciones por las cuales podemos crear mapas de bits, cargar imagenes
+y modificarlas.<br>Para ello, primero hay que importar las llamadas clases, que son funciones para poder realizar esas acciones.
+<br></font><br>
+
+<center><table width=600 height=* border="1" bordercolor=#EAEAEA bgcolor=#010739 cellpadding =5 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff> import flash.display.*;</font></td><td><font color=#ffffff>Funciones para manipular mapas de bits</font></td></tr>
+<tr><td valign=top><font color=#ffffff> import flash.geom.*;</font></td><td><font color=#ffffff>Funciones para filtrar mapas de bits</font></td></tr>
+<tr><td valign=top><font color=#ffffff> import flash.filters.*;</font></td><td><font color=#ffffff>Funciones para definir figuras geometricas y transformar clips de pelicula</font></td></tr></table></center>
+<br>
+<font color=#ffffff># El primer tipo importa funciones como "new BitmapData()"; que es la más importante, esta funcion crea un mapa de bits y tiene cuatro parámetros.<br>
+1) Es el ancho de la imagen.<br>
+2) Es el alto de la imagen.<br>
+3) Es un booleano que por defecto es false y que hace referecia a que el mapa sea o no transparente.<br>
+4) Aquí se escribe el color del mapa de bits, en lenguaje sexagesimal.<br>
+<br>
+# Otras funciones que tiene es "BitmapData.loadBitmap("")", que lo que hace es invocar una imagen de la bilbioteca, <br>tiene
+sólo un párametro, el nombre que le hemos dado a la imagen para invocarla desde ActionScript.<br>
+<br>
+<center><table width=700 height=* border="1" bordercolor=#EAEAEA bgcolor=#010739 cellpadding =7 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff> Crear mapa de bits</font></td><td><font color=#ffffff>Importar y exportar imagen</font></td></tr>
+<tr><td valign=top><font color=#ffffff> import flash.display.*;<br>mapabit1 = new BitmapData(200,200,false,0x0ff022)<br>attachBitmap(mapabit1,1)</font></td>
+<td><font color=#ffffff>import flash.display.*;<br>imagen = BitmapData.loadBitmap("imagen");<br>attachBitmap(imagen, 1)
+</font></td></tr></table></center><br>
+# Como os habreis fijado, también está la función "attachBitmap()", que sirve para poner la imagen en el escenario.<br>
+Ya hemos visto cómo crear e importar imágenes, estamos listos para modificarlas; este paquete de funciones (import flash.display.*);<br>
+también trae algunas para hacerlo como:<br><br>
+
+<u><b>1)"draw()"</u></b>:Esta función lo que hace es copiar algo en un mapa de bits, el mapa donde se va a clonar el objeto se pone antes
+<br> de "draw()", y el objeto que se clona, se pone en el parentesis así:    mapabit.draw(objeto).<br>
+
+<u><b>2)"clone()"</u></b>:Esta función lo que hace es clonar un mapa de bits. Ejemplo:   mapabit2= clone(mapabit1).<br>
+Esto significa que mapabit2=mapabit1<br><br>
+
+<u><b>3)"threshold()"</u></b>:Esta función sirve para aislar colores de una imagen. Antes del efecto, se pone la imagen a la que se aplica<br>Y sus parámetros son:<br>
+1) La imagen de entrada que se pone, que suele ser una copia de la misma a la que se le aplica.<br>
+2) Un rectángulo que define el área al que se le va a aplicar el efecto.<br>
+3) Un punto,(ya explicaré lo que es), normalmente de coordenadas (0,0)<br>
+4) Un String: "==","!=", "<=",">=","<" o ">"; que varía el efecto sobre los pí<br>
+5) Un color sexagesimal con el que se prueba cada píxel para comprobar si está dentro o supera el umbral.<br>
+6) Un color en sexagesimal que indica el valor de color al que se define un píxel si se supera la prueba de umbral. <br>El valor predeterminado es 0x00000000.<br>
+7) Un color en sexagesimal que indica la máscara que se va a emplear para aislar un componente de color. <br>        El valor predeterminado es 0xFFFFFFFF.<br>
+8) Un valor booleano, si el valor es true, los valores de píxel de la imagen de origen se copian al destino cuando falla la prueba de umbral.<br> Si es false, la imagen de origen no se copia cuando falla la prueba de umbral. El valor predeterminado es false.<br>
+<br>
+
+<table width=900 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =7 aling=center cellspacing=0>
+<tr><td valign=top><table width=420 height=150 border="1" bordercolor=#EAEAEA bgcolor=#010739 cellpadding =7 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff>imagen = BitmapData.loadBitmap("imagen");<br>
+attachBitmap(imagen, 1) <br>
+punto= new Point()<br>
+rec=imagen.rectangle<br>
+imagen.threshold(imagen, rec, punto, "<", 0xff330000, 0xff808080, 0x00ffffff)</font></td>
+</td></tr></table></td>
+<td>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="450" height="230" id="threshold" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="flash/threshold.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="threshold.swf" quality="high" bgcolor="#000022" width="450" height="230" name="threshold" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object></td></tr></table>
+
+
+
+<u><b>4)"perlinNoise()"</u></b>: Esta función, coge una imagen, o un mapa de bits y crea ruido, es decir, mediante una ecuación cuyos valores son los parametros,<br>
+ se crean píxeles aleatorios de forma desordenada, da igual el color del mapa de bits o la imagen al que se lo apliquemos, <br>
+siempre tendrá el mismo efecto de desconfiguración, ya que no puede tener en cuenta la imagen. Lo que en resumen hace <br>
+es deformar un mapa de bits, tu podrás decir cada cuanto se crea un ruido diferente, cuantos ruidos a la vez y que ruido usar; <br>
+además el color del resultado sólo podrá ser negro y del color de canal que le pongamos.<br>
+Como en el efecto anterior y en muchos otros, antes del efecto hay que poner el mapa de bits al que se aplica,<br>
+este tiene nueve parámetros y son:<br>
+1) Un numero que indica cada cuantos pixeles el ruido es diferente en el ejede las x.<br>
+2) Un numero que indica cada cuantos pixeles el ruido es diferente en el ejede las y.<br>
+3) El tercer numero indica el numero de diferentes ruidos que se combinan.<br>
+4) La ecución esta del ruido, tiene un valor que es este, que es un termino independiente para que con el mismo tipo de ruido,<br>
+se creen diferentes imágenes pero muy parecidas. Normalmente en este parametro se pone un numero aleatorio entre unos<br>
+cuantos números, para ser mayor el efecto de aleatoriedad.<br>
+5) Es un booleano que si es true intenta suavizar los bordes de transición, y si es false no.<br>
+6) Otro booleano que si es true es ruido fractal y si es false genera turbulencia
+7)El quinto numero da un canal de color al ruido. Hay 4 canales, hay cuatro canales principales, el 1 (rojo), el 2 (verde),<br>
+el 3 (azul) y el 4(alfa). Estos canales de color se pueden mezclar, por ejempor   rojo + verde = 1|2<br>
+8)Este tercer booleano dice si el color es en blanco y negro<br>
+9)El ultimo dato lo que hace es poner el efecto, las funciones individuales de ruido<br>
+en un punto, para que si desplazamos ese punto lo que pase es que se valla<br>
+generando mas ruido y creando efecto de desplazamiento<br><br>
+
+<table width=900 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =7 aling=center cellspacing=0>
+<tr><td valign=top><table width=420 height=150 border="1" bordercolor=#EAEAEA bgcolor=#010739 cellpadding =7 aling=center cellspacing=0>
+<tr><td valign=top><font color=#ffffff>import flash.display.*;<br>
+mapabit1 = new BitmapData(200,200,false,0x0ff022)<br>
+attachBitmap(mapabit1,1)<br>
+punto= new Point()<br>
+mapabit1.perlinNoise(20,20, 1, 1, false, true, 2, false, [punto])</font></td>
+</td></tr></table></td>
+<td>
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="400" height="190" id="perlinoise" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="flash/perlinoise.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="perlinoise.swf" quality="high" bgcolor="#000022" width="400" height="190" name="perlinoise" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object></td></tr></table>

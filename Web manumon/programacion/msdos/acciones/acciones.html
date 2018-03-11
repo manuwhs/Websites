@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=800 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Etiquetas, Bifurcación y Condiciones  </H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Etiquetas y Bifurcaciones</h1>
+<b><font color=00ffff>Una etiqueta es cualquier línea que comienza por dos puntos ":".</b></font> <bR>
+Los comentarios en el código batch pueden ser hechos por usando un ":" doble, osea "::"<br>
+Las etiquetas son procesadas antes que el resto del codigo.<br>
+Las etiquetas que empiezan por un solo ":" sirven para crear puntos de control, es decir,<br>
+donde lo pongamos creara una referencia para que con otra funcion podamos saltar hasta esa parte<br>
+del codigo para saltarnos otro y que se siga leyendo.<br>
+Su esctructura es esta ----> <font color=00ffff> :nombre_punto_control<bR></font>
+La estructura de los comentarios es ----><font color=00ffff> ::comentario</font><br>
+Ejemplo:<br><font color=00ffff>
+  :: esto es un comentario porque empieza por un doble dos puntos, pertenece al grupo de las etiquetas<br>
+     @echo off<br>
+     goto punto<br>
+     *** Este codigo no sera ejecutado***<br>
+     *** porque nunca sera leido ***<br>
+     :punto<br>
+     echo "Hemos saltado ese codigo"<br></font>
+
+<br>
+Aqui aparece el comando <b><font color=00ffff>"goto"</b></font>, este comando crea una bifurcacion, y lo hace  llendo al punto de control que pongas despues.<br>
+Su estructura es esta ----> goto nombre_punto.<br>
+En el ejemplo, creamos el punto ":punto" y una bifurcacion en la tercera linea que hace que el lector
+de codigo salte donde estaba :punto, por tanto la 4º y 5º lineas no seran leidas.
+
+<h1>Condicionales</h1>
+# Para crear estructuras condicionales en batch, usamos la estructura if, que significa "si".<br>
+Su estructura es esta ----> if [condicion] [sentencia]<br>
+Recordad que los [ ] no se ponen en realidad, los ponemos en los tutoriales para diferencias las partes.<br>
+Lo que quiere decir que si se cumple lo que hallamos puesto en la  condicion se ejecutara la sentencia.<br>
+Esta estructura admite 6 formas de sintaxis:<br><br>
+<table width=700 cellpadding=3 border=2 cellspacing=0 bgcolor=000000>
+<tr><td>if exist fichero orden</td><td>  si existe 'fichero' ejecutar la orden </td></tr>
+<tr><td>if not exist fichero orden</td><td>si no existe fichero ejecuar la orden  </td></tr>
+<tr><td>if cadena1==cadena2 orden  </td><td>comparar cadena1 y cadena2 </td> </tr>
+<tr><td>if not cadena1 == cadena2 orden  </td><td>si son distintos </td> </tr>
+<tr><td>if errorlevel numero orden </td> <td>si el comando anterior acabó con un errorlevel igual o superior a numero ejecutar orden  </td></tr>
+<tr><td>if not errorleven numero orden </td> <td>si el comando anterior acabó con un errorlevel inferior a numero ejecutar orden </td> </tr>
+</table>
+

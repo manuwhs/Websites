@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Funciones</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+<strong><font color=ff00ff>Una función es un bloque de código que desempeña una fucnion y que podemos usar  con sólo llamarla,<br>
+ademas realizan una sentencia y/o devuelven un valor.</strong></font>
+<br>Es decir, es un conjunto de variables, operadores y otras funciones. Para empezar una funcion, escribimos 'function', despues el nombre que le des a la funcion, y luego entre () variables indefinidas que usaremos en la funcion y que luego cuando la invoquemos, le demos valor, si no las hay o si no las quieres poner, pones solo (). 
+<br>Un detalle es que al termiar la funcion, debemos poner antes de } un punto y coma ;  asi ;}.<br>
+Queda entonces que su expresion general es: function (variables) {sentencia;}. <br>Una sentencia no es mas que una instruccion, como sumar dos variables, declarar variables o usar otras funciones. Ejemplo:
+<br> <font color=#00ff00> function miFuncion() {<br>
+	$miVariable = 1;<br>
+	echo $miVariable;<br>
+}<br></font>
+Esta funcion define una variable que es igual a 1 y luego la muestra en pantalla.<br><br>
+Para invocar una funcion tenemos que escribir el nombre de la misma seguida de las variables entre parentesis. Ejemplo:
+<br> <font color=#00ff00>miFuncion() <br></font>
+Al escribir este codigo se ejecutara la funcion, si lo escribimos dos veces, lo hara dos veces, etc.<br>
+PHP tambien incorporpora funciones hechas por el llamadas acciones.<br><br>
+Aqui se explica mejor la funcion creadora de funciones "function":<br><br>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff> function: </strong></font>Es la funcion creadora de funciones.<br>
+Esta funcion sirve para crear tus propias funciones. Funciona asi: function miFuincion(){sentencia;}.
+<br>Donde miFuncion es el nombre de la funcion y los parentesis sirven para poner las variables, con las que nos manejaremos en la funcion y que al invocar la funcion, entre los parentesis solo tengamos que poner unos valores que sustituiran a las variables que antes hemos creado.  En cado de no querer definir ese tipo de variables solo ponemos (). <br>
+Primer ejemplo:<br>
+
+<font color=00ffff>function decirsi () {<br>
+echo "si";};<br>
+decirsi ()<br></font>
+Aqui, definimos la funcion "decirsi" cuya sentencia lo que hace es mostrar en pantalla la palabra "si".<br>
+En la segunda linea invocamos la funcion.<br>
+Segundo ejemplo:<br>
+
+<font color=00ffff>$numero = 10;<br>
+$numero2 = 20;<br>
+function suma() {<br>
+global $numero;<br>
+global $numero2;<br>
+echo $numero + $numero2;};<br>
+suma ()<br></font>
+Aqui hemos definido dos variables que equivalen a dos numeros, luego hemos creado una funcion que carga esas dos variables e interactua con ellas. En este ejemplo, el resultado seria "30".<br>
+Tercer ejemplo:<br>
+<font color=00ffff>
+function suma ($sumando1,$sumando2) { <br>
+$sumar = $sumando1+$sumando2 ; <br>
+echo $sumar;};<br>
+suma(10,3)
+<br></font>
+Aqui se crea la funcion suma, y dos variables indefinidas entre los parentesis. En la sentencia de la funcion se crea una nueva variable a la que se le da el valor de la suma de las dos variables creadas entre los parentesis y con la sentencia echo se muestra la variable sumar en pantalla. Despues, cuando invocamos la funcion, entre los parentesis introducimos dos valores, que sustituiran a las variables que creamos antes. <br>
+El resultado sera mostrar en pantalla la suma de los dos numero que hallamos puesto, en este caso mostrara 13.
+<br><br>

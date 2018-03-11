@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="40" topmargin="20">
+<center><table  border="4" width=400 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Tablas</H1></u></center></font>
+
+</table></center><br>
+<br>
+Ahora aprenderemos a trabajar con las tablas, estas, son muy utiles en cuanto a diseño, <br>
+porque todos los objetos se alinean por defecto a la izquierda de las páginas web, <br>
+pero gracias a las tablas es posible distribuir el texto en columnas, colocar imágenes al lado de un bloque de texto, <br>
+y otra serie de cosas que sin las tablas serían imposibles de realizarse.<br>
+
+<br>Las tablas de invocan mediante las etiquetas  <strong><font color=00ffff>&lttable&gt y &lt/table&gt.</strong></font>  <br>Entre dichas etiquetas habrá que especificar las filas y columnas que formarán la tabla.<br>
+Para insertar una fila, escribimos las etiquetas <font color=00ffff><strong>&lttr&gt y &lttr&gt</strong><br></font> 
+Pero no basta con especificar las filas, sino las columnas, entre cada etiqueta <font color=00ffff><strong>&lttr&gt y &lttr&gt</strong>,</font>  tendremos que escrbir tantas veces <br><font color=00ffff><strong>&lttd&gt y &lt/td&gt</strong> </font> como columnas queramos que tenga dicha fila. Es necesario poner las etiquetas <font color=00ffff><strong>&lttd&gt y &lt/td&gt</strong></font> incluso cuando la fila solo esta formado por una columna.
+Y entre cada par de etiquetas <font color=00ffff><strong>&lttd&gt y &lt/td&gt</strong></font> escribimos el texto que queramos<br>
+Ejemplo de tabla:<br>
+
+<table cellpadding=20>
+<tr><td>
+<font color=#00ff00>
+&lttable&gt<br>
+&lttr&gt&lttd&gtCasa&lt/td&gt&lttd&gtPerro&lt/td&gt&lt/tr&gt<br>
+&lttr&gt&lttd&gtCoche&lt/td&gt&lttd&gtAgua&lt/td&gt&lt/tr&gt<br>
+&lttr&gt&lttd&gtFuego&lt/td&gt&lttd&gtTierra&lt/td&gt&lt/tr&gt<br>
+&lt/table&gt</font><br><br></td>
+<td>
+
+<table bordercolor="#ffffff" border=1 >
+<tr><td valign=top><font color=#ffffff> Casa</font></td><td><font color=#ffffff>Perro</font></td></tr>
+<tr><td valign=top><font color=#ffffff> Coche</font></td><td><font color=#ffffff>Agua</font></td></tr>
+<tr><td valign=top><font color=#ffffff> Fuego</font></td><td><font color=#ffffff>Tierra</font></td></tr></table>
+</td></tr></table>
+<h1>Atributos</h1>
+Como veis el resultado no es muy estetico, por eso &lttable&gt tiene atributos para modificar el aspecto de la tabla:
+<br><br>
+      <table width="600" border="1" align="center" cellspacing="0" bordercolor="#999999" class="texto" bgcolor=#010739>
+        <tr> 
+          <td width="100" background="f_rotulo2b.gif"><div align="center"><strong>Atributo</strong></div></td>
+          <td width="200" background="f_rotulo2b.gif"><div align="center"><strong>Significado</strong></div></td>
+          <td width="300" background="f_rotulo2b.gif"><div align="center"><strong>Posibles 
+              valores</strong></div></td>
+        </tr>
+        <tr> 
+          <td> <p align="center" class="atributoazul"><strong>width</strong></p></td>
+          <td><div align="center">ancho de la tabla</div></td>
+          <td> <p align="center">un n&uacute;mero, acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje</p></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>height</strong></div></td>
+          <td><div align="center">altura de la tabla</div></td>
+          <td><div align="center">un n&uacute;mero, acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje</div></td>
+        </tr>
+        <tr> 
+          <td height="22"><div align="center" class="atributoazul"><strong>cellpadding</strong></div></td>
+          <td><div align="center">espacio entre el contenido de las celdas y el 
+              borde</div></td>
+          <td><div align="center">un n&uacute;mero</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">cellspacing</div></td>
+          <td><div align="center">espacio entre celdas</div></td>
+          <td><div align="center">un n&uacute;mero</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">border</div></td>
+          <td><div align="center">grosor del borde</div></td>
+          <td><div align="center">un n&uacute;mero</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">align</div></td>
+          <td><div align="center">alineaci&oacute;n de la tabla dentro de la p&aacute;gina</div></td>
+          <td><div align="center"><span class="palabramarron"><strong>left</strong></span><strong> 
+              </strong>(izquierda)<br>
+              <span class="palabramarron"><strong>right</strong></span> (derecha)<br>
+              <span class="palabramarron"><strong>center</strong></span> (centro)</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">bgcolor</div></td>
+          <td><div align="center">color de fondo</div></td>
+          <td><div align="center">n&uacute;mero hexadecimal</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">background</div></td>
+          <td><div align="center">imagen de fondo</div></td>
+          <td><div align="center">n&uacute;mero hexadecimal</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">bordercolor</div></td>
+          <td><div align="center">color del borde</div></td>
+          <td><div align="center">n&uacute;mero hexadecimal</div></td>
+        </tr>
+      </table>
+Ejemplo:<br>
+<font color=#00ff00>
+&lttable width = 600 height = 400 bordercolor = #ffffff bgcolor = #00ff00 cellpadding = 10 cellspacing = 0&gt<br>
+&lttr&gt&lttd&gtCasa&lt/td&gt&lttd&gtPerro&lt/td&gt&lt/tr&gt<br>
+&lttr&gt&lttd&gtCoche&lt/td&gt&lttd&gtAgua&lt/td&gt&lt/tr&gt<br>
+&lttr&gt&lttd&gtFuego&lt/td&gt&lttd&gtTierra&lt/td&gt&lt/tr&gt<br>
+&lt/table&gt</font><br><br>
+<h1>Atributos de las celdas</h1>
+Tembien es posible, modificar las caracteristicas de las columnas con los atributos:<bR><br>
+<table width="600" border="1" align="center" cellspacing="0" bordercolor="#999999" class="texto" bgcolor=#010739>
+        <tr > 
+          <td width="100" background="f_rotulo2b.gif"><div align="center"><strong>Atributo</strong></div></td>
+          <td width="200" background="f_rotulo2b.gif"><div align="center"><strong>Significado</strong></div></td>
+          <td width="300" background="f_rotulo2b.gif"><div align="center"><strong>Posibles 
+              valores</strong></div></td>
+        </tr>
+        <tr> 
+          <td> <p align="center" class="atributoazul"><strong>width</strong></p></td>
+          <td><div align="center">ancho de la tabla</div></td>
+          <td> <p align="center">un n&uacute;mero, acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje</p></td>
+        </tr>
+        <tr> 
+          <td><div align="center" class="atributoazul"><strong>height</strong></div></td>
+          <td><div align="center">altura de la tabla</div></td>
+          <td><div align="center">un n&uacute;mero, acompa&ntilde;ado de % cuando 
+              se desee que sea en porcentaje</div></td>
+        </tr>
+        <tr> 
+          <td height="22"><div align="center" class="atributoazul">align</div></td>
+          <td ><div align="center">alineaci&oacute;n horizontal del contenido de 
+              la celda</div></td>
+          <td><div align="center"><span class="palabramarron"><strong>left</strong></span><strong> 
+              </strong>(izquierda)<br>
+              <span class="palabramarron"><strong>right</strong></span> (derecha)<br>
+              <span class="palabramarron"><strong>center</strong></span> (centro)</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">valign</div></td>
+          <td><div align="center">alineaci&oacute;n vertical del contenido de 
+              la celda</div></td>
+          <td><div align="center"><span class="palabramarron"><strong>baseline</strong></span><strong> 
+              </strong>(l&iacute;nea de base)<br>
+              <span class="palabramarron"><strong>bottom</strong></span> (inferior)<br>
+              <span class="palabramarron"><strong>middle</strong></span> (medio)<br>
+              <span class="palabramarron"><strong>top</strong></span><strong> 
+              </strong>(superior)</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">bgcolor</div></td>
+          <td><div align="center">color de fondo</div></td>
+          <td><div align="center">n&uacute;mero hexadecimal</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">background</div></td>
+          <td><div align="center">imagen de fondo</div></td>
+          <td><div align="center">n&uacute;mero hexadecimal</div></td>
+        </tr>
+        <tr> 
+          <td height="22" class="atributoazul"><div align="center">bordercolor</div></td>
+          <td><div align="center">color del borde</div></td>
+          <td><div align="center">n&uacute;mero hexadecimal</div></td>
+        </tr>
+      </table><br>
+Ejemplo:<br>
+<font color=#00ff00>
+&lttable&gt<br>
+&lttr&gt&lttd width="50%" border="2" align="center" cellspacing="0" bordercolor="#000000" bgcolor="#FFCC99"&gtCasa&lt/td&gt&lttd&gtPerro&lt/td&gt&lt/tr&gt<br>
+&lttr&gt&lttd&gtCoche&lt/td&gt&lttd&gtAgua&lt/td&gt&lt/tr&gt<br>
+&lttr&gt&lttd&gtFuego&lt/td&gt&lttd&gtTierra&lt/td&gt&lt/tr&gt<br>
+&lt/table&gt</font></font>
+<br><br>
+Para la  etiqueta &lttd&gt tambien existen dos atributos,<strong> colspan y rowspan</strong>. A través del atributo <strong>colspan</strong> se especifica el número de columnas por las que se extenderá la celda, y a través del atributo <strong>rowspan</strong> se especifica el número de filas por las que se extenderá la celda.<br>

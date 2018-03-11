@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=400 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Sentencias</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<p><font color=ff00ff><strong>Una sentencia es una instrucción que se da para que el navegador la interprete, como, por ejemplo, ejecutar una acción concreta como x=2 . Forman parte de las acciones.</font></strong>
+<br>Aqui veremos los principales tipos:
+<h1>Condicionales/Bucles</h1>
+
+<font color=00ffff><strong>Las sentencias condiciones permiten determinar si se da una determinada situacion</strong></font> y, seguidamente ejecutar las acciones que se especifiquen. Este tipo de sentencias se construyen con:
+<br><img src="ico2.jpg"> <strong><font color=ff00ff>  if.....else</strong></font>: El if se traduce como el "si" condicional y el else como el "en caso contrario"<br> Esta sentencia funciona de la siguiente manera: if(condicion){sentencia}else{sentencia }. Ejemplo:<br>
+<font color=00ffff>var numero=10;<br>
+if (numero==9) {trace("si"} else {trace("no")}<br></font>
+Aqui creamos una variables y con esta sentencia condicional decimos que si numero es igual a 9, decir si en el Panel de Salida, en caso contrario decir no. Aunque no es obligatorio poner el else, con el if nos basta. Ejemplo:
+<font color=00ffff>if (numero==9) {trace("si"}</font>
+<br>
+
+<br><img src="ico2.jpg"> <strong><font color=ff00ff>  if.....else if</strong></font>: Este es casi identico al anterior solo que donde antes habia "en caso contrario" ademas hay "si" condicional.<br>
+Esta sentencia funciona de la siguiente manera: if(condicion){sentencia}else if (condicion) {sentencia}}. Ejemplo:
+<br><font color=00ffff>var numero=10;<br>
+if (numero==9) {trace("si"} else if (numero==7){ trace ("alomejor")}}<br></font>
+Aqui dice que si numero es igual a 9 mostrar si y en caso contrario, si es 7 mostrar alomejor. <br>Esta contruccion tembien se puede combinar con el else simple. Ejemplo:
+<br><font color=00ffff>var numero=10;<br>
+if (numero==9) {trace("si"} else if (numero==7){ trace ("alomejor")}}else {trace("ni 7 ni 9")<br></font><br>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>Operador IF </strong></font>: Hay un operador que no hemos visto que hace una funcion muy parecida a la sentencia if.<br>
+Aqui lo que se hace es darle un valor a una variable en funcion de una condicion. Su estructura es:<br> 
+variable = (condición) ? valor1 : valor2 <br>
+Donde (condicion) es la condicion de la condicional, la "?" sirve para terminar la condicion; despues vienen dos valores <br>
+separados por ":", el primer valor sera el que tomara la variable en caso de que la condicion sea verdadera y el segundo valor sera el que tomara si es falsa. Ejemplo:<br>
+<font color=00ffff>
+var momento;<br>
+var hora_actual=13;<br>
+momento = (hora_actual < 12) ? "Antes del mediodía" : "Después del mediodía" <br></font>
+Como veis aqui, se dice que si la variable hora_actual es menor que 12, el valor de momento es igual a "Antes del mediodía"<br>
+y que en caso contrario, su valor sea "Después del mediodía".
+
+<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff> for </strong></font>: for es igual a "durante".<br>
+Esta sentencia crea un bucle condicional cuya estructura es esta: for (variable ; condicion ; operacion){sentencia}.<br>
+Es decir, el primer parametro es una variable que definimos cuyo valor es un numero, el siguiente parametro es la condicion para que el bucle pare y el tercer parametro es la operacion que sufre la variable hasta que llegue a cumplir la condicion. 
+<br>La sentencia, se realizara tantas veces, como veces se haya tenido que repetir la operacion hasta cumplir la condicion. Ejemplo:
+<br><font color=00ffff>for (numero = 0 ; numero < 10 ; numero++) {trace(numero)}</font><br>
+Aqui dice que mientras la variable numero sea menor que 10, mostremos la variable numero en el Panel de Salida. <br>
+Como el hemos asignado el operador de incremento a la variable, cada vez que se ejecute le sumara uno a la variable.<br>
+Entonces mostrar la variable 10 veces: 0,1,2,3,4,5,6,7,8,9.<br>
+Este tipo de bucles los hace inmediatamente.<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff> while </strong></font>: while es igual a "mientras".
+Esta sentencia es casi identica a "for" ya que tambien crea un bucle condicional.<br> Su estructura es esta: while(condicion){sentencia}. Ejemplo:
+<br>
+Aqui dice que mientras la variable numero sea menor que 10 se ejecute la sentencia, que es mostrar la variable numero.<br>
+
+<font color=00ffff>numero=0<br>while (numero<10){<br>trace(numero); <br>numero++}<br></font>
+Como es veis es muy parecido a for solo que la variable no declara dentro del parentesis y que la operacion se relaza dentro de la sentencia. El resultado seria igual al anterior ejemplo: 0,1,2,3,4,5,6,7,8,9.
+<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff> switch </strong></font>:<br>
+Esta estructura condicional lo que hace es estudiar realizar una o varias sentencias en funcion del valor o estado de una variable.<br>
+Su estructura es:<br><font color=00ffff>
+switch (variable) {<br>
+case valor1:<br>
+sentencia<br>
+break <br>
+case valor2:<br>
+sentencia<br>
+break <br>
+case valor3:<br>
+sentencia<br>
+break <br>}<br><br></font>
+Donde variable es la variable, de la cual se comprovara si tiene esos valores para ejecutar una sentencia o no.<br>
+La particula case va seguida del valor de la funcion y despues de él van dos puntos ":" y aparte.<br>
+La particula break lo que hace es que si un caso es verdadero solo se ejecute la sentencia correspondida a ese caso,<br>
+si no ponemos la particula break, si un valor es verdad, se ejecutarian todas las sentencias desde ese caso que es verdadero hacia abajo. Es decir, si no la ponemos y el primer caso es verdadero, entonces se ejecutaria la sentencia del caso primero y de los siguientes, si fuera verdadera el del caso dos, se ejecutaria la del dos y siguientes...
+<br>Ejemplo:<br><font color=00ffff >
+<br><pre>
+var dia_de_la_semana=2
+Switch (dia_de_la_semana) { 
+    case 1: 
+       document.write("Es Lunes") 
+       break 
+    case 2: 
+       document.write("Es Martes") 
+       break 
+    case 3: 
+       document.write("Es Miércoles") 
+       break 
+    case 4: 
+       document.write("Es Jueves") 
+       break 
+    case 5: 
+       document.write("Es viernes") 
+       break 
+    case 6: 
+    case 7: 
+       document.write("Es fin de semana") 
+       break 
+    default: 
+       document.write("Ese día no existe") 
+} </pre></font>
+En este codigo, tenemos una veriable llamada "dia_de_la_semana" y una sentencia switch con esa variables que dice que si esa variable es igual a 1, se muestre "Es lunes, si es 2, "Es Martes"...<br>
+En este caso como su valor es 2, daria como resultado "Es Martes"
+
+
+
+
+
+
+
+
+
+
+<h1>Otras</h1>
+<img src="ico2.jpg"> <strong><font color=ff00ff> function: </strong></font>Es la sentencia de sentencias.<br>
+Esta sentencia sirve para crear tus propias funciones. Funciona asi: function miFuincion(){sentencia}.
+<br>Donde miFuncion es el nombre de la funcion y los parentesis sirven para crear nuevas variables, con las que nos manejaremos en la funcion y que al invocar la funcion, entre los parentesis solo tengamos que poner unos valores que sustituiran a las variables que antes hemos creado.  En cado de no querer definir ese tipo de variables solo ponemos (). <br>
+Primer ejemplo:<br>
+
+<font color=00ffff>function decirsi () {alert("si")}<br>
+decirsi ()<br></font>
+Aqui, definimos la funcion "decirsi" cuya sentencia lo que hace es mostrar la palabra "si".<br>
+En la segunda linea invocamos la funcion.<br>
+Segundo ejemplo:<br>
+
+<font color=00ffff>numero = 10<br>
+numero2 = 20<br>
+function suma() {trace(numero+numero2)}<br>
+suma ()<br></font>
+Aqui hemos definido dos funciones que equivalen a dos numeros, luego hemos creado una funcion que interactua con es esas dos variables, entoces carga esas dos variables en la funcion y la ejecuta. En este ejemplo, el resultado seria "30".<br>
+Tercer ejemplo:<br>
+<font color=00ffff>
+function suma (sumando1,sumando2) { var sumar = sumando1+sumando2 ; return sumar}<br>
+alert(suma(10,3))
+<br></font>
+Aqui se crea la funcion suma, y dos variables indefinidas entre los parentesis. En la sentencia de la funcion se crea una nueva variable a la que se le da el valor de la suma de las dos variables creadas entre los parentesis y con la sentencia return se devulve el valor de la variable suma. Despues, cuando invocamos la funcion, entre los parentesis introducimos dos valores, que sustituiran a las variables que creamos antes. Ademas lo que hacemos es mostrar con la accion "alert" la funcion. Mostrar 13.
+<br><br>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff> return: </strong></font> return es igual a "devolver"<br>
+Esta sentencia evalúa la sentencia de una funcion y devuelve el resultado de la función en la que se ejecuta como un valor. Ejemplo:<bR>
+<font color=00ffff>
+function suma (sumando1,sumando2) { var sumar = sumando1+sumando2 ; return sumar}<br>
+alert(suma(10,3))
+<br></font>

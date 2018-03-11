@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=450 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Cadenas: String</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Como ya hemos dicho antes, un String es una variable que almacena cadenas de caracteres, es decir,<br> un conjunto de caracteres alfanuméricos. Las variables de tipo String deben ir entre comillas dobles (") o simples ('). <br>
+Esto significa que puede albergar numeros, simbolos y letras. <br>Ejemplo:<br>
+ <font color=00ffff> $cadena1 = "Palabras";<br>
+$cadena2 = "126832";<br>
+$cadena3 = "Tengo 12 cosas ";<br>
+</font>
+<br>Podemos yuxtaponer o concatenar estas variables, es decir, unirlas, para ello usaremos el punto "."<br>
+ <font color=00ffff>$cadena4 = $cadena1.$cadena1;<br>
+echo $cadena4</font>
+<br>
+Esto seria igual a:  Palabras 126832<br>
+Tambien podemos poner otras variables dentro de nuestro String.<br><font color=00ffff>
+$numero = 20;<br>
+$edad = "Tengo $numero años";<br>
+echo $edad </font><br>
+Esto es igual a:  Tengo 20 años<br><br>
+Ahora vamos a ver caracteres que para ponerlos, debemos escribirlos de otra forma:
+<table cellpadding=20><tr><td>
+
+<table cellspacing=0 cellpadding=4 border=2>
+<tr><td>Caracter</td><td>Efecto en la cadena</td></tr>
+<tr><td>\$</td><td>Escribe dolar $ en la cadena</td></tr>
+<tr><td>\"</td><td>Escribe comillas " en la cadena</td></tr>
+<tr><td>\\</td><td>Escribe contrabarra \ en la cadena</td></tr>
+<tr><td>\5*2</td><td>Escribe 5*2 y no 10</td></tr>
+
+</table>
+</td><td>
+
+<table cellspacing=0 cellpadding=4 border=2>
+<tr><td>Caracter</td><td>Efecto en la cadena</td></tr>
+<tr><td>\t</td><td>Introduce una tabulación</td></tr>
+<tr><td>\n</td><td>Crea un salto de linea</td></tr>
+<tr><td>\r</td><td>Retorno de carro</td></tr>
+</table>
+
+</td></tr></table>
+
+Vamos a terminar diciendo que si sumamos dos Strings que tienen por cadena un numero, se suman.<br>
+<font color=00ffff>
+$numero = "20";<br>
+$numero2 = "10";<br>
+$suma = $numero + $numero2
+echo $suma </font><br>
+Esto pondria en pantalla el numero 30.<br><br>
+Ejemplos:<br><font color=00ffff>
+&lt?<br>
+$cadena = "Esto es un texto que tiene /n un salto de linea";<br>
+$dinero = "Tengo 9\$";<br>
+echo $cadena;<br>
+echo $dinero<br>
+?&gt<br></font>
+Esto mostraria en pantalla: <br>
+Esto es un texto que tiene<br>
+ un salto de linea<br>
+Tengo 9$.

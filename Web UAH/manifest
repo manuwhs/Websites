@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# 2012-02-21 v1.0.0
+
+FALLBACK:
+/html/ /offline.html
+
+NETWORK:
+index.html
+config.html
+mininombre.html
+/images/*
+
+CACHE:
+

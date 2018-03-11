@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html manifest="manifest">
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>uah</title>
+  </head>
+  <body onload="Mostrar(); mostrarCookies();fonds()">
+    <script type="text/javascript" src="scripts/local_storage_rx.js">
+    </script>
+    <script type="text/javascript" src="scripts/galletas.js">
+    </script>
+    <script type="text/javascript" src="scripts/fondo.js">
+    </script> 
+    <link rel="stylesheet" type="text/css" href="css/Estilo.css">
+    <div id="contenedor">
+      <div id="titulo" class="titul"> Estación Meteorológica Politécnico </div>
+      <div id="menu" class="medioi"> <a href="mininombre.html">Nombre</a> <a href="config.html">Configuración</a>
+        <a href="galeria.html"> Galer&iacutea</a> <a href="galeria2.html"> Galer&iacutea 2</a>
+        <a href="tablas.html"> Tablas</a> </div>
+      <div id="informacion" class="mediod">Información:</div>
+      <div id="datos de la estacion" class="medio">
+        <h1 class="naranja">Datos de la Estación</h1>
+        <ul class="blanco">
+          <li>Country: <span id="counti">Spain</span></li>
+          <li>City: <span id="citi">Alcalá de Henares</span></li>
+          <li>Location: <span id="locai"> 40.514223,-3.348577</span></li>
+          <li> <span id="mapsi"><a href="https://maps.google.es/" class="blanco">Google
+                Maps</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<input value="Ver Coordenadas"
+
+              onclick="abrir_gps()" type="button"></li>
+        </ul>
+        <p> </p>
+        <div class="imagen"><img src="images/imag.png" height="90" width="90"></div>
+        <p></p>
+      </div>
+      <div id="datos de los sensores" class="medio">
+        <h1 class="naranja">Datos de los Sensores</h1>
+        <div class="tablas">
+          <table align="center" border="1" width="400px">
+            <tbody>
+              <tr onmouseover="this.style.backgroundColor='orange'" onmouseout="this.style.backgroundColor='blue'">
+                <td>Temperatura (º)</td>
+                <td>25</td>
+              </tr>
+              <tr onmouseover="this.style.backgroundColor='orange'" onmouseout="this.style.backgroundColor='blue'">
+                <td>Humedad (%)</td>
+                <td>18</td>
+              </tr>
+              <tr onmouseover="this.style.backgroundColor='orange'" onmouseout="this.style.backgroundColor='blue'">
+                <td>Dirección de viento</td>
+                <td>NE</td>
+              </tr>
+              <tr onmouseover="this.style.backgroundColor='orange'" onmouseout="this.style.backgroundColor='blue'">
+                <td>Velocidad del viento (km/h)</td>
+                <td>15</td>
+              </tr>
+              <tr onmouseover="this.style.backgroundColor='orange'" onmouseout="this.style.backgroundColor='blue'">
+                <td>Presión atmosférica (hPa):</td>
+                <td>1119.4</td>
+              </tr>
+              <tr onmouseover="this.style.backgroundColor='orange'" onmouseout="this.style.backgroundColor='blue'">
+                <td>Lluvia (mm) últimas 2 horas</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="pie" class="pie"> Universidad de Alcalá. &nbsp; <span id="fecha"></span>
+        <br>
+        <span id="visitas"></span> </div>
+    </div>
+  </body>
+</html>

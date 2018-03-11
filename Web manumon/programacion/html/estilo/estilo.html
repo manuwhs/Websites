@@ -1,0 +1,218 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=400 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Hojas de Estilos</H1></u></center></font>
+
+</table></center><br>
+<br>
+Como os habreis fijado, no podemos cambiar muchos aspectos de nuestra web, para ello se crearon los CSS u hojas de estilo.<br>
+El modo de funcionamiento de las CSS consiste en definir, mediante una sintaxis especial, la forma de presentación que le aplicaremos a:<br> 
+<img src="ico2.jpg"> Un web entero, de modo que se puede definir la forma de todo el web de una sola vez. <br>
+<img src="ico2.jpg"> Un documento HTML o página, se puede definir la forma, en un pequeño trozo de código en la cabecera, a toda la página. <br>
+<img src="ico2.jpg"> Una porción del documento, aplicando estilos visibles en un trozo de la página. <br>
+ <img src="ico2.jpg"> Una etiqueta en concreto, llegando incluso a poder definir varios estilos diferentes para una sola etiqueta.<br>
+ Esto es muy importante ya que ofrece potencia en nuestra programación. Podemos definir, por ejemplo, varios tipos de párrafos: en rojo, en azul, con margenes, sin ellos... 
+<br><br>
+Ademas con los CSS podremos definir un monton de cosas mas que en HTML.<br>
+<img src="ico2.jpg"> Podemos definir la distancia entre líneas del documento. <br>
+<img src="ico2.jpg"> Se puede aplicar identado a las primeras líneas del párrafo. <br>
+<img src="ico2.jpg"> Podemos colocar elementos en la página con mayor precisión, y sin lugar a errores. <br>
+ <img src="ico2.jpg"> Y mucho más, como definir la visibilidad de los elementos, margenes, subrayados, tachados... <br><br>
+
+# Para definir y aplicar estilos, podemos hacer dos cosas:<br>
+<img src="ico2.jpg"> Crear una clase y luego insertarla con el atributo class="clase"<br>
+<img src="ico2.jpg"> Definir el estilo directamente donde lo queramos aplicar con el atributo style=""<br>
+<img src="ico2.jpg"> Definir el estilo de una etiqueta o elemento de HTML .
+
+<h1>Sintaxis</h1>
+# Vamos a ver, pera definir un estilo se utilizan atributos como font-size,text-decoration... segudos de dos puntos y el valor que le deseemos asignar. Podemos definir un estilo a base de definir muchos atributos separados por punto y coma. Ejemplo:<br>
+<font color=00ffff>font-size: 10pt; text-decoration: underline; color: black</font>
+<br><br>
+# A la hora de definir una etiqueta como por ejemplo &lth1&gt o crear una clase de estilo, tenemos que escrbirlo dentro de las etiquetas<br>
+&ltstyle&gt y &lt/style&gt, pero para definirlo dentro de un sitio concreto, como por ejemplo una fila de una tabla solo necesitaremos poner dentro de la etiqueta el atributo style="" y dentro de las comillas escribir los atributos de CSS. Ejemplo:<br>
+<font color=00ffff>
+&ltstyle&gt<br>
+h1 {color:ff00ff;font-size:20; text-decoration: underline; text-align:center}<br>
+&lt/style&gt<br><br>
+&ltselect name="menu" style="Background-color:000000;color:cornsilk; font-size:17"&gt<br>
+&ltoption&gt Uno &lt/option&gt<br>
+&ltoption&gt Dos &lt/option&gt<br>
+&ltoption&gt Tres &lt/option&gt<br>
+&ltoption&gt Cuatro &lt/option&gt<br>
+&ltselect&gt</font>
+<br><br>
+En el primer parrafo, hemos definido la etiqueta h1, cada vez que la invoquemos tendra esas propiedades.<br>
+En el segundo parrafo, hemos definido el estilo de un menu, le hemos puesto otro color y tamaño a la letra y fondo.<br>
+<br>
+# Ahora vamos a crear una clase, una clase es un conjunto de atributos de style="", es como una funcion en Javascript, sirve para no tener que volver escribir el estilo cuando lo apliquemos a diferentes partes.<br>
+Su sintaxis de creacion es: .nombre_clase{atributos}<br>
+Como veis es casi igual a definir una etiqueta solo que con un "." al principio, las clases tambien se escriben entre &ltstyle&gt.<br>
+Una vez definido la clase, lo podemos a aplicar a un texto, objeto... con el atributo class = "nombre_clase".<BR>
+
+<font color=00ffff>
+&ltstyle&gt<br>
+.letrafondo {Background-color:000000;color:cornsilk; font-size:17}<br>
+&lt/style&gt<br><br>
+&ltselect name="menu" class="letrafondo"&gt<br>
+&ltoption&gt Uno &lt/option&gt<br>
+&ltoption&gt Dos &lt/option&gt<br>
+&ltoption&gt Tres &lt/option&gt<br>
+&ltoption&gt Cuatro &lt/option&gt<br>
+&ltselect&gt</font>
+<br><br>
+Aqui hemos definido la clase letrafonfo y luego la hemos usado en el menu.<br>
+La ventaja que tiene esto es que puedes aplicarla en el objeto que quieras y si no, no;  mientras que si defines la etiqueta, todo lo que hagas con esa etiqueta tendra esas caracteristicas.
+<h1>Atributos</h1>
+Bueno, ya hemos visto su sintaxis, ahora veremos sus diferentes atributos para cambiar el estilo de elementos.<br><br>
+ <table width="800" border="1" align="center" cellspacing="0" bordercolor="#999999" bgcolor=#010739 cellpadding=3>
+<tr>
+<td>Atributo </td>
+<td>Descripcion</td>
+<td>Valores</td>
+</tr>
+<tr>
+<td> color</td>
+<td> Sirve para indicar el color del texto</td>
+<td> RGB o nombre de color </td>
+</tr>
+<td> font-size</td>
+<td> Sirve para indicar el tamaño del texto</td>
+<td> Unidades CSS</td>
+</tr>
+<td> font-family</td>
+<td> Sirve para indicar la tipografia del texto.</td>
+<td> Fuentes</td>
+</tr>
+<td> font-style</td>
+<td> Es el estilo de la fuente.</td>
+<td> normal, italic o oblique  </td>
+</tr>
+</tr>
+<td> font-weight</td>
+<td> Indica la anchura de la fuente, es decir, lo "negrilla" que es</td>
+<td> normal, bold, bolder, lighter o 100 - 900  </td>
+</tr></table>
+<br>
+
+
+
+<table width="800" border="1" align="center" cellspacing="0" bordercolor="#999999" bgcolor=#010739 cellpadding=3>
+<tr>
+<td>Atributo </td>
+<td>Descripcion</td>
+<td>Valores</td>
+</tr>
+<tr>
+<td> line-height </td>
+<td> Indica el alto de una linea y por tanto, el espaciado entre líneas.</td>
+<td> normal o unidades CSS</td>
+</tr>
+<td> text-decoration </td>
+<td>Para establecer la decoración de un texto</td>
+<td> underline, overline o line-through </td>
+</tr>
+<td>text-align</td>
+<td> Sirve para indicar la alineación del texto.</td>
+<td> left, right, center o justify </td>
+</tr>
+<td> text-indent </td>
+<td> Sirve para hacer sangrado o márgenes en las páginas.</td>
+<td> Unidades CSS   </td>
+</tr>
+<td>text-transform </td>
+<td> Sus valores indican si poner el texto en mayus o minus</td>
+<td> capitalize, uppercase, lowercase, none   </td>
+</tr></table>
+
+
+<br>
+
+
+
+<table width="800" border="1" align="center" cellspacing="0" bordercolor="#999999" bgcolor=#010739 cellpadding=3>
+<tr>
+<td>Atributo </td>
+<td>Descripcion</td>
+<td>Valores</td>
+</tr>
+<tr>
+<td>Background-color</td>
+<td>Indica el color de fondo</td>
+<td> Color</td>
+</tr>
+<td>Background-image  </td>
+<td>Imagen de fondo</td>
+<td>Direccion de la imagen </td>
+</tr></table>
+<br>
+<table width="800" border="1" align="center" cellspacing="0" bordercolor="#999999" bgcolor=#010739 cellpadding=3>
+<tr>
+<td>Atributo </td>
+<td>Descripcion</td>
+<td>Valores</td>
+</tr>
+<tr>
+<td> Margin-left </td>
+<td> Indica el tamaño del margen izquierdo.</td>
+<td> Unidades CSS</td>
+</tr><tr>
+<td>Margin-right </td>
+<td>Indica el tamaño del margen derecho</td>
+<td> Unidades CSS </td>
+</tr><tr>
+<td>Margin-top </td>
+<td> Indica el tamaño del margen de arriba.</td>
+<td> Unidades CSS </td>
+</tr><tr>
+<td> Margin-bottom</td>
+<td> Indica el tamaño del margen de abajo.</td>
+<td> Unidades CSS   </td>
+</tr><tr>
+<td>Padding-left </td>
+<td>Espacio izquierdo entre el borde del objeto y su interior</td>
+<td> Unidades CSS   </td>
+</tr><tr>
+<td>Padding-right  </td>
+<td>Espacio derecho entre el borde del objeto y su interior</td>
+<td>Unidades CSS</td>
+</tr>
+<tr>
+<td> Padding-top </td>
+<td> Espacio de arriba entre el borde del objeto y su interior</td>
+<td> Unidades CSS</td>
+</tr><tr>
+<td>Padding-bottom  </td>
+<td>Espacio de abajo entre el borde del objeto y su interior</td>
+<td> Unidades CSS </td>
+</tr><tr>
+<td>Border-color </td>
+<td> Color del borde</td>
+<td> Unidades CSS </td>
+</tr><tr>
+<td> border-width</td>
+<td>Anchura del borde.</td>
+<td> Unidades CSS   </td>
+</tr><tr>
+<td>float</td>
+<td> Alinea un texto a la derecha o izquierda de un objeto</td>
+<td> none | left | right   </td>
+</tr><tr>
+<td>clear </td>
+<td> Hace lo contrario que el anterior</td>
+<td> none | left | right one   </td>
+
+
+</tr></table>
+
+
+

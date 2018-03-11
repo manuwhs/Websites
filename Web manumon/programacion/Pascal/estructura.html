@@ -1,0 +1,210 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Estructura y reglas</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Pascal se caracteriza por ser un lenguaje de programación estructurado. Esto implica que:<br>
+* El código esta dividido en porciones fácilmente legibles llamadas funciones o procedimientos. <br>
+De esta forma Pascal facilita la utilización de la programación estructurada.<br>
+* El tipo de dato de todas las variables debe ser declarado previamente para que su uso quede habilitado. <br><br>
+
+Los programas Pascal tienen definidas dos partes: declarativa y ejecutiva. <br>
+En la primera debe aparecer todo lo que se usará en la segunda (como las variables), <br>
+de lo contrario se detecta como desconocido y evita ciertas incomprensiones como veremos más adelante. <br>
+En la parte declarativa se enuncian Unit existentes, procedimientos, funciones, variables, constantes <br>
+y nuevos tipos de datos estructurados. Es la parte donde se declaran las intrucciones.<br>
+<h1>Reglas sintacticas generales</h1>
+* Toda declaracion o sentencia debe ser finalizada por ";"<br>
+* Para asignar un valor a una variable se usa el operador " := "<br>
+* Para asignarle un valor a una constante se usa el operador " = "<br>
+* El "end" del cuerpo del programa se escribe con un punto " . " al final que indica el fin del programa<br>
+<h1>Estructura general</h1>
+
+A continuacion se mostrara una tabla con las partes de un programa Pascual.<br>
+En la columna de la izquierda apareceran las partes un programa y a la izquierda<br>
+las palabras clave (identificadores) con las cuales se indica que estamos definiendo esa parte del programa.<br><br>
+
+<table width="60%" height="30%" bgcolor=#010739 border=1 cellspacing=0>
+     <tr> <td width="50%" align="center"><font class="pasar"><b>Partes de un programa</b></font></td>
+       <td width="50%" align="center"><font class="pasar"><b>Palabras reservadas</b></font></td> </tr>
+     <tr>  <td width="50%" align="center"><font class="pasar"> Cabecera (t&iacute;tulo)
+       </font></td><td width="50%" align="center"><font class="pasar"> program
+       </font></td> </tr> <tr><td width="50%" align="center"><font class="pasar">
+Declaraci&oacute;n de unidades</font></td><td width="50%" align="center"><font class="pasar">
+          uses</font></td></tr><tr><td width="50%" align="center"><font class="pasar">
+          Declaraci&oacute;n de constantes</font></td><td width="50%" align="center"><font class="pasar">
+          const</font></td></tr><tr> <td width="50%" align="center"><font class="pasar">
+          Declaraci&oacute;n de tipos
+       </font></td><td width="50%"  align="center"><font class="pasar">
+          type</font></td>  </tr><tr><td width="50%" align="center"><font class="pasar">
+          Declaraci&oacute;n de variables
+       </font></td> <td width="50%" align="center"><font class="pasar">
+          var</font></td></tr> <tr><td width="50%" align="center"><font class="pasar">
+           Declaraci&oacute;n de subprogramas</font></td>
+       <td width="50%" align="center"><font class="pasar">
+          function o procedure</font></td></tr> <tr><td width="50%" align="center"><font class="pasar">
+          Cuerpo del programa
+       </font></td><td width="50%" align="center"><font class="pasar">
+          begin, end y punto(.)
+       </font></td> </tr>
+   </table><br>
+
+
+<h2>Cabecera</h2>
+
+La cabecera es una sección obligatoria, debe figurar en todos los programas. 
+Debe comenzar con la palabra reservada program seguida del nombre del programa y un ";" al final 
+Con esto ya se cumplirían los requisitos mínimos que debe tener una cabecera, pero se puede y es muy 
+recomendable incluír también un comentario. Este comentario lo utilizamos para documentar el programa, 
+que es algo que la gente suele dejar en segundo plano, pero es de lo más importante en programación. 
+Ejemplo: <br><br>
+
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+program MiPrimerPrograma;<br>
+(* Manumonhacker*)</td></tr></table>
+
+
+<h2>Declaración de unidades</h2> 
+El compilador, en este caso Turbo Pascual, le entrega al programador unas biblioteca con funciones y procedimientos, <br>
+que le permiten realizar distintos tipo de tareas, las cuales vienen en archivos llamados UNIDADES.<br>
+
+Cuando un usuario desea utilizar alguna función o procedimiento de alguna de esas unidades, debe declarar<br>
+ la unidad (biblioteca) que contiene dicha función o procedimiento antes de poder hacer uso de ella en el programa principal.<br>
+
+Los programadores también pueden construir sus propias unidades.<br>
+
+Mas adelante estudiaremos en detalle las unidades y las funciones que suministra.<br><br>
+
+Las unidades que suministra Turbo Pascal son: DOS, WINCRT, PRINTER, GRAPH, GRAPH3.<br>
+
+EJEMPLO: Si en un programa tiene :<br><br>
+<table width="200" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+uses WINCRT, DOS
+</td></tr></table><br>
+
+En el momento de la escritura del programa, se podran hacer uso de los procedimientos o funciones que formen dichas unidades.<br>
+
+<h2>Declaración de constantes </h2> 
+Esta sección no es obligatoria, y sólo tendrás que declararla si quieres definir alguna constante en tu programa. <br>
+Para ello empezamos con la palabra reservada const seguida del nombre de las constantes y sus valores.<br>
+Las constantes deben separarse unas de otras mediante ";". 
+Ejemplo:<br><bR>
+
+<table width="200" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+const <br>
+Saludo = 'Hola';<br>
+Dinero = 5000;<br>
+Suma = 3 + 5; <br>
+</td></tr></table>
+<h2>Declaración de tipos</h2> 
+Esta sección no es obligatoria, y sólo tendrás que declararla si quieres definir tus propios tipos de datos en el programa. <br>
+Los types son los tipos de datos que puede almacenar una variable, <br>
+los que proporciona Pascal son Integer, Real, Boolean, String cuyo signifcado ya daremos. <br>
+Aunque a veces es interesante declarar tipos para hacer el código más legible.<br>
+Por ejemplo, podemos crear un type que sea un tipo de dato alfanumerico (String) que solo pueda tener 10 caracteres: <br><br>
+
+<table width="200" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+type<br>
+Cadenap = String[10]; <br>
+var<br>
+Nombre:cadenap<br>
+</td></tr></table>
+<h2>Declaración de variables</h2> 
+Esta sección, aunque no es obligatoria casi siempre se declara.<br>
+Para declarar variables debemos escribir la palabrea reservada var, despues el nombre de las variables separadas por comas,<br>
+por ultimo escribimos ":" y el tipo. De esta manera: variable1,variable2:tipo.  <br>
+Al declarar un grupo de variables del mismo tipo, se cierra la declaracion con ";". Ejemplo:<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+
+var<br>
+nombre,apellido,lugar:String;<br>
+telefono,direccion:real;
+<br>
+</td></tr></table>
+<h2>Declaración de procedimientos y funciones</h2> 
+Esta sección es muy importante, aunque para tus primeros programas no la necesitarás. <br>
+En ella puedes declarar procedimientos y funciones (subprogramas) para que los uses en otros subprogramas o en el cuerpo principal.<br>
+La diferencia principal entre una función y un procedimiento es que la primera devuelve un valor y el segundo no devuelve nada.<br>
+Este apartado lo veremos mas adelante con mas profundiad, pero aqui os dejo su estructura:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+function [titulo];<br>
+begin <br>
+[instrucciones]<br>
+end;<br>
+procedure [titulo];<br>
+begin<br>
+[instrucciones]<br>
+end;<br>
+</td></tr></table>
+<h2>Declaración del cuerpo principal</h2> 
+También se le llama bloque del programa, y es junto con la cabecera, la única sección obligatoria en un programa Pascal. <br>
+Debe comenzar y finalizar con las palabras reservadas begin y end respectivamente. <br>
+Después de la palabra end, siempre tiene que ir un punto que indica el final del programa. <br>
+Entre begin y end se escriben una o más sentencias, ya sean simples o compuestas. <br>
+Las sentencias pueden ser varias: asignaciones, llamadas a procedimientos y funciones, <br>
+sentencias selectivas , sentencias iterativas...<br>
+Pongamos un ejemplo simple en el cual se escribe una frase en pantalla.<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+begin<br>
+writeln ('Hola capullos');<br>
+readln;<br>
+end.<br>
+</td></tr></table>
+<h1>Estructura general</h1>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr>
+<td>Estructura Completa</td><td>Estructura obligatoria</td>
+</tr><tr>
+<td>
+<pre>
+program [titulo];
+
+uses 
+           [unidades];
+const
+           [constantes];
+type
+            [tipos];
+var
+                 [variables];
+procedure 
+                 [procedimiento];
+function
+                [funcion];
+begin
+               [sentencias]; 
+end. </pre>
+
+</td>
+<td>
+<pre>
+program [titulo];
+
+begin
+               [sentencias]; 
+end. </pre>
+
+</td></tr></table>

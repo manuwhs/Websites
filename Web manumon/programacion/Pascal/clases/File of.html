@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="30" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Archivos de Acceso directo</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Un archivo de acceso directo es un archivo formado por un conjunto de partes individuales que pertenecen al mismo tipo de datos.<br>
+Cada uno de los componentes del archivo es llamado registro. <br>
+Cada uno de los componentes de este tipo de archivos es accesible directamente. <br>
+
+Los archivos de acceso directo son también llamados archivos con tipos o tipeados. <br><br>
+
+A diferencia de los archivos secuenciales, los archivos tipeados no estan compuestos de lineas de caracteres, <br>
+sino que se acomodan en registros con estructuras fijas. <br>
+La longitud de los registros esta determinada por la cantidad de bytes que se necesitan para almacenar el tipo de datos que contendrá el registro.<br>
+Por ejemplo, si se van a almacenar números enteros en un archivo, cada registro servirá para un número específico y ocupará 2 bytes, <br>
+el siguiente registro utilizará los dos bytes siguientes del archivo y así sucesivamente hasta completar la cantidad de datos que se almacenen<br><br> 
+
+Este tipo de archivos no pueden ser visualizados con la instrucción type del sistema operativo debido al formato utilizado para guardarlos. <br>
+Estos archivos, son de cualquier tipo que no sea de las archivos secuenciales (*.txt o *.dat), como los archivos de imagen como *.jpg,<br>
+los ejecutables *.exe, los videos como *.avi...<br><br>
+<h2>La Clase File Of</h2>
+La clase File Of se utiliza para declarar un archivo de acceso directo.<br>
+Este tipo de datos sirven para que se les asigne la direccion de un archivo de acceso directo.<br>
+Es decir el contenido de estas variables sera el archivo secuencial que le asignemos, pero no su contenido.<br>
+Estructura de declaracion de una variable tipo File Of:<font color=00ffff><b><br>
+Var<br>
+archivo : File Of  [extension];<br>
+</b></font>
+Una vez declarada, seguimos los pasos para leer o escribir un archivo: 
+
+
+

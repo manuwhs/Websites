@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=450 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Variables</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+# <font color=00ffff><b>Una variable es un espacio en memoria donde se almacena un dato,</b></font> un espacio donde podemos guardar cualquier tipo de información que necesitemos para realizar las acciones de nuestros programas.
+<br><br>
+# <font color=00ffff><b>Declarar variables consiste en definir y de paso informar al sistema de que vas a utilizar una variable. </b></font><br> Es una costumbre habitual en los lenguajes de programación el definir las variables que se van a usar en los programas y para ello, se siguen unas reglas estrictas. Pero javascript se salta muchas reglas por ser un lenguaje un tanto libre a la hora de programar y uno de los casos en los que otorga un poco de libertad es a la hora de declarar las variables, ya que no estamos obligados a hacerlo, al contrario de lo que pasa en la mayoría de los lenguajes de programación. 
+
+De todos modos, es aconsejable declarar las variables, además de una buena costumbre y para ello Javascript cuenta con la palabra var. Como es lógico, se utiliza esa palabra para declarar la variable antes de utilizarla. 
+<br> <font color=00ffff><b>Para declarar variables usamos  "var". </b></font><br>
+Ejemplo:<br>
+var numero = 10
+<h1>Tipos</h1>
+El contenido de las variables puede ser de tres tipos:<br>
+<img src="ico2.jpg"> <strong><font color=ff00ff>Number:  </strong></font>puede almacenar números enteros o decimales, positivos o negativos. El signo decimal en ActionScript es el punto (.). Podrás realizar operaciones matemáticas con estas variables. <br>
+Ejemplo: <font color=00ffff> var numero=11<br></font>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>String: </strong></font>puede almacenar cadenas de caracteres, es decir, un conjunto de caracteres alfanuméricos. Las variables de tipo String deben ir entre comillas dobles ("). <br>
+Ejemplo: <font color=00ffff> var letras = "Solo palabras"<br></font>
+
+<img src="ico2.jpg"> <strong><font color=ff00ff>Boolean: </strong></font> Puede almacenar sólo dos valores, o true (verdadero) o false (falso). 
+<br>Ejemplo:  <font color=00ffff>var verdadero = true   /    var falso = false<br><br></font>
+Cuando no definimos una variable, su valor es undefined. Ejemplo:  <font color=00ffff>var nada;</font>
+<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff>Arrays: </strong></font>Son variables donde podemos introducir varios valores, en lugar de solamente uno como ocurre con la variables normales. <br>
+Los arrays nos permiten guardar varias variables y acceder a ellas de manera independiente, es como tener una variable con distintos compartimentos donde podemos introducir datos distintos.<br>
+Para crear un Array antes hay que declararlo:<br>
+<font color=00ffff>var datos = new Array()<br></font>
+Es crea un Array sin contenido alguno, podemos especificar cuantas variables diferentes tendra el Array poniendo su numero entre parentesis. <font color=00ffff>var datos = new Array(2)</font>. Esto crea un Array con dos variables de valor undefined ya que no les hemos dado valor.<br>
+Las variables en un Array se introducen de forma dinamica de la siguiente manera:<br>
+
+<font color=00ffff>var datos = new Array()<br>
+datos[0] = 155 <br>
+datos[1] = "hola"  </font><br>
+Como veis la dinamica de las variables de un Array es:  nombre_Array [numero_variable] = dato.<br>
+Cada variable de un Array es independiente y puede escribirse en ella cualquier dato que se puede escribir en una variable normal.<br>
+Tambien podemos escribir entre los parentesis del Array las variables separadas por comas:<br>
+<font color=00ffff>var datos = new Array("hola",8,true)<br></font>
+Aqui tenemos un Array con tres variables, estas variables equivaldrian a:<br><font color=00ffff>
+datos[0] = "hola" <br>
+datos[1] = 8  <br>
+datos[2] = true </font><br></font>
+
+<h1>Ambito</h1>
+
+Se le llama ámbito de las variables al lugar donde estas están disponibles. Por lo general, cuando declaramos una variable hacemos que esté disponible en el lugar donde se ha declarado, esto ocurre en todos los lenguajes de programación y como javascript se define dentro de una página web, las variables que declaremos en la página estarán accesibles dentro de ella. Tipos:<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff>Variables globales: </strong></font>Son las que están declaradas en el ámbito más amplio posible, que en Javascript es una página web. Para declarar una variable global a la página simplemente lo haremos en un script, con la palabra var. Ejemplo:<br>
+<font color=00ffff> var letras = "Solo palabras"<br></font>
+Las variables globales son accesibles desde cualquier lugar de la página, es decir, desde el script donde se han declarado y todos los demás scripts de la página.
+
+<br><br>
+<img src="ico2.jpg"> <strong><font color=ff00ff>Variables locales: </strong></font>Son aquellas variables que esten declaradas dentro de una funcion. Solo podemos acceder a ellas en la funcion en la que vallan. Aparte de funciones, son variables locales en general todas aquellas que vallan entre { }. Ejemplo:
+<br><font color=00ffff>
+function miFuncion (){ <br>
+    var numero = 20<br>
+     alert (numero)<br>
+} </font><br>
+En este caso numero es una variable local, puede haber una variable local que se llame igual que una global, ya que cada una influye en sus respectivos campos.

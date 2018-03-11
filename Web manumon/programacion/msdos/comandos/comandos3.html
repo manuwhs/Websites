@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+<style>
+h3{color:'00ffff'; size:3}
+</style>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Gestion de directorios</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<p></p>
+Comando: FORMAT<br>
+Etimología: Viene de formatear, anglicismo.<br>
+Función: Formateado, o borrado completo de un disco o disquete.<br>
+Sintaxis: format <unidad:><br>
+Parámetros: Permite los siguientes modificadores<br>
+/Q: Realiza formato rápido.<br>
+/Q y /U : El uso conjunto de estos dos parámetros asegura un formateado muy rápido.<br>
+Peculiaridades: También existe para recuperar lo formateado el UNFORMAT.<br>
+</p>
+<p>
+Comando: SYS<br>
+Etimología: De system (sistema).<br>
+Función: Crear un disco de sistema (un disco con los archivos de sistema)<br>
+Sintaxis: sys unidad:<br>
+</p>
+<p>
+Comando: CHKDSK<br>
+Etimología: Deriva de las palabras (check disck), chequear disco.<br>
+Función: Nos realiza un chequeo de la unidad introducida como parámetro en el comando.<br>
+Mostrándonos así el estado del disco o disquete.<br>
+Sintaxis: chkdsk [unidad:] [fichero]<br>
+
+<p>
+Comando: DISKCOPY<br>
+Etimología: Deriva de disk (disco) y copy (copiar) = copia de discos.<br>
+Función: Copia el contenido total de un disco o disquete, sirve para hacer copias de seguridad, etc.<br>
+Sintaxis: diskcopy <unidad_origen:> <unidad_destino:><br>
+
+<p>
+Comando: DISKCOMP<br>
+Función: Tras realizar una copia de disquetes podemos realizar una verificación, para ver si ha copiado<br>
+todos los contenidos, comparando. Este comando compara discos o disquetes.<br>
+Sintaxis: diskcomp <unidad1:> <unidad2:><br>
+
+<p>
+Comando: LABEL<br>
+Función: Es una orden que permite cambiar o borrar el nombre de la etiqueta que tiene asignado un<br>
+disco o disquete cuando este es formateado. La etiqueta es simplemente un nombre asignado por el<br>
+usuario para identificar el disco o disquete. Generalmente es bueno que dicho nombre haga alusión a su
+contenido.<br>
+Sintaxis: label [etiqueta de volumen]<br>
+Donde, poniendo solo label nos visualizaría el nombre de la etiqueta, actual. Y especificando ya ese<br>
+parámetro nos lo podria directamente.<br>
+
+<p>
+Comando: VOL<br>
+Función: Este comando nos muestra en pantalla, prácticamente la misma información que el anterior,<br>
+haciendo la salvedad de que este también nos muestra el numero de serie que se le es asignado al disco<br>
+o disquete. Este numero de serie no es modificable puesto que la etiqueta si lo es y ha de haber alguna<br>
+forma con la que siempre el sistema pueda identificar un disco. Esto lo hace refiriéndose a ese numero de
+serie (no modificable).<br>
+Sintaxis: vol<br>
+
+<p>
+Comando: DEFRAG<br>
+Función: Defragmenta y obtimiza el disco, almacenando los ficheros en clusters secuenciales, lo que<br>
+optimiza el rendimiento del sistema.<br>
+Sintaxis: defrag<br>
+
+
+<p>
+Comando: SCANDISK<br>
+Función: Comprueba la integridad de los datos almacenados basándose en el estado del disco que<br>
+almacena estos datos.<br>
+Sintaxis: scandisk<br>
+
+<p>
+Comando: MSBACKUP<br>
+Función: Realiza copias de seguridad. Permite realizar una copia de seguridad de todos o parte de los<br>
+archivos que se encuentran en el disco duro.<br>
+Sintaxis: MSBACKUP [nombre del fichero y especificaciones]<br>
+
+<p>
+Comando: RESTORE<br>
+Función: Restablece los ficheros de los discos de seguridad. Es un comando complementario al anterior.<br>
+Sintaxis: RESTORE disk-1: disk-2: [archivos]<br>
+</p>

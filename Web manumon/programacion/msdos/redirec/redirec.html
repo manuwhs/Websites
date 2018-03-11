@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Redirecciones y Filtros</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Redirecciones</h1>
+En MS-DOS, la informacion que damos al sistema se llama "entrada" y la que nos devulve tras haberla procesado se llama "salida".<bR>
+Normalmente, la entrada es tomada por el teclado y la salida va al monitor. <br>
+La informacion es tomada y presentada por los llamados dispositivos, por defecto la informacion es tomada <br>por el dispositivo teclado y es presentada por el dispositivo monitor.
+<br>
+Para variar la entrada de una orden, la salida o ambas, se utilizan los operadores de redireccionamiento. Son cuatro: 
+
+<bR><bR>
+<table border=1 cellspacing=0 cellpadding=5 bgcolor=#010739>
+<tr><th>Simbolo</td><th>Descripcion</th><th>Sintaxis</th></tr>
+<tr><th>&lt</th><td>Redirección de la entrada</td><td>orden &ltfichero/dispositivo</td></tr>
+<tr><th>&gt</th><td>Redirección de la salida</td><td>orden &gtfichero/dispositivo</td></tr>
+<tr><th>&gt&gt</th><td>Redirección de la salida a un fichero existente</td><td>orden &lt&ltfichero</td></tr>
+<tr><th>|</th><td>Redirección de la salida de una orden a entrada de otra orden  </td><td>orden1 |orden2</td></tr>
+<table><br>
+<h1>Filtros</h1>
+<br>
+Los filtros del DOS son las órdenes More, Sort y Find. Estas tres órdenes externas se denominan filtros porque su misión es recibir una entrada, filtrarla y devolver una salida.
+<br>
+More: 
+Recibe como entrada un conjunto de caracteres organizados en filas y devuelve los mismos caracteres insertando una pausa <br>cada 23 líneas.
+
+En muchas ocasiones la información mostrada por una orden o el contenido de un fichero no cabe en una sola pantalla y los datos se desplazan a gran velocidad sin darnos tiempo a leerlos. <br>La utilidad de la orden More se encuentra en estas ocasiones, deteniendo el desplazamiento de información en cada pantalla. Entonces, More muestra la siguiente línea: -- Más -- 
+<br>
+Después de leer los datos en pantalla, podemos pulsar Enter para continuar o también Ctrl+Pausa para interrumpir
+
+<br><br>
+Sort:
+
+Recibe como entrada un conjunto de caracteres organizados en filas y devuelve los mismos caracteres ordenando cada fila alfabéticamente. 
+
+El uso más frecuente de este filtro es ordenar alfabéticamente el contenido de un fichero. Admite dos modificadores: <br>
+
+
+/R --->  Ordena inversamente (de la `Z' a la `A' y del `9' al `0') <br>
+/+ ----> columna  Indica la columna del carácter a partir del cual se comparará cada fila. <br><br>
+
+Find 
+
+Recibe como entrada un conjunto de caracteres organizados en filas y devuelve las filas que contengan una cadena determinada. <br>
+
+La cadena de caracteres para buscar debe especificarse entre comillas (Mays+2) después de la orden. <br>
+
+Se utiliza, a menudo, para buscar una cadena de caracteres en un fichero o en la salida de una orden.<br> El filtro Find distingue entre mayúsculas y minúsculas mientras no le especifiquemos el modificador /I entre la orden y la cadena. <br>
+
+FIND "cadena" (cadena es diferente que CADENA)<br>
+FIND /I "cadena" (cadena es lo mismo que CADENA) <br><br>
+
+
+
+
+

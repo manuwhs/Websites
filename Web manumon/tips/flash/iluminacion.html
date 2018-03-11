@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="550" height="120" id="ondas" align="top">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="linterna.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="ondas.swf" quality="high" bgcolor="#000000" width="550" height="120" name="ondas" align="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto nieve lo que hace es<br>crear una funcion llamada nevar<br>en la cual va importando los copos<br>estos copos tienen nombre igual <br>y a la vez diferente, ya que<br>su nombre siempre va a ser<br>"polo"+ un numero que incrementa<br>y en el momento justo en el que se <br>importa se llama copo, en ese momento,<br>se le van dando porpiedades <br>aleatorias, y se le imprime la <br>funcion monevar(), por la cual<br>se mueven.
+<br><br>
+<center><a href="Efecto linterna.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+La última función es una funcion que <br>crea aleatoriedad entre el <br>intervalo de dos numeros.<br>Tambien antes de eso, está el efecto<br>iluminacion, que ilumina los copos
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+import flash.display.*;<br>
+import flash.geom.*; <br>
+import flash.filters.*<br><br>
+_quality = "low"; <br>
+pt = new Point();<br>
+Mouse.hide();<br><br>
+img = BitmapData.loadBitmap("imagen");<br>
+rc= img.rectangle;<br>
+img.width > img.height? h=img.width: h=img.height; <br><br>
+h=Math.round(h); <br>
+img2 =img.clone();<br>
+temp = img.clone();<br><br>
+img.colorTransform(rc, new ColorTransform(1,1,1,0,127,127,127,255));<br>
+img2.colorTransform(rc, new ColorTransform(1,1,1,1,0,0,0,255));<br>
+temp.perlinNoise(20,20,2,0,true,true,15,false,null);<br>
+img.merge(temp,rc,pt,80,80,80,255);<br>
+temp.dispose();<br>
+img.applyFilter(img, rc, pt, new BlurFilter(4, 4, 1));<br><br>
+mc1 = this.createEmptyMovieClip("mc1",1);<br>
+mc1.attachBitmap(img2,2);<br>
+marco = this.createEmptyMovieClip("marco",2); <br>
+marco.blendMode = 14;<br><br>
+mc2 = marco.createEmptyMovieClip("mc2",1);<br>
+cl = [0xffffff,0xe7cf07,0]; al = [40,60,100];<br>
+rt = [0,37,255];matrix = new Matrix(); <br><br>
+matrix.createGradientBox(h,h,0,h/2,h/2);<br>
+mc2.beginGradientFill("radial",cl,al,rt, matrix);<br>
+mc2.moveTo(0,0); mc2.lineTo(0,2*h);<br>
+mc2.lineTo(2*h,2*h);mc2.lineTo(2*h,0); <br>
+mc2.lineTo(0,0); mc2.endFill();<br><br>
+sal = temp = img.clone();<br>
+mx1 = [0,0,0,-1,0,1,0,0,0];<br>
+mx2 = [0,-1,0,0,0,0,0,1,0];<br>
+temp.applyFilter(img,rc,pt,new ConvolutionFilter(3,3,mx1,1,127));<br>
+sal.copyPixels(temp,rc,pt); <br>
+temp = img.clone(); <br><br>
+temp.applyFilter(img,rc,pt,new ConvolutionFilter(3,3,mx2,1,127));<br>
+sal.copyChannel(temp,rc,pt,1,2); <br>
+temp.dispose();<br>
+dMap = new DisplacementMapFilter(sal,pt,1,2,-300,-300);<br><br>
+onMouseMove = function(){  <br>
+x = h-_xmouse ; <br>
+y = h-_ymouse; <br>
+dMap.mapPoint = new Point(x,y);  <br>
+mc2.filters = [dMap]; mc2._x =-x; mc2._y =-y; <br>
+updateAfterEvent();}<br><br>
+onMouseMove();
+
+
+</font></td></tr></center>

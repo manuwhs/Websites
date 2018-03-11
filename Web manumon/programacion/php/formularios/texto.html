@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Textos</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+Este campo de texto es el resultado de escribir de escribir la etiqueta &ltINPUT type="text"&gt. <INPUT type="text"><br>
+Sirve para introducir texto normalmente en un formulario.
+<h1>Propiedades</h1>
+<img src="ico2.jpg"> <b><font color=ff00ff>defaultValue </b></font><br>
+Es el valor por defecto que tiene un campo. Lo que contiene el atributo VALUE de la etiqueta &ltINPUT&gt. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>form </b></font><br>
+Hace referencia al formulario. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>name </b></font><br>
+Contiene el nombre de este campo de formulario 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>type </b></font><br>
+Contiene el tipo de campo de formulario que es. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>value </b></font><br>
+El texto que hay escrito en el campo. 
+
+<h1>Metodos</h1>
+
+<img src="ico2.jpg"> <b><font color=ff00ff> blur()  </b></font><br>
+Retira el foco de la aplicación del campo de texto. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> focus()  </b></font><br>
+Pone el foco de la aplicación en el campo de texto. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> select()  </b></font><br>
+Selecciona el texto del campo. 
+
+<h1>Ejemplos</h1> 
+1- Vamos a ver, este tipo de objetos se pueden utilizar para crear interactividad entre los que visitan la web.<br>
+Ahora que hemos dado las propiedades, sabremos como:<br>
+<font color=00ffff><pre>
+&ltscript>
+function evaluar() { document.evalua.result.value = eval (evalua.expr.value) } 
+&lt/script&gt
+&ltform name="evalua"&gt
+&ltinput type name="expr" value="" size=60&gt
+Resultado: &ltINPUT TYPE="text" NAME="result" SIZE=20&gt 
+&ltinput type="button" VALUE="Ejecutar" onClick="evaluar()"&gt
+&lt/FORM>
+</pre></font>
+
+<script>
+function evaluar(){
+	document.evalua.result.value = eval(evalua.expr.value)} 
+</script>
+<FORM NAME="evalua">
+<input type name="expr" value="" size=60><br><br>
+Resultado: <INPUT TYPE="text" NAME="result" SIZE=20> 
+<INPUT TYPE="button" VALUE="Ejecutar" onClick="evaluar()">
+</FORM>
+Vamos a ver, este codigo lo que hace es ejecutar el script que pongamos en el area de texto y nos dara el resultado de la ejecucion <br>en el area te texto pequeño.<br> Esto se consigue igualando la propiedad value del texto grande a la del chico y ademas usando la funcion eval().
+<br>Esto tiene un montonazo de aplicaciones

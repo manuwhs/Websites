@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Constantes</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+
+Una constante es un dato cuyo valor no puede cambiar durante la ejecución del programa. <br>
+Recibe un valor en el momento de la compilación y este permanece inalterado durante todo el programa. <br>
+Las constantes se declaran en una sección que comienza con la palabra reservada const, siguiendo esta estructura:<br>
+const<br>
+constante1 = valor1<br>
+constante2 = valor2<br>
+...  <br><br>
+Como veis no hace falta declarar que tipo de informacion almacenara. <br>
+Después de declarar una constante ya puedes usarla en el cuerpo principal del programa.<br>
+Tienen varios usos: ser miembro en una expresion, en una comparación, asignar su valor a una variable, etc. <br>
+Ejemplo:<br>
+<br>
+<table width="250" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+program ejemploConstantes;<br>
+const<br>
+Autor = 'manumonhacker';<br>
+Ano = '1998'<br>
+Suma = 25*2+10<br>
+</td></tr></table><br>
+
+Las constantes de cadena tambien se pueden definir con resourcestring.<br>
+En ambos casos se está definiendo una constante, esto es, un valor que no va a cambiar durante la ejecución del programa. <br>
+La diferencia consiste en la implementación. Una constante de cadena definida con la directiva resourcestring se almacena <br>
+en los recursos del programa, en una tabla de cadenas de caracteres. Ejemplo:<br><br>
+
+<table width="250" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+program ejemploConstantes;<br>
+resourcestring<br>
+Autor = 'manumonhacker';<br>
+Ciudad = 'Madrid';
+</td></tr></table><br><br>
+
+<h2>Clases de constantes</h2>
+
+<h3>Constantes literales</h3>
+Son valores de cualquier tipo que se utilizan directamente, no se declaran ya que no tienen nombre. <br>
+En el siguiente ejemplo tienes la variables Suma y un par de constantes literales (el 85 y el 5): <br>
+
+Suma := 85 + 5
+
+
+<h3>Constantes declaradas</h3>
+También llamadas constantes con nombre, son las que se declaran en la sección const asignándoles un valor directamente.  <br>
+Por ejemplo:  <br>
+const  <br>
+Pi = 3.141592; (* valor real *)  <br>
+Min = 0; (* entero *)  <br>
+Max = 99; (* entero *)  <br>
+Saludo = 'Hola'; (* cadena caract. *)   <br>
+
+
+<h3>Constantes expresión</h3>
+También se declaran en la sección const, pero a estas no se les asigna un valor directamente, sino que se les asigna una expresión.  <br>
+Esta expresión se evalúa en tiempo de compilación y el resultado se le asigna a la constante.<br> 
+En el siguiente ejemplo las constantes Min, Max e Intervalo son declaradas y las consantes<br> 
+N y Centro son de expresion. Ejemplo: <br> 
+
+const  <br>
+Min = 0;  <br>
+Max = 100;  <br>
+Intervalo = 10;  <br>
+N = (Max - Min) div Intervalo; <br>
+Centro = (Max - Min) div 2;   <br>
+
+

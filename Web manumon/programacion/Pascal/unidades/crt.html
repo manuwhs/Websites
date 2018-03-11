@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>CRT</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+La Unidad crt implementa una amplia gama de rutinas que permiten el control completo de características de la computadora, <br>
+tales como control del modo de pantalla, códigode teclados, colores, ventanas y sonido<br>
+<h2>Rutinas</h2>
+
+<font color="00ffff"><b>* ClrEol    </b></font><br>
+Borra los caracteres desde el cursor hasta el final de la línea. <br><br>
+<font color="00ffff"><b>* ClrScr    </b></font><br>
+Borra la ventana actual, y posiciona el cursor en la esquina superior izquierda de esta. <br><br>
+<font color="00ffff"><b>* Delay(ms:word)   </b></font><br>
+Detiene la ejecución del programa durante ms milisegundos. <br><br>
+<font color="00ffff"><b>* Deline    </b></font><br>
+Borra la línea en la que se encuentra el cursor. <br><br>
+<font color="00ffff"><b>* GotoXY(X,Y:byte)    </b></font><br>
+Sitúa el cursor en las coordenadas de pantalla (X,Y) <br><br>
+<font color="00ffff"><b>* InsLine    </b></font><br>
+Inserta una línea vacía en la posición del cursor <br><br>
+<font color="00ffff"><b>* KeyPressed : bolean   </b></font><br>
+ Devuelve el valor verdadero si se pulsa una tecla en ese momento, y falso en caso contrario. <br><br>
+<font color="00ffff"><b>* NoSound    </b></font><br>
+Interrumpe la emisión de sonidos emitidos por el altavoz.<br><br>
+<font color="00ffff"><b>* ReadKey : char    </b></font><br>
+Lee un carácter del teclado. Este carácter no se visualiza en pantalla. <br><br>
+<font color="00ffff"><b>* Sound (Frec:word)   </b></font><br>
+Emite un sonido de la frecuencia indicada (en hercios). Este sonido se emite hasta el momento de ejecución de la instrucción NoSound. <br>
+<font color="00fff"><b>* WhereX : byte    </b></font><br>
+Devuelve un valor que corresponde a la coordenada X del cursor. <br><br>
+<font color="00ffff"><b>* WhereY : byte    </b></font><br>
+Devuelve un valor que corresponde a la coordenada Y del cursor. <br><br>
+<font color="00ffff"><b>* TextBackground (color : byte)   </b></font><br>
+Selecciona el color de fondo: color = 0 negro, 1 azul, 2 verde, 3 cian, 4 rojo, 5 magenta, 6 marron, 7 gris claro<br><br>
+<font color="00ffff"><b>* TextColor (color : byte)    </b></font><br>
+Selecciona el color del carácter de primer plano<br><br>
+
+<font color="00ffff"><b>* Cursoroff()    </b></font><br>
+Desactiva el cursor (lo esconde)<br><br>
+<font color="00ffff"><b>* Cursoron()    </b></font><br>
+Reactiva el cursor (lo muestra de nuevo)<br><br>
+
+<font color="00ffff"><b>* LowVideo   </b></font><br>
+LowVideo activa la salida de texto no marcado o sobresaltada. (esto limpia la alta intensidad de bit de atributo del video)<br><br>
+
+<font color="00ffff"><b>* NormVideo   </b></font><br>
+NormVideo activa la salida de texto normal<br><br>
+<font color="00ffff"><b>* HightVideo   </b></font><br>
+HighVideo cambia la salida al texto marcado. (Fija el pedacito de la alta intensidad de la cualidad del video)

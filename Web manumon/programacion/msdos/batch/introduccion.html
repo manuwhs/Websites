@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Batch</H1></u></center></font>
+
+</table></center><br>
+Como ya hemos dicho antes, MS-DOS posee un conjunto de comandos que constituye su lenguaje,<br>
+este conjunto es conocido como Batch y con él podemos manipular este sistema operativo.<br>
+Un comando es una instrucción o mandato que el usuario proporciona a un sistema informático, desde la línea de comandos.<br><br>
+
+
+Los archivos que contienen este lenguaje son archivos batch y poseen la extension .bat. Son archivos de procesamiento por lotes.<br>
+
+Se trata de archivos de texto sin formato, guardados con la extensión <font color=00ffff><b>*.bat </b></font>que contienen un conjunto de comandos DOS. <br>
+Cuando se ejecuta este archivo bat, los comandos contenidos son ejecutados en grupo, de forma secuencial,<br>
+ permitiendo automatizar diversas tareas. Cualquier comando DOS puede ser utilizado en un archivo batch.<br>
+
+ 
+<br>
+Hay que aclarar Batch que no es un Lenguaje de Programación.<br>
+Es un archivo de código que contiene comandos del, Shell de Windows, llamado MS-DOS.
+<br>
+Estos comandos se pueden ejecutar desde Inicio --> Ejecutar --> CMD o creando un archivo .bat con comandos.<bR>
+<bR>
+<font color=00ffff>Por tando el lenguaje batch sirve para ejecutar comandos MS-DOS del Shell de Windows.</font>
+<br><br>
+Este lenguaje esta formado fundamentalmente por comandos, pero como en otros lenguajes, podremos definir variables <br>
+y escribir sentencias condicionales, pero solo en caso de que creemos un archivo .bat, de la otra manera no se podria.
+<br><br>
+Como el resto de los tutoriales, escribiremos este lenguaje en un documento de texto le cambiaremos la extension.<br>
+Con referencia a la sintaxis, las variables de definen con "set" y cuando queramos nombrarlas tenemos que poner su nombre entre %.<br><bR>
+Para poner comentarios a un código solo basta usar el comando REM seguido del comentario, o con dos veces 2 puntos o con signos porcentaje:
+<font color=00ffff>REM[comentario] o ::[comentario]</font><br><br> 
+A proposito, cuando veamos por ejemplo la estructura de los diferentes comandos, los atributos que tenemos que poner nosotros<br>
+apareceran entre "[]", pero estos no se ponen, por ejemplo para poner un comentario seria asi:<br>
+<font color=00ffff>:: esto es un comentario</font>
+y estaria mal ponerlo asi:<br>
+<font color=00ffff>:: [esto es un comentario]</font>
+<br><br>
+Algunos de los comandos mas normales son:<br>
+
+<font color = 00ffff>echo [contenido]</font>: Este comando muestra en la ventana shell de Window el [contenido]<br>
+<font color = 00ffff>pause</font>: Este comando para la lectura del archivo .bat ya que por ejemplo, si usamos el comando anterior<br>
+y no ponemos pause, el lector del archivo seguira leyendo, y la ventana shell se cerrara.<br>
+<font color = 00ffff>exit</font>: Este comando sirve para salir y cerrar el archivo sin que se pueda leer la continuacion<br><br>
+
+Cuando creemos un archivo batch, los comandos que escribamos se ejecutaran de la misma manera que lo harian en el Shell.<br>
+Me explico, si tu abres el Shell de Windows pondra "C:\Documents and Settings\Usuario>" que es la direccion de tu cuenta<br>
+de usuario y el simbolo ">" que significa que es la direccion de entrada para los comandos que escribamos a continuacion.<br>
+Ejemplo:<br>
+Si abrimos el shell y escribimos el comando "dir", nos mostrara todos los directorios que tenga la carpeta que este escrita,<br>
+la que viene de serie al abrir es "C:\Documents and Settings\Usuario".<br>
+Si en un archivo batch escribimos "dir" hara exactamente lo mismo, pero deberemos escribir tb pause para que no siga leyendo.<br><br>
+Otra cuestion que se explicara mas adelante detenidamente es el redireccionamiento ">" que hace que lo que este a la izquierda<br>
+sirva de informacion de entrada para lo que esta a la derecha, que en el caso anterior es un comando "dir", que muestra<br>
+los directorios de la direccion, pero si escribimos "dir>directorios.txt", a su vez, la informacion de los directorios servira de entrada<br>
+para el archivo directorios.txt lo que hara que es cree el archivo "directorios.txt" y que en su interior esten los directorios de la direccion.<br>

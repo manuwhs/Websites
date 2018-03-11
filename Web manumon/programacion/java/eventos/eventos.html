@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+<a name="ancla"></a>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20" text =#ffffff>
+<center><table  border="4" width=400 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Eventos</H1></u></center></font></ta
+</td></tr>
+</table></center><br>
+<strong><font color=ff00ff>Los eventos son aquellas acciones que surgen como respuesta a alguna acción llevada a cabo por el usuario.</strong></font>
+<br>
+Para referirnos a un evento en HTML, el nombre del evento irá precedido por "on".<br> Por ejemplo, el gestor de eventos de "Click" será "onClick". 
+<br><br>Normalmente, estos eventos se colocan dentro de las etiquetas HTML de algun objeto, esto hace que el evento se refiera e ellos, por ejemplo si lo colocas dentro de las etiquetas de una imagen y es el evento onClick pues entonces cuando cliquees sobre la imagen se generara la sentencia.<br>
+Su estructura es esta  onEvento = "sentencia". Como ves, la sentencia se escribe entre comillas dobles, la sentencia puede escribirse ahi o puedes invocar una funcion ya definida.<br>
+<br>Los eventos estan destinados a una serie de objetos, un evento no se puede utilizar en todos los objetos, por ejemplo el evento onKeyPress solo puede darse en campos de texto.
+<br><br>
+
+<table width="100%" align=center border=1 cellspacing="0" bordercolor="#999999" bgcolor=#010739 cellpadding=5>
+<tr>
+ <td><b>Evento</b></td><td><b>Situacion que detecta.</b></td></tr>
+<tr>
+ <td>Click </td><td>Cuando se pulsa sobre el objeto indicado</td></tr>
+<tr>
+ <td>DblClick</td><td>Cuando se pulsa dos veces sobre el objeto indicado</td></tr>
+<tr>
+ <td>Abort</td><td>Cuando se interrumpe un objeto que se esta cargando</td></tr>
+<tr>
+ <td>DragDrop</td><td>Cuando se arrastrar un objeto a la ventana del navegador</td></tr>
+<tr>
+ <td>Error</td><td>Cuando se produce un error en la carga de un documento</td></tr>
+<tr>
+ <td>Focus</td><td>Cuando el usuario se posiciona en una ventana o cuadro de texto de un formulario</td></tr>
+<tr>
+ <td>KeyDown</td><td>Cuando se pulsa una tecla</td></tr>
+ <tr>
+ <td>KeyPress</td><td>Cuando se pulsa o libera una tecla</td></tr>
+<tr>
+ <td>KeyUp</td><td>Cuando se libera una tecla</td></tr>
+<tr>
+ <td>Load</td><td>Cuando se carga un documento en el navegador</td></tr>
+<tr>
+ <td>MouseDown</td><td>Cuando se pulsa un botón del ratón en el objeto indicado</td></tr>
+<tr>
+ <td>MouseMove</td><td>Cuando se mueve el cursor en el objeto indicado</td></tr>
+<tr>
+ <td>MouseOver</td><td>Cuando el puntero del ratón se posiciona en el objeto indicado</td></tr>
+<tr>
+ <td>MouseOut</td><td>Cuando el puntero del ratón sale de un enlace o imagen mapa</td></tr>
+<tr>
+ <td>MouseUp</td><td>Se libera un botón del ratón sobre el objeto indicado</td></tr>
+<tr>
+ <td>Move</td><td>Cuando se mueve la ventana. Esta acción también la puede realizar el script</td></tr>
+<tr>
+ <td>Reset<td>Cuando se pulsa sobre el botón reset del formulario</td></tr>
+<tr>
+ <td>Resize</td><td>Cuando las dimensiones de la ventana cambian</td></tr>
+<tr>
+ <td>Select</td><td>Cuando se selecciona una de las opciones de un cuadro combo del formulario</td></tr>
+<tr>
+ <td>Submit</td><td>Cuando se pulsa el botón submit del formulario</td></tr>
+<tr>
+ <td>UnLoad</td><td>Cuando el usuario sale de la página</td></tr>
+</table>
+
+<h1>Ejemplos</h1>
+1- Aqui creamos una funcion y luego hacemos que se realice al pulsar sobre el objeto que es la imagen:<br>
+<font color=00ff00>&ltscript&gt<br>
+  &lt!-- <br>
+    function Muestramensaje() 
+    {<br>
+      alert("Esto es un mensaje, activado por una función javascript");
+    }<br>
+  //--&gt<br>
+&lt/script&gt<br><br></font>
+<font color=00ffff>&ltimg src="imagen.jpg" onClick="Muestramensaje ()"&gt<br><br></font>
+
+<script>
+<!-- 
+function Muestramensaje() {
+alert("Esto es un mensaje, activado por una función javascript"); }
+//-->
+</script>
+
+<img src="imagen.jpg" onClick="Muestramensaje()"> <br>
+<br>
+2- Aqui usaremos el evento onLoad en la etiqueta body para que al cargarse muestre un mensaje.
+<script>
+<!-- 
+function Muestramensaje() {
+alert("Esto es un mensaje, activado por una función javascript"); }
+//-->
+</script>
+
+<body onLoad="Muestramensaje"> <br>
+<font color=00ff00>&ltscript&gt<br>
+  &lt!-- <br>
+    function Muestramensaje() 
+    {<br>
+      alert("Esto es un mensaje, activado por una función javascript");
+    }<br>
+  //--&gt<br>
+&lt/script&gt<br><br></font>
+<font color=00ffff>&ltbody onLoad="Muestramensaje ()"&gt<br><br></font>
+3- Aqui usaremos onUnload para con el body de este frame para que nos muestre un mensaje cuando nos vallamos o lo cerremos.<br><br>
+<font color=00ff00>&ltscript&gt<br>
+  &lt!-- <br>
+    function Muestramensaje() 
+    {<br>
+      alert("no te vallas cabron");
+    }<br>
+  //--&gt<br>
+&lt/script&gt<br><br></font>
+<font color=00ffff>&ltbody onUnLoad="Muestramensaje ()"&gt<br><br></font>
+
+<body onUnLoad="Muestramensaje">
+4- Aqui teneis el evento onMouseOver y onMouseOut refiriendose a una tabla, pero las sentencias estan escritas alli.<br>
+<font color=00ffff>
+&ltcenter &gt&lttable  border="1" width=350 height=20 bordercolor=#555555 bgcolor=#010739 cellpadding =3 cellspacing=0 &gt&lttr &gt
+
+&lttd align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#010739'" onmouseout="this.style.backgroundColor='#000000'" &gt  &ltfont color=#ffffff face="Times New Roman" size=3>Normal&lt/td &gt
+&lttd align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#CA5202'" onmouseout="this.style.backgroundColor='#000000'" &gt  &ltfont color=#ffffff face="Times New Roman" size=3>Fuego&lt/td &gt
+&lttd align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#6B97FA'" onmouseout="this.style.backgroundColor='#000000'" &gt  &ltfont color=#ffffff face="Times New Roman" size=3>Agua&lt/td &gt
+&lttd align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#BDD0FD'" onmouseout="this.style.backgroundColor='#000000'" &gt  &ltfont color=#ffffff face="Times New Roman" size=3>Nieve&lt/td &gt
+&lttd align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#4B4B01'" onmouseout="this.style.backgroundColor='#000000'" &gt &ltfont color=#ffffff face="Times New Roman" size=3>Deformación&lt/td &gt
+
+&lt/tr&gt&lt/center &gt</table &gt<br>
+</font>
+<center ><table border="1" width=350 height=20 bordercolor=#555555 bgcolor=#010739 cellpadding =3 cellspacing=0 ><tr > <td align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#010739'" onmouseout="this.style.backgroundColor='#000000'" > <font color=#ffffff face="Times New Roman" size=3>Normal</td > <td align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#CA5202'" onmouseout="this.style.backgroundColor='#000000'" > <font color=#ffffff face="Times New Roman" size=3>Fuego</td > <td align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#6B97FA'" onmouseout="this.style.backgroundColor='#000000'" > <font color=#ffffff face="Times New Roman" size=3>Agua</td > <td align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#BDD0FD'" onmouseout="this.style.backgroundColor='#000000'" > <font color=#ffffff face="Times New Roman" size=3>Nieve</td > <td align=center bgcolor=#000000 onmouseover="this.style.backgroundColor='#4B4B01'" onmouseout="this.style.backgroundColor='#000000'" > <font color=#ffffff face="Times New Roman" size=3>Deformación</td > </tr></center > </table>
+<br><br>
+5- Ahora usamos KeyUp en un campo de texto:<br>
+<font color=00ff00>
+&lttextarea onKeyPress="alert('Has pulsado una tecla')"&gt&lt/textarea&gt</font><br><br>
+<textarea onKeyPress="alert('Has pulsado una tecla')"></textarea>

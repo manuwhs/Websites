@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="550" height="120" id="ondas" align="top">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="nieve.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="ondas.swf" quality="high" bgcolor="#000000" width="550" height="120" name="ondas" align="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto nieve lo que hace es<br>crear una funcion llamada nevar<br>en la cual va importando los copos<br>estos copos tienen nombre igual <br>y a la vez diferente, ya que<br>su nombre siempre va a ser<br>"polo"+ un numero que incrementa<br>y en el momento justo en el que se <br>importa se llama copo, en ese momento,<br>se le van dando porpiedades <br>aleatorias, y se le imprime la <br>funcion monevar(), por la cual<br>se mueven.
+<br><br>
+<center><a href="Efecto nieve.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+La última función es una funcion que <br>crea aleatoriedad entre el <br>intervalo de dos numeros.<br>Tambien antes de eso, está el efecto<br>iluminacion, que ilumina los copos
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+
+onEnterFrame = function() {nevar();}<br><br>
+
+function nevar() {<br>
+	profundidad = _root.getNextHighestDepth();<br><br>	
+	
+	copo = _root.attachMovie("nieve", "polo"+profundidad, profundidad);	<br><br>
+    copo._x = randRange(1, 550);<br>
+	copo._y = -1;	<br>
+	copo._alpha = randRange(50, 100);	<br>
+	copo._xscale = randRange(70, 110);<br>
+	copo._yscale = tmp._xscale;<br>
+	copo.mover = true;	<br>
+	copo.onEnterFrame = monevar;}<br><br>
+
+function monevar() {<br><br>
+	
+if (this.mover) {	<br>	
+		this._y += 2<br>
+		this._x += Math.cos(this._y/10)<br><br>
+
+import flash.filters.GlowFilter;<br>
+var iluminacion:GlowFilter= new GlowFilter();<br>
+ilumincaion.quality=1;<br>
+iluinacion.alpha=0.50<br>
+iluminacion.color=0xcccccc;<br>
+iluminacion.strength=2.5;<br>
+iluminacion.blurX=8;<br>
+iluminacion.blurY=8;<br><br>
+
+this.filters=[iluminacion];}}<br><br>
+		
+function randRange(min:Number, max:Number):Number {<br>
+var randomNum:Number = Math.floor(Math.random()*(max-min+1))+min;	<br>
+return randomNum;}<br>
+		</font></td></tr></center>

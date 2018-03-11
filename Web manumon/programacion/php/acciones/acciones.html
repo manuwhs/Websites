@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Acciones</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Las <strong><font color=ff00ff>Acciones son funciones predefinidas de PHP</strong></font>, es decir: <br>PHP las crea, y nosotros sólo tenemos que usarlas de la manera que se nos indica.<br> No tenemos que definir las funciones ni nada por el estilo, ni siquiera necesitamos saber cómo están hechas... Lo importante es que están listas para usar, lo que facilita el uso de este lenguaje de programación y sobre todo, haga muy rápido comenzar a programar. <br>
+Las acciones son practicamento todos los codigos predefinidos por PHP, incluyendo las sentencias, funciones...
+<br><strong><font color=ff00ff>Para invocar estas acciones, escribimos su nombre y sus parametros entre () en el caso de que los haya.</font></strong><br>
+
+Estas acciones, estan contenidas en la libreria de funciones de PHP. <br>
+<h2>Manipulacion de Strings</h2>
+<img src="ico2.jpg"> <b><font color=ff00ff>strcmp (variable1, variable2)</b></font><br>
+Esta funcion compara dos variables, es como el operador ==, si las variables son iguales devuelve 0 y si no -1.<br><font color=00ffff>
+&lt?php<br>
+$a = "ola";<br>
+$b = "ola";<br>
+$comparacion = strcmp($a,$b);<br>
+echo $comparacion<br>
+?&gt<br><br></font>
+<img src="ico2.jpg"> <b><font color=ff00ff>substr(string, inicio, tamaño)</b></font><br>
+Esta funcion, obtiene una subcadena de un string, el parametro "string" indica el string del que se sustraera la subcadena, <br>
+el parametro "inicio" dice desde que caracter se empieza a crear la subacadena y el parametro "tamaño" es opcional<br>
+e indica el numero de caracteres que cojeremos.<font color=00ffff><br>
+&lt?php<br>
+$cadena = "Esto es una cadena algo extensa";<br>
+$subcadena = substr($cadena,10);<br>
+$subcadena2 = substr($cadena,5,12);<br>
+echo $subcadena."&ltbr&gt".$subcadena2<br>
+?&gt <br><br></font>
+<img src="ico2.jpg"> <b><font color=ff00ff>strpos (string, referencia, inicio); strrpos (string, referencia); strstr (string, referencia)</b></font><br>
+Estas tres funciones nos alludan a saber la situacion de una parte de un string:<br>
+- strpos (string, referencia, inicio). Esta funcion devuelve la posicion de una parte de un string, el primer parametro es el string, el segundo el caracter o cadena que buscamos y el tercero es opcional e indica desde donde empezamos a buscar.<br>
+- strrpos (string, referencia). Hace lo mismo que la funcion anterior pero empieza buscando de fin a principio.<br>
+- strstr (string, referencia). Devuelve la subcadena que haya despues del caracter o cadena que hayamos puesto.<br>
+<font color=00ffff>
+&lt?php<br>
+$cadena= "Esto es una  cadena de caracteres";<br>
+$posicion1=strpos($cadena,"de");<br>
+echo $posicion1."&ltbr&gt";<br>
+$posicion2=strrpos($cadena,"de");<br>
+echo $posicion2."&ltbr&gt";<br>
+$subcadena=strstr($cadena,"de");<br>
+echo $subcadena<br>
+?&gt</font> <br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>echo cadena y printf (cadena)</b></font><br>
+Estas dos funciones muestran en pantalla la cadena que especifiquemos.<br>
+<font color=00ffff>
+&lt?php<br>
+$cadena1 = "Cadena mostrada con echo";<br>
+$cadena2 = "Cadena mostrada con printf()";<br>
+echo $cadena1."&ltbr&gt";<br>
+printf ($cadena2)<br>
+?&gt</font> <br><br>
+<h1>Otros temas</h1>
+<a none href="ficheros.html">Trabajar con ficheros</a><br>
+<a none href="directorios.html">Trabajar con directorios</a>

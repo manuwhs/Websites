@@ -1,0 +1,98 @@
+
+<STYLE type="text/css"> 
+input {background-color : Black; color : White; font-family : Verdana, Arial, Helvetica; font-size : 9pt}
+
+<body >
+<!-- 
+BODY { 
+scrollbar-face-color: #2a2a2a; 
+scrollbar-highlight-color: #000000; 
+scrollbar-3dlight-color: #808080; 
+scrollbar-darkshadow-color: #000000; 
+scrollbar-shadow-color: #242424; 
+scrollbar-arrow-color: #FFffff; 
+scrollbar-track-color: #000022; 
+} 
+--> 
+</STYLE> 
+
+<html>
+<head>
+<title>
+Manumonhacker.Principal
+</title>
+</head>
+
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text =ffffff>
+<body bgcolor=#000022>
+<bgsound id='audio' src=ol.mp3>
+<body leftmargin="10" topmargin="0">
+<style>
+select {Background-color:000022;color:cornsilk; font-size:17; Border-color:"ffffff"; }
+</style>
+<script>
+function sonidos(){audio.src="ola.mp3"}
+function evaluar() { document.evalua.result.value = eval (evalua.expr.value) } 
+</script>
+<form name="evalua">
+<INPUT TYPE=text name="expr" value="" size=25 ><br>
+Resultado: <INPUT TYPE="text" NAME="result" SIZE=25 > 
+<input type="button" VALUE="Ejecutar" onClick="evaluar()" style="background-color : White; color : Black">
+<br><br>
+<form name="lol">
+<select name="music" size=1 onChange=audio.src=music.value>
+<option value="uno" selected>Musica</option>
+<option value="musica/Hunting.mp3">Hunting.mp3</option>
+<option value="musica/Faint.mp3">Faint.mp3</option> 
+<option value="musica/End.mp3">End.mp3</option>
+<option value="musica/Belong.mp3">Belong.mp3</option>
+<option value="musica/Done.mp3">Done.mp3</option>
+<option value="musica/Head.mp3">Head.mp3</option>
+</select>
+</form>
+
+
+<script>
+function horar(){
+hoy = new Date()
+ano = hoy.getFullYear() 
+mes = hoy.getMonth() + 1 
+dia = hoy.getDate()
+hora = hoy.getHours() 
+minutos = hoy.getMinutes()
+segundos = hoy.getSeconds()
+tiempo =dia + " / " + mes + " / " + ano +" ["+ hora + ":" + minutos + ":" + segundos +"]"
+relojito.crono.value=tiempo}
+setInterval("horar()",1000) 
+</script>
+
+
+
+<form name="manda" action="recibidor.php" enctype="multipart/form-data" method="post"><br>
+<input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
+<input type=file name="archivo" id="archivo" size=5><br>
+<input type=submit VALUE="Subir musica" style="background-color : White; color : Black"><br>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form name="relojito"> 
+<input type="text" name="crono" size=25 style="text-align : center; font-size :8pt"> 
+</form>
+
+

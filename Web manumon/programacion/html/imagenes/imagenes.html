@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="70" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Imagenes</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+Todas las páginas web acostumbran a tener un cierto número de imágenes, <br>
+que permiten mejorar su apariencia, o dotarla de una mayor información visual. <br>
+
+Para insertar una imagen es necesario insertar la etiqueta <strong>&ltimg&gt</strong>. <br>
+Dicha etiqueta no necesita etiqueta de cierre. El nombre de la imagen ha de especificarse a través del atributo <strong>src</strong>.<br>
+
+Por ejemplo, para insertar la siguiente imagen:<br><br>
+<img src="manumon.jpg" alt="imagen de prueva">
+<br><br>
+Hay que escribir el codigo:<br>
+<font color=00ff00>
+&ltimg src="manumon.jpg"&gt
+</font><br>
+Recordad que en caso de que la imagen estubiera en una subcarpeta, se pone el nombre de la carpeta<br> seguido de <strong>/</strong> y despues el nombre de la imagen.
+<br><br>
+<h1>Atributos</h1>
+Como os habreis fijado, al poner el puntero sobre la imagen aparece un texto, esto es gracias al atributo <strong><font size=4 color=00ffff> alt</font></strong>. Este atributo funciona de la siguiente manera:
+<font color=00ff00>&ltimg src="manumon.jpg" alt="imagen de prueva"&gt</font><br><br>
+Las imagenes tienen tambien el atributo <strong><font size=4 color=00ffff> border</font></strong>, por el cual aparece un borde que rodea a la imagen. Por defecto, cuando insertamos una imagen no tiene borde, pero cuando la convertimos en un hipervinculo como hemos visto anteriormente, entoces aparece un borde y mediante este atributo podemos quitarlo igualando border a 0. Ejemplo:<br>
+<font color=00ff00>
+&ltimg src="manumon.jpg" border = 2&gt
+</font><br><br>
+Otro aspecto que podemos cambiar de la imagen es su tamaño, cuando la insertamos posee el mismo tamaño que la imagen real, pero podemos modificarlos con <font size=4 color=00ffff><strong>width y height </strong></font>. Ejemplo:<br>
+
+<font color=00ff00>
+&ltimg src="manumon.jpg" border = 2 width="200" height="80"&gt
+</font>
+<br>
+<img src="manumon.jpg" alt="imagen de prueva" width="200" height="80"><br><br>
+Existen dos atributos para separar la imagen de lo que le rodea, son <font size=4 color=00ffff><b>vspace y hspace</font>.</b><br>
+La alineación de las imágenes se establece a través del atributo <b><font size=4 color=00ffff>align</font></b>. Este atributo indica la alineación de las imágenes con respecto a la línea de texto en la que se encuentran.
+
+Los valores del atributo align pueden ser los siguientes:<br><br>
+
+<table width="440" border="1" align="center" cellspacing="0" bordercolor="#999999" class="texto" bgcolor=#010739>
+        <tr> 
+          <td width="80" background="f_rotulo2b.gif"><div align="center"><strong>Valor</strong></div></td>
+          <td width="180" background="f_rotulo2b.gif"><div align="center"><strong>Significado</strong></div></td>
+          <td width="180" background="f_rotulo2b.gif"><div align="center"><strong>Ejemplo</strong></div></td>
+        </tr>
+        <tr> 
+          <td height="60"><div align="center"> 
+              <p class="palabramarron"><strong>absbottom</strong></p>
+            </div></td>
+          <td> <div align="center">inferior absoluta</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="absbottom"> 
+            <u> Imagen</u> con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60"><div align="center" class="palabramarron"><strong>absmiddle</strong></div></td>
+          <td><div align="center">medio absoluta</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="absmiddle"> 
+            <u>Imagen</u> con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60"><div align="center" class="palabramarron"><strong>baseline</strong></div></td>
+          <td><div align="center">l&iacute;nea de base</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="baseline"> 
+            <u>Imagen</u> con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60" class="palabramarron"><div align="center">bottom</div></td>
+          <td><div align="center">inferior</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="bottom"> 
+            <u>Imagen</u> con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60" class="palabramarron"><div align="center">left</div></td>
+          <td> <div align="center">izquierda</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="left"> 
+             <u>Imagen</u> 
+            con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60" class="palabramarron"><div align="center">middle</div></td>
+          <td><div align="center">medio</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="middle"> 
+            <u>Imagen</u> con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60" class="palabramarron"><div align="center">right</div></td>
+          <td><div align="center">derecha</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="right"> 
+             <u>Imagen</u> 
+            con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60" class="palabramarron"><div align="center">texttop</div></td>
+          <td><div align="center">texto superior</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="texttop"> 
+            <u>Imagen</u> con texto</font></td>
+        </tr>
+        <tr> 
+          <td height="60" class="palabramarron"><div align="center">top</div></td>
+          <td><div align="center">superior</div></td>
+          <td><font size="3"><img src="graficos/aulaclic.jpg" border="1" align="top"> 
+            <u>Imagen</u> con texto</font></td>
+        </tr>
+      </table>
+

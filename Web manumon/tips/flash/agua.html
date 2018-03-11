@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="550" height="120" id="ondas" align="top">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="agua.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="ondas.swf" quality="high" bgcolor="#000000" width="550" height="120" name="ondas" align="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este es un efecto muy complicado que<br>se explica en el FLA, <br>para que funcione debeis crear<br>un clip de pelicula y llamarlo cosa<br>
+<br>
+<center><a href="Efecto agua.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+Para ver este efecto tienes que pulsar<br>sobre Efecto agua y mover el raton.<br>
+Y recordad que sera mejor que veais mis<br>tutoriales, que lejos de ser buenos,<br>por lo menos explican las cosas<br>en un lenguaje que todos comprendemos.
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+
+import flash.display.*;<br>
+import flash.geom.*;<br>
+import flash.filters.*;<br><br>
+img = BitmapData.loadBitmap("imagen");<br>
+w = img.width-1;h = img.height-1;<br><br>
+pt = new Point()<br>
+Nx = new Matrix();<br>
+Mx = new Matrix();<br>
+Mx.scale(2, 2);<br>
+fz = 60;<br>
+v = (255/256)-1/100000;<br><br>
+sal = new BitmapData(w/2, h/2);<br>
+sal1 = sal2=new BitmapData(w, h);<br><br>
+ori = acum=new BitmapData(w/2, h/2, false, 128);attachBitmap(sal2, 0); <br><br>
+ola = new ConvolutionFilter(3, 3, [1, 1, 1, 1, 1, 1, 1, 1, 1], 9);<br>
+ade = new ColorTransform(0, 0, v, 1, 0, 0, 2, 0);<br>
+agua = new DisplacementMapFilter(sal2, pt, 4, 4, fz, fz);onda();<br><br>
+onMouseDown = function () {   pul = true;   clearInterval(ID);   ID = setInterval(onda, 30);}<br>
+onMouseUp = function () { pul = false;}<br><br>
+function onda() {  <br>
+if (pul) {     <br>
+cont = 0;   <br>
+ori.setPixel(_xmouse/2, _ymouse/2, 0)    <br>
+agua.scaleY = agua.scaleX += 10*(agua.scaleX<(fz-10));  } <br>
+else {      cont++;      <br>
+if (cont>fz) {        <br>
+agua.scaleY = agua.scaleX -= 5*(agua.scaleX>50)+.25;      }   }  <br><br>
+sal.applyFilter(ori, new Rectangle(0, 0, w/2, h/2), pt, ola);  <br>
+sal.draw(sal, Nx, null, "add"); <br>
+sal.draw(acum, Nx, null, "difference"); <br>
+sal.draw(sal, Nx, ade);  <br>
+sal1.draw(sal, Mx, null, null, null, true);  <br><br>
+sal2.applyFilter(img, new Rectangle(0, 0, w, h), pt, agua);  <br>
+acum = ori;   ori = sal.clone();  <br><br>
+if (agua.scaleX<=0) {     <br> agua.scaleY = agua.scaleX=fz;    <br>
+cont = 0;   <br>
+clearInterval(ID)  }}
+		</font></td></tr></center>

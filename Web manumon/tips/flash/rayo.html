@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body>
+<body bgcolor=#000022>
+<body leftmargin="10" topmargin="20">
+
+<center> <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="550" height="120" id="ondas" align="top">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="rayo.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000022" /><embed src="ondas.swf" quality="high" bgcolor="#000000" width="550" height="120" name="ondas" align="top" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+<br>
+<br>
+</center><br>
+<center><table width=955 height=* border="0" bordercolor=#EAEAEA bgcolor=#000022 cellpadding =15 aling=center cellspacing=0>
+<tr><td valign=top ><font color=#ffffff>Este efecto nieve lo que hace es<br>crear una funcion llamada nevar<br>en la cual va importando los copos<br>estos copos tienen nombre igual <br>y a la vez diferente, ya que<br>su nombre siempre va a ser<br>"polo"+ un numero que incrementa<br>y en el momento justo en el que se <br>importa se llama copo, en ese momento,<br>se le van dando porpiedades <br>aleatorias, y se le imprime la <br>funcion monevar(), por la cual<br>se mueven.
+<br><br>
+<center><a href="Efecto rayo.fla"><img src=fla.jpg border=no></a></center>
+<br>
+<br>
+La última función es una funcion que <br>crea aleatoriedad entre el <br>intervalo de dos numeros.<br>Tambien antes de eso, está el efecto<br>iluminacion, que ilumina los copos
+</font></td><td bgcolor=#010739>
+
+<font color=#ffffff>
+
+cr=0xffffff; <br>
+al=[0,.5,.6];<br>
+rt=[0,125,255]; <br>
+i=0;<br>cl=[0,0x220066,cr];<br><br>
+gf = new flash.filters.GradientGlowFilter(0,180,cl,al,rt,30,30,4,2,"outer",false);<br>
+createEmptyMovieClip("rayo",0);<br><br>
+onEnterFrame= function(){<br>
+	if (rd(100)>(6+88*(i==0))){<br>
+		traza(10+rd(12),5+rd(5));}}<br><br>
+		
+function traza(l,t){ <br>
+       i? Po=Pt[rd(i)].clone(): Po = new flash.geom.Point(50+rd(300),rd(60)); <br>
+	   rayo.moveTo(Po.x,Po.y);<br><br>
+	   for( b=l;b>0;b--){ <br>
+	        Po.offset(rd(3*t)-rd(3*t),5+rd(l));<br>
+			gr = 1300/(Po.y+180);   <br><br>
+			rayo.lineStyle(gr,cr,100,true,"normal","round","miter",16);  <br>
+			rayo.lineTo(Po.x,Po.y);<br>
+			rayo.filters = [gf];<br>
+			i++; Pt[i]=Po.clone()}<br><br>
+rd(100)>50? rayo._xscale>100? rayo._xscale-=1 : rayo._xscale+=1:null;<br>
+if (i>90){rayo.clear();Pt=[];i=0;}}function rd(n){return Math.round(n*Math.random())}<br>
+
+
+</font></td></tr></center>

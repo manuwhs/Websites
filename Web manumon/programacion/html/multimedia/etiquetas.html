@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text =ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Multimedia</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+Hasta ahora hemos visto como crear tablas, formularios, poner imagenes... En este tema veremos como colocar objetos multimedia.<br>
+Los objetos multimedia en definitiva son los archivos de audio y video.<br><br>
+Para poner sonido de fondo usamos la etiqueta <strong>&ltbgsound&gt</strong>. Mediante el atributo src="" indicamos el archivo de audio que elegimos. Si queremos que se reproduzca infinitamente ponemos el atributo loop="-1". Ejemplo:<br>
+<font color=00ff00>&ltbgsound src="musica" loop=-1&gt</font>
+<br><br>
+Cuando queremos insertar un archivo de video, usamos la etiqueta <strong>&ltembed&gt</strong>, que funciona igual que bgsound, tiene el atributo src="" para poner la direccion del archivo que queremos poner.<br>
+Tambien posee el atributo autostar que si es true se carga al cargarse la pagina y si es false no.<br>
+Como en el caso anterior, tiene el atributo loop que indica si crea un bucle.<br>
+Otros atributos que tiene son width y height que son la anchura y la altura; ademas tiene el atributo hidden, que si es true, los controles del video desaparecen.
+Ejemplo:<br>
+<font color=00ff00>&ltembed src="video" autostart="false" loop="false" width="numero" height="numero"&gt</font>
+<br><br>
+Las animaciones Flash se insertan del mismo modo que los archivos de audio y de vídeo, a través de la etiqueta &ltembed&gt, pero debido a que tiene más posibilidades de que se produzcan incompatibilidades entre los distintos navegadores, necesita también de la etiqueta <strong>&ltobject&gt</strong>.
+Como el uso de la etiqueta <strong>&ltobject&gt</strong> puede resultar bastante complicado, vamos a ver solamente un caso concreto para la inserción de un archivo SWF, siempre que insertemos un archivo .swf tendremos que poner este codigo y cambiar algunos parametros.<br>
+<font color=00ff00>
+&ltobject classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="200" height="100"&gt<br>
+
+  &ltparam name="movie" value="graficos/pelicula.swf"&gt<br>
+  &ltparam name="quality" value="high"&gt<br>
+  &ltembed src="graficos/pelicula.swf" width="200" height="100" quality="high" <br>
+  pluginspage="http://www.macromedia.com/go/getflashplayer" <br>
+  type="application/x-shockwave-flash"&gt&lt/embed&gt<br>
+&lt/object&gt</font><br><br>
+Ahora analizaremos el codigo:<br>
+quality especifica la calidad con la que se reproducirá la animación Flash. Puede valer high (alta), autolow (baja automática), o low (baja). Si no se incluye este atributo, se considera que la calidad será automáticamente alta.
+<br>
+pluginspage especifica la página desde la que se podrá descargar el plug-in necesario para reproducir la animación Flash, para que si algún usuario no lo tiene aún instalado en su ordenador pueda descargarlo.
+<br>
+type especifica el tipo de fichero, para que el navegador pueda saber qué tipo de programa necesita ejecutar para reproducir la animación.
+<br>
+classid  identifica al objeto. Cuando el objeto es una animación Flash, el atributo classid debe valer clsid:D27CDB6E-AE6D-11cf-96B8-444553540000.
+<br>
+ codebase especifica la dirección en la que se encuentran los componentes externos necesarios para reproducir la animación.
+<br>
+width y height se utilizan del mismo modo, y deben tener el mismo valor, que en la etiqueta <embed>.
+<br>
+Por último, vamos a analizar la etiqueta <param>. Esta etiqueta se utiliza para especificar los valores necesarios para la inicialización de un objeto.
+<br>
+La etiqueta <param> no necesita etiqueta de cierre, y ha de contener los atributos name y value. El atributo name indica el nombre de la característica que va a ser definida, y value indica su valor.
+
+
+

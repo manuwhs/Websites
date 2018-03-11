@@ -1,0 +1,97 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="100" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Clase Date</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+Esta clase contiene todo el trabajo que se puede hacer con fechas en JavaScript, sirve para crear objetos que indiquen fechas.<br>
+Para crear un objeto de esta clase, podemos hacer dos cosas:<br>
+<b>* Crear una variable igual a una instancia de esta clase, sin parametros: </b> var tiempo = new Date().<br>
+ Esto crea un objeto con fecha del dia y hora actuales<br>
+<b>* Crear una variable igual a una instancia de esta clase, con paramtreos:</b> var tiempo = new Date(año,mes,dia,hora,minutos,segundos).<br>
+ Esto crea un objeto igual a la fecha que hemos definido, en los parametros solo se pueden escribir numero. <br>(Los meses, empiezan por 0, es decir, 0 = enero).
+<h1>Metodos</h1>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getDate() </b></font><br>
+Devuelve el día del mes. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getDay() </b></font><br>
+Devuelve el día de la semana. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getHours() </b></font><br>
+Retorna la hora. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getMinutes() </b></font><br>
+Devuelve los minutos. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getMonth() </b></font><br>
+Devuelve el mes (atención al mes que empieza por 0).<br><br> 
+
+<img src="ico2.jpg"><b><font color=ff00ff> getSeconds() </b></font><br>
+Devuelve los segundos. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getTime() </b></font><br>
+Devuelve los milisegundos transcurridos entre el día 1 de enero de 1970 y la fecha correspondiente al objeto al que se le pasa el mensaje. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getYear() </b></font><br>
+Retorna el año, al que se le ha restado 1900. Por ejemplo, para el 1995 retorna 95, para el 2005 retorna 105. Este método está obsoleto en Netscape a partir de la versión 1.3 de Javascript y ahora se utiliza getFullYear(). <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> getFullYear() </b></font><br>
+Retorna el año con todos los dígitos. Usar este método para estar seguros de que funcionará todo bien en fechas posteriores al año 2000. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setDate() </b></font><br>
+Actualiza el día del mes. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setHours() </b></font><br>
+Actualiza la hora. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setMinutes() </b></font><br>
+Cambia los minutos. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setMonth() </b></font><br>
+Cambia el mes (atención al mes que empieza por 0). <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setSeconds() </b></font><br>
+Cambia los segundos. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setTime() </b></font><br>
+Actualiza la fecha completa. Recibe un número de milisegundos desde el 1 de enero de 1970. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setYear() </b></font><br>
+Cambia el año recibe un número, al que le suma 1900 antes de colocarlo como año de la fecha. Por ejemplo, si recibe 95 colocará el año 1995. Este método está obsoleto a partir de Javascript 1.3 en Netscape. Ahora se utiliza setFullYear(), indicando el año con todos los dígitos. <br><br>
+
+<img src="ico2.jpg"><b><font color=ff00ff> setFullYear() </b></font><br>
+Cambia el año de la fecha al número que recibe por parámetro. El número se indica completo ej: 2005 o 1995. Utilizar este método para estar seguros que todo funciona para fechas posteriores a 2000. <br><br>
+
+Como habréis podido apreciar, hay algún método obsoleto por cuestiones relativas al año 2000: setYear() y getYear(). Estos métodos se comportan bien en Internet Explorer y no nos dará ningún problema el utilizarlos. Sin embrago, no funcionarán correctamente en Netscape, por lo que es interesante que utilicemos en su lugar los métodos getFullYear() y setFullYear(), que funcionan bien en Netscape e Internet Explorer.
+<h1>Ejemplos</h1>
+1- Ejemplo de los dos tipos de fechas a hacer:<br><font color=00ffff>
+&ltscript&gt<br>
+hoy = new Date()<br>
+otroDia = new Date(2005,6,5,15,30,12) <br>
+document.write(hoy+"&ltbr&gt")<br>
+document.write(otroDia)<br>
+&ltscript&gt<br></font><br>
+Aqui creamos una variable con la fecha actual y luego otra variable con una fecha inventada y las mostramos.<br><br>
+2- Ahora estraeremos datos de la primera variable:<br><font color=00ffff>
+&ltscript&gt<br>
+hoy = new Date()<br>
+document.write(hoy+"&ltbr&gt")<br>
+ano = hoy.getFullYear() <br>
+mes = hoy.getMonth() + 1 <br>
+dia = hoy.getDate()<br>
+document.write(ano+", "+mes+", "+dia)<br>
+&lt/script&gt<br></font><br>
+Aqui te muestra por un lado la fecha tal como te lo dice lo dice new Date(), y luego hemos estraido su año, mes y dia y lo hemos mostrado.

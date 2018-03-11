@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=450 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Variables</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+# <font color=00ffff><b>Una variable es un espacio en memoria donde se almacena un dato,</b></font> un espacio donde podemos guardar cualquier tipo de información que necesitemos para realizar las acciones de nuestros programas.
+<br><br>
+# Hay cuatro clases de variables en archivos de batch: <br>
+1- Argumentos de línea de mando.<br>
+2-  Variables de ambiente.<br>
+3- ERRORLEVELs.<br>
+4- FOR variables. .<br>
+Todos excepto ERRORLEVEL, que es de tipo "byte", son de tipo "String".<bR><br>
+<h1>Argumentos de línea de mando</h1>
+Son las variables que ponemos despues del nombre del archivo variables.
+<h1>Variables de ambiente</h1>
+# Son aquellas variables que residen en el ambiente corriente del área de memoria.<bR>
+Es decir, son contenedores de informacion que definimos nosotros dentro del archivo .bat.<br>
+Declarar variables consiste en definir y de paso informar al sistema de que vas a utilizar una variable. 
+<br> En bat, para definir una variable solo necesitamos anteponerle la particula <font color = 00ffff>"set"</font>.<br>
+Y para nombrarla despues otra vez tenemos que ponerla entre <font color = 00ffff>%</font>.<br>
+Su estructura es esta: <font color = 00ffff>set nombre_variable = valor</font>.<br>
+Ejemplo:
+<font color = 00ffff><br>
+set numero = 5<br>
+echo %numero%<br>
+pause<br>
+</font>
+Aqui definimos una variable mediante set y luego la mostramos en pantalla mediante echo, para que se quede mostrado y no se cierre escribimos el comando pause. Esto se explicara con detalla en otros temas.<br><br>
+# Estas  variables pueden tener otro parametro que puede ser o <font color = 00ffff>/p o /a</font>. Veremos ahora lo que hacen ambos:<br>
+<font color = ff00ff><b>/p</b></font> : Esta particula puesta antes del nombre de una variable, hace que se abra la ventana Shell mostrando el contenido de <br>la variable y un espacio para escribir, lo que escribamos sera igual a la variable.<bR>
+Su estructura es: set /p nombre_variable /p = texto_inicial.<br>
+Ejemplo:<br><font color = 00ffff>
+@echo off <br>
+set /P var=tu nombre : <br>
+echo Usted se llama %var% <br>
+pause <br></font>
+Aqui aparece un nuevo comando que aun no hemos mencionado, el "@echo off" este comando hace que no se muestre el eco.<bR>
+En este codigo definimos una variable "var" en la cual al poner la particula /p, su valor sera igual al valor que intruduzcamos cuando se abra la ventana Sell, y el texto que precedera a esa introduccion de texto que haremos sera el valor que le hallamos asignado a la variable cuando la definimos.<bR><br>
+<font color = ff00ff><b>/a </b></font>: Esta particula sirve para hacer calculos, en batch por ejemplo si sumamos dos variables que son numeros, no dara la suma de los dos numeros sino "var1 + var2", este paramatro sirve para provocar que se ejecute la operacion.<br>
+Su estructura es: Su estructura es: set /a nombre_variable = operacion <br>
+Ejemplo:<br><font color = 00ffff>
+@echo off <br>
+set numero=12<br>
+set numero2=18<br>
+set /a resultado=%numero%+%numero2% <br>
+echo %resultado% <br>
+pause </font>
+<br><br>
+# Hay otra forma de variables de entorno, son variables que cuyo valor se indica cuando lo ejecutamos, es decir para acceder a ellas, ejecutamos el archivo y al hacerlo indicamos seguido del nombre del archivo, las variables que usaremos.<bR>
+Esto presenta una gran ventaja ya que podremos definir estas variables con el valor que queramos indicandolo cuando lo ejecutemos.<bR>
+Pero para poder usarlas tenemos que usarlas tenemos que ejecutar desde el Sell de Windows ya que es aqui donde nos permitira dar valor a las variables. Ejemplo:<br>
+<font color=00ffff>C:\WINDOWS\> archivo.bat gato perro ave<bR></font>
+Aqui ejecutamos el archivo "archivo.bat" que esta en la carpeta windows y tambien definimos tres variables gato, perro y ave.<bR>
+Para llamar estas variables en el codigo interior usaremos la notacion  <font color=00ffff>%numero</font>.<bR>
+Es decir para llamarlas escribiremos % seguido del numero que ocupe la variable.<br>
+Por ejemplo en el ejemplo anterior:<br>
+* gato = %1<br>
+* perro = %2<br>
+* ave = %3<br>
+La variable %0 es igual a la direccion del archivo .bat que estamos ejecutando.<br><br>
+
+# Hay unas variables de ambiente exportadas que están siempre disponibles, es decir variables ya creadas:<bR>
+PATH: "Direccion"<br>
+El path de un archivo o unidad de disco es su direccion. MS-DOS nos proporciona la lista de archivos del ordenador para que nosotros podamos buscarla, encontrarla y ejecutarla.
+<br><bR>
+COMSPEC: 

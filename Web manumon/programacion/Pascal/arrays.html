@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Arrays</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+Un Array es un tipo de variable (type) donde podemos introducir varios valores, <br>
+en lugar de solamente uno como ocurre con la variables de tipos normales. <br>
+Los arrays nos permiten guardar varias variables y acceder a ellas de manera independiente, <br>
+es como tener una variable con distintos compartimentos donde podemos introducir datos distintos.<br><br>
+<h2>Array Unidimensional</h2>
+Un array de una dimensión (unidimensional), también llamado vector o fila, es un tipo de datos estructurado <br>
+compuesto de un número determinado de elementos, de tamaño fijo y elementos homogéneos (del mismo tipo). <br>
+La característica de tamaño fijo se refiere a que el tamaño del array debe ser conocido en tiempo de compilación.<br>
+Es decir al declararlo debemos especificar cuantos subindices tiene el array y de que tipo.<br>
+Los subindices son cada uno de los valores que posee un array.<br><br>
+
+Al declarar que una variable es de tipo Array, a su vez hay que declarar que tipo de Array sera, es decir, <br>
+su numero de subindices y su tipo. La estructura de declaracion del tipo Array es esta:<br>
+
+<font color="00ffff"><b>nombre_variable : Array [rango del subíndice] OF tipo;<br></b></font><br>
+Donde "rango de subindice" es el numero de subindices expresado en rango que poseera la variable, es decir,<br>
+un rango podria ser del 1 al 10 y el Array podria tener 10 valores distintos.<br>
+Este "rango de subindice" se indica poniendo el rango entre dos numeros de la siguiente manera X..Y,<br>
+donde X es el primer numero y Y el segundo, es decir, por ejemplo para decir el rango del 1 al 10 seria 1..10<br>
+Lo que indica el rango son los dos puntos seguidos " .. ".<br>
+Y donde "tipo" es el tipo de dato (type) de los subindices del Array. Ejemplo:<br><br>
+Var <br>
+Lista : Array [1..50] of integer;<br><br>
+
+Para nombrar a cada uno de los subindices del Array se pone el nombre de la variable seguido del numero<br>
+del subindice entre corchetes: <font color="00ffff"><b>nombre_variable[subindice]</b></font><br>
+Es decir, en el ejemplo anterior, el subindice 27 por ejemplo se llamaria Lista[27].<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+Program ejemplo_array;<br>
+Var Lista : Array [1..50] of integer;<br>
+begin<br>
+Lista[1]:=5;<br>
+Lista[2]:=10;<br>
+Lista[29]:=98;<br>
+Lista[45]:=25;<br>
+end.<br>
+</td></tr></table>
+<h2>Array Bidimensional</h2>

@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=800 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Comunicaciones y Caracteristicas de los SO</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<h1>Llamadas al Sistema Operativo</h1>
+Las llamadas al SO son llamadas que ejecutan los programas de aplicación para pedir algún servicio al SO.<br>
+Cada SO implementa un conjunto propio de llamadas al sistema.<br>
+Ese conjunto de llamadas es el interfaz del SO frente a las aplicaciones<br>
+Constituyen el lenguaje que deben usar las aplicaciones para comunicarse con el SO<br><br>
+Cada SO tiene que tener dos modos de operacion diferentes:<br>
+* Modo usuario: el CPU podrá ejecutar sólo las instrucciones del juego restringido de las aplicaciones.<br>
+* Modo supervisor: la CPU debe poder ejecutar el juego completo de instrucciones. <br>
+Por ejemplo cuando nosotros eliminamos un archivo en realidad estamos utilizando un comando del MS-DOS,<br>
+el SO de Window, asi como ese comando tenemos otros cuantos que podemos utilizar pero hay otros que <br>
+solo los podremos ejecutar en el Shell ya que su disponiblidad debe ser restringida a usuarios que no sepan usarlo<br>
+debido a que una mala ejecucion de algunos podria dañar nuestros sistema.<br><br>
+
+Las llamadas al sistema no siempre tienen una expresión sencilla en los lenguajes de alto nivel,<br>
+por ello se crean las bibliotecas de interfaz, que son bibliotecas de funciones que pueden usarse para efectuar llamadas al sistema.<br>
+La aplicación llama a una función de la biblioteca de interfaz (mediante una llamada normal)<br>
+y esa función es la que realmente hace la llamada al sistema<br>
+
+<h1>Caracteristicas del Sistema Operativo</h1>
+A continuacion veremos los distintos tipos de SO atendiendo a diferentes propiedades:
+
+<h4>Administración de tareas</h4>
+* Monotarea: Solamente puede ejecutar un proceso (aparte de los procesos del propio S.O.) en un momento dado.<br>
+ Una vez que empieza a ejecutar un proceso, continuará haciéndolo hasta su finalización y/o interrupción. <br>
+* Multitarea: Es capaz de ejecutar varios procesos al mismo tiempo.<br>
+ Este tipo de S.O. normalmente asigna los recursos disponibles (CPU, memoria, periféricos) de forma alternada a los procesos<br>
+ que los solicitan, de manera que el usuario percibe que todos funcionan a la vez, de forma concurrente. 
+
+ <h4>Administración de usuarios  </h4>
+* Monousuario: Si sólo permite ejecutar los programas de un usuario al mismo tiempo. <br>
+* Multiusuario: Si permite que varios usuarios ejecuten simultáneamente sus programas,<br>
+ accediendo a la vez a los recursos de la computadora.<br>
+ Normalmente estos sistemas operativos utilizan métodos de protección de datos,<br>
+ de manera que un programa no pueda usar o cambiar los datos de otro usuario. 
+
+ <h4>Manejo de recursos </h4>
+* Centralizado: Si permite utilizar los recursos de una sola computadora. <br>
+* Distribuido: Si permite utilizar los recursos (memoria, CPU, disco, periféricos... ) de más de una computadora al mismo tiempo<br>
+
+
+
+

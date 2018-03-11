@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+<style>
+h3{color:'00ffff'; size:3}
+</style>
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=600 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Gestion de directorios</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+<p>
+Comando: MD<br>
+Etimología: Viene de make directory.<br>
+Función: Crear directorios<br>
+Sintaxis: MD [unidad\ruta\]<nombre><br>
+</p>
+
+<p>
+Comando: RD<br>
+Etimología: Viene de remove directory.<br>
+Función: Borra un directorio (solo si este se encuentra vació).<br>
+Sintaxis: RD [unidad\ruta\]<nombre><br>
+</p>
+<p>
+Comando: DELTREE<br>
+Etimología: Anglicismo delete “eliminar/borrar” tree “árbol”.<br>
+Función: Borrar directorios (estando o no estando vacíos).<br>
+Sintaxis: DELTREE [unidad\ruta\]<nombre><br>
+<p>
+Comando: DEL<br>
+Etimología: Anglicismo delete “eliminar/borrar”.<br>
+Función: Borrar directorios (estando o no estando vacíos).<br>
+Sintaxis: DEL [unidad\ruta\]<nombre><br>
+</p>
+</p>
+<p>
+Comando: DIR<br>
+Etimología: De directorio.<br>
+Función: Este comando procesa una visualización de todos los ficheros, directorios, de la ruta en la que<br>
+nos encontramos.<br>
+Mediante una serie de parámetros podemos modificar ese listado de visualización. 
+Este comandofunciona como un filtro.<br>
+Sintaxis: DIR [unidad\directorio\fichero]<br>
+Parámetros: podemos especificar unos parámetros para que se listen los archivos y directorios de una
+forma concreta:<br>
+/P Con este parámetro podemos restringir la secuencia de listado y detenerla hasta que pulsemos una<br>
+tecla. Al pulsar una tecla se procesara el siguiente bloque de listado y así sucesivamente. Este comando<br>
+reparte internamente el numero de ficheros y directorios en bloques para luego ir sacándolos.<br>
+/N Ordena por nombre<br>
+/E Ordena por extensión<br>
+/S Ordena por tamaño<br>
+/D Ordena por fecha<br>
+/G Ordena poniendo agrupados todos los directorios después de los ficheros.<br>
+</p>
+<p>
+Comando: CD<br>
+Etimología: De change dir (cambiar directorio)<br>
+Función: Permite cambiar de un directorio activo a otro. Es por el cual podemos movernos en MDDOS.<br>
+Sintaxis: CD [unidad:]\[ruta]\[directorio]<br>
+Peculiaridades: Si deseamos retroceder un directorio no hace falta poner la ruta nos basta con poner cd..<br>
+</p>
+<p>
+Comando: TREE<br>
+Etimología: Palabra inglesa tree (árbol).<br>
+Función: Este comando nos mostrara la estructura o el árbol de directorios de la unidad especificada en<br>
+función opcional de unos parámetros dados.<br>
+Sintaxis: tree [unidad\ruta] [/f] [/a]<br>
+Donde unidad/ruta podremos especificar la ruta de la cual deseamos obtener esta información. El<br>
+parámetro /f hará que se muestren también los archivos dentro de esta estructura de directorios.<br>
+</p>
+<p>
+Comando: MOVE<br>
+Etimología: Viene de move (mover)<br>
+Función: Este comando mueve ficheros de un directorio a otro. Este comando vendría hacer<br>
+internamente una copia del archivo al directorio especificado a mover, luego borra el fichero de salida.<br>
+Sintaxis: move [/y] <origen> <destino><br>
+Donde /y es un parámetro que poniéndolo el move moverá ficheros sin preguntar la confirmación de<br>
+reemplazo a otros archivos que se puedan llamar de la misma forma al directorio de destino. En caso de<br>
+no especificarse, MSDOS nos preguntara la confirmación de reemplazo de ficheros. A continuación<br>
+debemos especificar el directorio de origen y el de salida o destino.<br>
+</p>

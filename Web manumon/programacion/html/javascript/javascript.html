@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text=ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="70" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#eaeaea bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>JavaScript</H1></u></center></font></td></tr></table></center>
+<br><br>
+<font color=00ffff><b>JavaScript es un lenguaje de programacion de tipo script </font></b> por lo que dispone de variables, métodos y objetos predefinidos.<br>
+Es un lenguaje basado en objetos y esta hecho para ser interpretado por lo que no generan ningun archivo ejecutable.<br>
+Para insertar funciones JavaScript en un documento, es necesario insertar las etiquetas <font color=ff00ff><b>&ltscript&gt y &lt/script&gt </font></b>dentro de la cabecera o dentro del cuerpo de la página Es decir, entre <b>&lthead&gt y &lthead&gt </b>o entre<b> &ltbody&gt y &lt/body&gt.</b><br>
+<br>Supongamos que un navegador no es capaz de leer la etiqueta &ltscript&gt, entoces lo que haria seria mostrar un pantalla el codigo que hemos escrito. Para que esto no ocurra, podemos insertar el codigo entre las etiquetas de los comentarios <b>&lt!-- y //--&gt </b>para que si no lee, no muestre nada.
+<br><br>
+Un ejemplo practico seria este:<br>
+<font color=00ff00>&ltscript&gt<br>
+  &lt!-- <br>
+    function Muestramensaje() 
+    {<br>
+      alert("Esto es un mensaje, activado por una función javascript");
+    }<br>
+  //--&gt<br>
+&lt/script&gt<br><br></font>
+<font color=00ffff>&ltimg src="imagen.jpg" onClick="Muestramensaje ()"&gt<br><br></font>
+<script>
+<!-- 
+function Muestramensaje() {
+alert("Esto es un mensaje, activado por una función javascript"); }
+//-->
+</script>
+
+<img src="imagen.jpg" onClick="Muestramensaje()"> 
+
+<br><br>
+En este codigo, he creado una funcion llamada Muestramensaje que tiene la funcion alert que muestra el mensaje que queramos en forma de alerta. Luego hemos insertado una imagen y le hemos puesto el evento onClick, este evento lo que hace es detectar la accion de presionar sobre algo, y como esta puesto en la imagen, cuando presionemos sobre la imagen, pasara lo que pongamos a continuacion de ese evento. Y dice que al presionar se realice la funcion Muestramensaje(), por lo que al presionar sobre la imagen, se abrira el mensaje de alerta.
+<br><br> Este es solo un anticipo de lo que puede hacer JavaScript, en esta pagina hay un tutorial disponible.

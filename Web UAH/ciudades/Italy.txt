@@ -1,0 +1,5 @@
+	<option value="Madrid"></option>
+            <option value="Badajoz"></option>
+            <option value="Guadacacara"></option>
+            <option value="Valencia"></option>
+            <option value="Barcelona"></option>

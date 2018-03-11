@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="120" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Select</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+<br>
+El objeto select de un formulario es una de esas listas desplegables que nos permiten seleccionar un elemento. Se despliegan apretando sobre una flecha, a continuación se puede escoger un elemento y para acabar se vuelven a plegar.<br>
+Para crear estas listas usamos &ltselect&gt para empezarla y &ltoption&gt Para crear una opcion de la lista. 
+<select name="miSelect"> 
+<option value="10">Muy bien 
+<option value="5" selected>Regular 
+<option value="0">Muy mal 
+</select> 
+<h1>Propiedades</h1>
+<img src="ico2.jpg"> <b><font color=ff00ff> length </b></font><br>
+Guarda la cantidad de opciones del campo select. Cantidad de etiquetas &ltOPTION&gt
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> Option </b></font><br>
+Hace referencia a cada una de sus opciones. Son por si mismas objetos. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> options </b></font><br>
+Un array con cada una de las opciones del select. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> selectedIndex </b></font><br>
+Es el índice de la opción que se encuentra seleccionada. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff>También tiene las propiedades form, name, type como cualquier otro elemento de formulario. 
+</b></font><br>
+<h1>Metodos</h1>
+<img src="ico2.jpg"> <b><font color=ff00ff> blur()  </b></font><br>
+Retira el foco de la aplicación del campo de texto. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> focus()  </b></font><br>
+Pone el foco de la aplicación en el campo de texto. 
+<h1>Propiedades de option</h1>
+<img src="ico2.jpg"> <b><font color=ff00ff> defaultSelected </b></font><br>
+Indica con un true o un false si esa opción es la opción por defecto. La opción por defecto se consigue con HTML colocando el atributo selected a un option. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> index </b></font><br>
+El índice de esa opción dentro del select. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> selected </b></font><br>
+Indica si esa opción se encuentra seleccionada o no. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> text </b></font><br>
+Es el texto de la opción. Lo que puede ver el usuario en el select, que se escribe después de la etiqueta &ltOPTION&gt. 
+<br><br>
+<img src="ico2.jpg"> <b><font color=ff00ff> value </b></font><br>
+Indica el valor de la opción, que se introduce con el atributo VALUE de la etiqueta &ltOPTION&gt. 
+<h1>Ejemplos</h1>
+<font color=00ff00>
+&ltform action="mailto:formularios@formulario.com" method="post" enctype="text/plain"&gt<br> &ltselect name="estaciones" size=1&gt<br> 
+  &ltoption value="uno"&gtPrimavera&lt/option&gt<br>
+  &ltoption value="dos"&gtVerano&lt/option&gt<br>
+  &ltoption value="tres"&gtOtoño&lt/option&gt   <br>
+  &ltoption value="cuatro"&gtIncierno&lt/option&gt<br>
+&lt/select&gt<br>
+ &lt/form&gt<br></font>
+
+<form action="mailto:formularios@formulario.com" method="post" enctype="text/plain">
+<select name="estaciones" size=1>
+<option value="uno">Primavera</option>
+<option value="dos">Verano</option>
+<option value="tres">Otoño</option> 
+<option value="cuatro">Incierno</option>
+</select>
+</form>

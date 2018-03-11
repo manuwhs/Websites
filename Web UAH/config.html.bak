@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <style> 
+.estilo1
+{
+-moz-column-count:2;
+-moz-column-gap:50%;
+-moz-column-rule:4px outset darkorange;
+}
+</style> <title>CONFI2</title>
+    <link rel="stylesheet" type="text/css" href="css/Estilo.css">
+  </head>
+  <body onload="fonds()">
+    <script type="text/javascript" src="scripts/configuracion_error.js">
+    </script>
+    <script type="text/javascript" src="scripts/fondo.js">
+    </script>
+        <script type="text/javascript" src="scripts/rx_texto_ajax.js">
+    </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+
+type="text/javascript"></script>
+    <div id="contenedor">
+      <div id="titulo" class="titul"> Meteorológica Politécnico </div>
+      <div id="datos configuracion" class="estilo1" style="background-color:blue;height:100%">
+        <h1 class="naranja" style="text-align:left">Datos de la Estacion</h1>
+        <form name="formu" class="blanco" method="post" onsubmit="return get_Errors();"
+
+          action="./index.html"> <b> Country:</b> <input list="countriesi" name="count" onchange="loadTEXTDoc()"><span
+
+            id="countrye" class="error"></span> <br>
+            
+            
+          <datalist id="countriesi" name="count_list">
+            <option value="Spain"></option>
+            <option value="Italy"></option>
+            <option value="France"></option>
+            <option value="Sweden"></option>
+            <option value="England"></option>
+            <option value="Netherlands"></option>
+            <option value="Belgium"></option>
+            <option value="Brasil"></option>
+          </datalist> <br>
+          City:<input class="botoncillo" name="city" list = "citiesi">
+            <span id="citye"
+            class="error"></span>
+           <datalist id="citiesi" name="city_list">
+          </datalist> <br>
+            
+       
+            
+            <br>
+          Estacion:<input class="botoncillo" name="estac" type="text"> <br>
+          <b>Location:</b> <input class="botoncillo" name="loca" type="text"><span
+
+            id="locatione" class="error"></span> <br>
+          <b>Foto: </b><br>
+          <input value="seleccionar archivo" type="submit"> <br>
+          <b>Password:</b> <input class="botoncillo" name="pass" onkeydown="pass_strength()"
+
+            onkeyup="pass_strength()" type="password"><span id="passe" name="passito"
+
+            class="error"></span> <br>
+          <hr style="color:white"> <br>
+          <input value="Enviar datos" type="submit"> <br>
+          <br>
+          <h1 class="naranja"> <b> Selecione los sensores</b></h1>
+          <input name="Temperatura" type="checkbox"> <b> Temperatura </b><br>
+          <input name="Presión" type="checkbox"> <b> Presión</b> <br>
+          <input name="Lluvia" type="checkbox"> <b> Lluvia</b> <br>
+          <input name="Dirección Viento" type="checkbox"> <b> Dirección Viento</b>
+          <br>
+          <input name="Velocidad Viento" type="checkbox"> <b> Velocidad viento
+          </b><br>
+          <h1 class="naranja"> <b> Configure</b> <b> Alertas </b></h1>
+          <b>Temperatura Maxima</b> <input id="a" name="a" oninput="x.value=parseInt(a.value)-parseInt(b.value)"
+
+            type="number"><span id="ae" class="error"></span> <br>
+          <b> Temperatura Mínima</b> <input id="b" name="b" class="botoncillo"
+
+            oninput="x.value=parseInt(a.value)-parseInt(b.value)" type="number">
+          <span id="be" class="error"></span><br>
+          <b>Diferencia entre Temperaturas:</b><output id="x" name="x" for="a b"></output>
+          <br>
+          <br>
+        </form>
+      </div>
+      <b>
+        <div id="enlace" style="background-color:darkorange;color:purple;text-align:center;">
+          <a href="index.html">volver a pagina principal</a> </div>
+        <div id="pie" class="pie"> Universidad de Alcalá </div>
+ 
+      </b></div>
+    <b> </b>
+  </body>
+</html>

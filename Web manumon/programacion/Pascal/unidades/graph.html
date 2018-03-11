@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>GRAPH</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+
+Hasta ahora hemos trabajado en modo texto: escribimos letras en posiciones concretas de la pantalla. <br>
+Si deseamos dibujar líneas o puntos (pixels) individuales, no podíamos. <br>
+Mediante el uso de la Unidad graph, podemos hacer esto y mucho más. <br>
+Emplearemos los “BGI”, que nos permite realizar entre otras funciones de dibujo de puntos, <br>
+líneas, rectángulos, círculos, elipses, arcos, polígonos, rellenar superficies, cambiar la paleta de colores, etc<br><br>
+Para utilizar esta Unidad debemos hacer lo siguiente:<br>
+* Declarar que vamos a utilizar la unidad graph --------> Uses graph;<br>
+* A continuación indicamos el driver que utilizamos, que básicamente indica qué características tiene la tarjeta gráfica instalada,<br>
+ nosotros utilizaremos tarjetas Vga, para ello igualaremos una variable que creemos a Vga ------->  driver := Vga;<br>
+* Después indicamos el modo o la resolución que queremos utilizar (el número de puntos en pantalla).<br>
+VgaHi por ejemplo, utiliza 640x480 puntos o pixels, con 16 colores, esto tambien lo igualamos a una variables -----> modo := VgaHi;<br>
+* Por ultimo llamamos a la función InitGraph, que sirve para dar datos al ordenador del tipo de graficos que vamos a utilizar,<br>
+es decir, cone esta funcion le indicamos el driver, el modo y el directorio donde se encuentran las ‘BGI’ -----><br>
+ InitGraph(driver, modo, ‘c:\tp\bgi’);<br><br>
+Una vez definido todo esto ya podemos usar las rutinas que crean graficos, <br>
+Cuando hemos terminado, cerramos los gráficos con la instrucción CloseGraph, con lo que dejamos de visualizarlos,<br>
+por eso antes de esta instruccion es mejor poner la instruccion "ReadLn" para visualizarlos.<br>
+Estructura para la utilizacion de la Unidad graph:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+
+Program grafico1; <br>
+Uses    graph; <br>
+Var <br>
+       driver, modo : Integer; <br>
+Begin <br>
+driver := Vga; <br>
+modo := VgaHi;<br>
+InitGraph(driver, modo, ‘directorio_BGI’); <br>
+{Creacion de graficos aqui}<br>
+Readln; <br>
+CloseGraph;<br>
+end.
+</td></tr></table>
+<h2>Rutinas</h2>
+Antes de nada aqui va una tabla con los colores que usa Pascal, y su respectivo numero <a href="colores.html">Aqui</a><br><br>
+<font color="00ffff"><b>* SetColor(color): <br> </b></font>
+Selecciona un color predefinido. Este color sera el que utilicen aquellas formas con color predefinido.<br><br>
+<font color="00ffff"><b>* PutPixel(x,y,color):<br> </b></font>
+Dibuja un punto en el punto de cordenadas x,y del color que pongamos en "color"<br><br>
+<font color="00ffff"><b>* Line(x1,y1,x2,y2): <br> </b></font>
+Dibuja una línea con el color y estilo predefinido. Las cordenadas son del punto superior izquierdo
+y del inferior derecho de la linea<br><br>
+
+<font color="00ffff"><b>* SetLineStyle(estilo, patron, color): <br> </b></font>
+Cambia el estilo con que se dibujan las líneas. Para elegir el estilo de línea, tenemos definidas constantes como SolidLn (línea contínua), 
+DottedLn (línea punteada), etc. Para el grosor también tenemos constantes como NormWidth (normal), ThickWidth (gruesa), etc.<br><br>
+<font color="00ffff"><b>* Circle(x,y,radio): <br> </b></font>
+Dibuja un círculo con el color predefinido. Donde las cordenas x,y son las coordenadas del centro y Radio es el radio <br><br>
+<font color="00ffff"><b>* Ellipse(x,y,anguloIIni,anguloFin,radioX,radioY): <br> </b></font>
+Dibuja una elipse o un arco de elipse. <br><br>
+<font color="00ffff"><b>* Arc(x,y,anguloIni,anguloFin,radio): <br> </b></font>
+Dibuja un arco circular. Donde x,y son las coordenadas del centro, anguloIni y anguloFin el angulo del arco y radio el radio<br><br>
+<font color="00ffff"><b>* Rectangle(x1,y2,x2,y2): <br> </b></font>
+Dibuja un rectángulo con el color y el tipo de línea predefinido. <br>
+Los puntos son las esquinas superior izquierda e inferior derecha. <br><br>
+<font color="00ffff"><b>* Bar(x1,y1,x2,y2): <br> </b></font>
+Dibuja un rectángulo con el color y el tipo de línea predefinido. <br><br>
+<font color="00ffff"><b>* SetFillStyle(patron,color): <br> </b></font>
+Escoge el patrón y color de relleno. <br><br>
+<font color="00ffff"><b>* SetBkColor(color)<br> </b></font>
+Escoge el color de relleno.<br><br>
+
+<font color="00ffff"><b>* SetFillPattern(patron,color): <br> </b></font>
+Permite redefinir el patrón con el que se rellenarán las figuras. <br>
+Los patrones pueden ser: EmptyFill, SolidFill, LineFill, ltSlashFill, SlashFill, BkSlashFill, LtBkSlashFill <br>
+HatchFill, XHatchFill, InterLeaveFill, WideDotFill, CloseDotFill, UserFill <br><br>
+<font color="00ffff"><b>* FloodFill(x,y,borde): <br> </b></font>
+Rellena una zona cerrada, cuyo borde sea de un cierto color. <br>
+Las coordenadas son las de algun punto de esa figura y el "borde" es el color del borde de la figura.<br>
+Usa el color y patrón de relleno actual. <br><br>
+<font color="00ffff"><b>* OutText(texto): <br> </b></font>
+Escribe un texto en la posición actual del cursor. <br><br>
+<font color="00ffff"><b>* OutTextXY(x,y,texto): <br> </b></font>
+Escribe un texto en una posición dada. <br><br>
+<font color="00ffff"><b>* SetTextStyle(fuente,dirección,tamaño): <br> </b></font>
+Elige la fuente (tipo de letra), la dirección y el tamaño con el que se escribirán los textos.<br><br>
+<font color="00ffff"><b>* GetMaxX() <br> </b></font>
+Devuelve la coordenada maxima de las X.<br><br>
+<font color="00ffff"><b>* GetMaxY() <br> </b></font>
+Devuelve la coordenada maxima de las Y.<br><br>

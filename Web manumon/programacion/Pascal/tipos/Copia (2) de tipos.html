@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>
+Manumonhacker
+</title>
+</head>
+<body link="#ffffff" vlink="#ffff00" alink="#ffffff" text = ffffff>
+
+<body bgcolor=#000022>
+<body leftmargin="60" topmargin="20">
+<center><table  border="4" width=500 height=* bordercolor=#EAEAEA bgcolor=#000000 cellpadding =0 >
+  <tr><td valign=top><br>
+                 <font color=#ffffff face="Lucida Calligraphy">
+            <center> <u><H1>Tipos</H1></u></center></font>
+</font></td></tr>
+</table></center><br>
+El tipo de un dato es el conjunto de valores que puede tomar durante el programa. <br>
+Si se le intenta dar un valor fuera del conjunto se producirá un error.<br>
+El tipo de una variable es entonces el conjunto de valores que puede tomar durante el programa. <br>
+La asignación de tipos a los datos tiene dos objetivos principales: <br>
+* Detectar errores en las operaciones <br>
+* Determinar cómo ejecutar estas operaciones <br>
+
+Pascal es un lenguaje fuertemente tipeado, esto quiere decir que todos los datos deben de tener un tipo declarado <br>
+explícitamente, y además que existen ciertas restricciones en las expresiones en cuanto a los tipos de datos que en ellas intervienen. <br>
+<h1>Tipos de datos</h1>
+<h2>1.1 Dinamicos</h2>
+Dentro de esta categoría entra sólamente el tipo puntero. <br>
+Este tipo te permite tener un mayor control sobre la gestión de memoria en tus programas. <br>
+Con ellos puedes manejar el tamaño de tus variables en tiempo de ejecución, o sea, cuando el programa se está ejecutando. <br>
+Es decir, se puede cambiar el tamaño que ocupa un tipo de dato en memoria.<br>
+<h2>1.2 Estaticos</h2>
+Casi todos los tipos de datos son estáticos, la excepción son los punteros y no se tratarán debido a su complejidad. <br>
+Que un tipo de datos sea estático quiere decir que el tamaño que ocupa en memoria <br>
+no puede variar durante la ejecución del programa. <br>
+Es decir, una vez declarada una variable de un tipo determinado, <br>
+a ésta se le asigna un trozo de memoria fijo, y este trozo no se podrá aumentar ni disminuír. <br>
+<h3>1.2.1 Ordinales</h3>
+ 
+Un tipo es ordinal porque el conjunto de valores que representa se puede contar, es decir,<br>
+podemos establecer una relación uno a uno entre sus elementos y el conjunto de los números naturales.<br>
+Los tipos ordinales están basados en el concepto de orden o secuencia. <br>
+Usted no sólo puede comparar dos valores para ver cuál es más alto, sino que también puede pedir el<br>
+ valor que sigue o precede a un valor dado, o calcular el valor más bajo o alto de los posibles<br><br>
+
+Por ejemplo el tipo 'numeros enteros', es ordinal porque se puede saber que numero va despues de otro,<br>
+el siguiente numero al 2 sabemos que es el 3, pero en el tipo 'real' no se sabe que numero va despues,<br>
+ya que valdria cualqiera: 2,13 o 2,135 o 2,1354.<br><br>
+<h4>1.2.1.1 El tipo integer (entero)</h4>
+Al declarar una variable de tipo entero, estás creando una variable numérica que puede tomar valores positivos o negativos,
+y sin parte decimal. Este tipo de variables, puedes utilizarlas en asignaciones, comparaciones, expresiones aritméticas, etc.
+Ejemplo:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+var<br>
+telefono, edad:integer;<br>
+begin<br>
+telefono := 654235689485;<br>
+edad := 22;<br>
+end.
+
+</td></tr></table>
+<h4>1.2.1.2 El tipo boolean (lógico)</h4>
+El tipo de datos lógico es el que te permite usar variables que disponen sólo de dos posibles valores: cierto o falso. <br>
+Debido a esto, su utilidad salta a la vista, y no es otra que variables de chequeo. <br>
+Nos sirven para mantener el estado de un objeto mediante dos valores, 0 y 1, que pueden indicar: <br>
+* si/no <br>
+* cierto/falso <br>
+* funciona/no funciona <br>
+* on/off <br>
+* etc. <br>
+Ejemplo:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+var<br>
+conectado,encendido:boolean;<br>
+begin<br>
+conectado := 0 (*verdadero*)<br>
+encendido := 1 (*falso*)<br>
+
+      if conectado and (not encendido) then         <br>
+         writeln('No esta en marcha')<br>
+      else <br>
+         writeln('Esta en marcha')<br>
+
+      
+end.
+
+</td></tr></table><br>
+La estructura condicional que hay en el ejemplo la daremos mas adelante, pero es facil de interpretar.
+<h4>1.2.1.3 Los tipos char y string (caráctery cadena)</h4>
+* Con el tipo carácter (char) puedes tener objetos que representen una letra, un número, un signo ... <br>
+Es decir, puedes usar variables o constantes que representen un valor alfanumérico. <br>
+Pero ojo, cada variable sólo podrá almacenar un carácter. <br>
+* Con las cadenas de caracteres (strings) puedes contener en una sóla variable más de un carácter. <br>
+Los valores de estos dos tipos deben ir entrecomillados, entre comillas.<br>
+Ejemplo:<br><br>
+
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+var<br>
+hotmail:string;<br>
+letra:char;<br>
+begin<br>
+hotmail := 'manumon_20@hotmail.com';<br>
+letra := 'H';<br>
+end.
+
+</td></tr></table>
+
+
+<h3>1.2.2 Tipos no-ordinales, TIpo real (real)</h3>
+
+Simplificando, podríamos reducir los tipos simples no-ordinales al tipo real. <br>
+Este tipo nos sirve para declarar variables que pueden tomar valores dentro del conjunto de los números reales. <br>
+A diferencia de los tipos ordinales, los no-ordinales no se pueden contar. <br>
+No se puede establecer una relación uno a uno entre ellos y los número naturales. <br>
+Dicho de otra forma, para que un conjunto se considere ordinal se tiene que poder calcular la posición, <br>
+el anterior elemento y el siguiente de un elemento cualquiera del conjunto.¿Cuál es el sucesor de 5.12? Será 5.13, o 5.120, o 5.121<br>
+<br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+var<br>
+decimal,nazar:real;
+begin<br>
+decimal := 25.12;
+azar :=15,255;
+end.
+
+</td></tr></table>
+
+<br>
+Al mostrar este tipo de datos en pantalla, hay que indicar la cantidad de numeros enteros y decimales<br>
+que se mostraran. La estructura para hacerlo es: variable:enteros:decimales.<br>
+En el caso de este tipo de datos, el indicar la cantidad de numeros enteros carece de sentido ya que<br>
+se vera limitado por los numeros decimales, por lo que su valor sera 0 pero debemos indicar el<br>
+numero de decimales que se mostraran. Ejemplo:<br><br>
+<table width="" height="" bgcolor=#010739 border=1 cellspacing=0 cellpadding=10>
+<tr><td>
+program reales;<br>
+var<br>
+real1 : real;<br>
+begin<br>
+real1:=25.55;<br>
+writeln(real1:0:0);<br>
+writeln(real1:0:1);<br>
+writeln(real1:0:2);<br>
+writeln(real1:0:3);<br>
+writeln(real1:0);<br>
+readln;<br>
+end.
+</td></tr></table>
+
